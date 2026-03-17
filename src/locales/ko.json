@@ -1,0 +1,267 @@
+{
+	"seo": {
+		"siteName": "Happyuky7",
+		"description": "웹사이트, 블로그, 프로젝트 등. GitHub: https://github.com/Happyuky7"
+	},
+	"nav": {
+		"home": "홈",
+		"skills": "스킬",
+		"projects": "프로젝트",
+		"contact": "연락처",
+		"blog": "블로그"
+	},
+	"home": {
+		"available": "새 프로젝트 가능합니다",
+		"title-h1": "안녕하세요, 저는",
+		"view-projects": "프로젝트 보기",
+		"contact-me": "연락하기",
+		"skills": {
+			"title": "스킬",
+			"subtitle": "자주 사용하는 기술과 도구.",
+			"tabs": {
+				"all": "전체",
+				"programming": "언어",
+				"tools": "도구",
+				"creative": "크리에이티브",
+				"other": "기타"
+			}
+		},
+		"about-paragraphs": [
+			"저는 **유용한 소프트웨어**와 실제 프로젝트를 만드는 데 집중하는 개발자이자 콘텐츠 크리에이터입니다. **JavaScript/Node.js**와 **Java**를 주로 사용하며, 필요에 따라 **Python**과 **C++**도 사용합니다.",
+			"**ESP32**와 **Raspberry Pi**로 **하드웨어와 소프트웨어를 통합**하는 것, 그리고 도구/자동화에 적용하는 **AI 및 LLM** 프로젝트에 관심이 있습니다.",
+			"가끔 **Twitch**와 **YouTube**에서 과정을 공유하고, **X (Twitter)**에 **짧은 프로젝트/코드**를 올립니다."
+		]
+	},
+	"footer": {
+		"rights": "All rights reserved.",
+		"made-with": "Made with",
+		"by": "by"
+	},
+	"relevantProjects": {
+		"title": "주요 프로젝트",
+		"subtitle": "제가 자랑스러워하는 프로젝트를 엄선한 작은 목록 — 계속 개선 중입니다.",
+		"viewMore": "더 보기"
+	},
+	"projects": {
+		"title": "프로젝트",
+		"description": "여기 제 프로젝트 일부가 있습니다.",
+		"searchPlaceholder": "이름, 태그로 프로젝트 검색…",
+		"loading": "프로젝트 불러오는 중…",
+		"error": {
+			"loading": "프로젝트 로딩 오류",
+			"description": "프로젝트를 불러오는 중 문제가 발생했습니다. 페이지를 새로고침해 주세요.",
+			"noProjects": "사용 가능한 프로젝트가 없습니다",
+			"noProjectsDescription": "현재 표시할 프로젝트가 없습니다."
+		},
+		"refreshPage": "페이지 새로고침",
+		"filter": {
+			"title": "프로젝트 필터",
+			"description": "하나 이상의 태그를 선택해 프로젝트를 필터링하세요. 다시 클릭하면 필터가 해제됩니다.",
+			"allProjects": "전체 프로젝트",
+			"activeFilters": "활성 필터:",
+			"clearAllFilters": "모든 필터 지우기"
+		},
+		"noProjectsWithFilters": "필터에 맞는 프로젝트가 없습니다",
+		"tryDifferentFilters": "다른 태그를 선택하거나 모든 필터를 지워보세요.",
+		"noProjects": "사용 가능한 프로젝트가 없습니다",
+		"noProjectsDescription": "현재 표시할 프로젝트가 없습니다.",
+		"noDescriptionAvailable": "설명이 없습니다.",
+		"card": {
+			"nolinkavailable": {
+				"title": "프로젝트를 사용할 수 없습니다",
+				"description": "죄송합니다. 이 프로젝트는 현재 링크가 없습니다. 나중에 다시 시도해 주세요."
+			}
+		},
+		"showing": "표시",
+		"of": "/",
+		"projectsText": "프로젝트"
+	},
+	"projectsDetails": {
+		"backToProjects": "프로젝트로 돌아가기",
+		"loading": "프로젝트 상세 불러오는 중…",
+		"error": {
+			"loading": "프로젝트 상세 로딩 오류",
+			"description": "프로젝트 상세를 불러오는 중 문제가 발생했습니다. 페이지를 새로고침해 주세요."
+		},
+		"refreshPage": "페이지 새로고침",
+		"viewDemo": "데모 보기",
+		"viewOnGithub": "GitHub에서 보기",
+		"visitProject": "프로젝트 방문",
+		"noReadme": "이 프로젝트의 README가 없습니다",
+		"readmeError429": "요청이 너무 많습니다. 나중에 다시 시도해 주세요.",
+		"readmeError404": "README 파일을 찾을 수 없습니다",
+		"readmeErrorInvalid": "README 형식이 올바르지 않습니다",
+		"readmeErrorGeneric": "README 로딩 오류",
+		"readmeNotTranslated": "이 README는 영어만 제공되며 번역되지 않았습니다."
+	},
+	"blog": {
+		"title": "블로그",
+		"description": "최신 글과 업데이트를 읽어보세요.",
+		"subtitle": "최신 글과 업데이트를 읽어보세요.",
+		"searchPlaceholder": "제목, id, 태그로 글 검색…",
+		"minuteRead": "분 읽기",
+		"readMore": "더 읽기",
+		"noResults": "게시글이 없습니다",
+		"noResultsDesc": "검색어나 필터를 조정해 보세요.",
+		"clearFilters": "필터 지우기",
+		"allCategories": "모든 카테고리",
+		"allTags": "모든 태그",
+		"allYears": "모든 연도",
+		"allMonths": "모든 월",
+		"loading": "게시글 불러오는 중…",
+		"error": {
+			"loading": "게시글 로딩 오류",
+			"description": "블로그 게시글을 불러오는 중 문제가 발생했습니다. 페이지를 새로고침해 주세요."
+		},
+		"refreshPage": "페이지 새로고침",
+		"showing": "표시",
+		"of": "/",
+		"postsText": "게시글",
+		"postsPerPage": "페이지당 게시글",
+		"backToBlog": "블로그로 돌아가기",
+		"postNotFound": "게시글을 찾을 수 없습니다",
+		"tryAgain": "다시 시도",
+		"availableLanguages": "사용 가능한 언어",
+		"mainAuthor": "주 저자",
+		"collaborators": "협업자",
+		"translators": "번역자",
+		"translatedBy": "번역",
+		"share": "공유",
+		"shareAriaLabel": "이 글 공유하기",
+		"linkCopied": "링크가 복사되었습니다",
+		"sharePost": "게시글 공유",
+		"copyLink": "링크 복사",
+		"shareDefaultText": "이 블로그 글을 확인해 보세요!",
+		"tocTitle": "목차",
+		"cite": {
+			"button": "인용",
+			"buttonAriaLabel": "이 글을 인용하는 방법",
+			"modalTitle": "이 글을 인용하는 방법",
+			"modalSubtitle": "바로 사용할 수 있는 참고문헌을 복사하세요",
+			"close": "닫기",
+			"copy": "복사",
+			"copied": "복사됨",
+			"copyAriaLabel": "인용 복사",
+			"apa7": "APA 7",
+			"mla": "MLA",
+			"chicago": "Chicago",
+			"bibtex": "BibTeX"
+		},
+		"translatorOf": "번역",
+		"contentNotAvailableTitle": "콘텐츠를 사용할 수 없습니다",
+		"contentNotAvailableDesc": "이 글의 콘텐츠가 아직 준비되지 않았습니다. 파일이 없거나 아직 작업 중일 수 있습니다. 잠시 후 다시 시도해 주세요!",
+		"viewAllArticles": "모든 글 보기",
+		"retry": "재시도",
+		"languageNotAvailable": "사용할 수 없는 언어:",
+		"showingInstead": "대신 표시:"
+	},
+	"categories": {
+		"all": "모든 카테고리",
+		"tutorial": "튜토리얼",
+		"development": "개발",
+		"technology": "기술",
+		"programming": "프로그래밍",
+		"lifestyle": "라이프스타일",
+		"travel": "여행",
+		"food": "음식",
+		"education": "교육",
+		"health": "건강",
+		"entertainment": "엔터테인먼트",
+		"web-development": "웹 개발",
+		"backend-development": "백엔드 개발",
+		"ai-ml": "AI & ML",
+		"anime-analysis": "애니메이션 분석",
+		"mathematics": "수학",
+		"security": "보안",
+		"devops": "DevOps",
+		"photography": "사진",
+		"personal": "개인",
+		"3d-design": "3D 디자인",
+		"language-learning": "언어 학습"
+	},
+	"contact": {
+		"title": "연락처",
+		"description": "협업이나 문의가 있으면 연락해 주세요.",
+		"socialMedia": "SNS에서 팔로우하고 연락하세요.",
+		"quickTitle": "직접 연락",
+		"emailTitle": "이메일",
+		"xTitle": "X (Twitter)",
+		"discordTitle": "Discord",
+		"discordServerTitle": "Discord 서버",
+		"copy": "복사",
+		"copied": "복사됨",
+		"sendEmail": "보내기",
+		"openX": "열기",
+		"openDiscord": "열기",
+		"responseTitle": "응답 시간",
+		"responseText": "보통 다음 시간 내에 답장합니다",
+		"timezoneTitle": "시간대",
+		"timezoneText": "저는",
+		"formTitle": "메시지 보내기",
+		"formName": "이름",
+		"formEmail": "이메일",
+		"formMessage": "아이디어나 프로젝트에 대해 알려주세요…",
+		"formHint": "메일 앱이 열리고 메시지가 준비됩니다.",
+		"formButton": "메시지 보내기"
+	},
+	"errors": {
+		"banner": "// 오류 핸들러 :: portfolio",
+		"hintLabel": "힌트",
+		"traceTitle": "디버그 정보:",
+		"actions": {
+			"back": "뒤로",
+			"home": "홈으로",
+			"retry": "재시도"
+		},
+		"common": {
+			"title": "문제가 발생했습니다",
+			"message": "예기치 않은 오류가 발생했습니다.",
+			"hint": "뒤로 가거나 새로고침해 보세요"
+		},
+		"400": {
+			"title": "잘못된 요청",
+			"message": "요청이 유효하지 않은 것 같습니다.",
+			"hint": "URL을 확인하세요"
+		},
+		"401": {
+			"title": "인증 필요",
+			"message": "계속하려면 로그인해야 합니다.",
+			"hint": "로그인 후 다시 시도"
+		},
+		"403": {
+			"title": "접근 금지",
+			"message": "이 페이지에 접근할 권한이 없습니다.",
+			"hint": "접근이 거부되었습니다"
+		},
+		"404": {
+			"title": "페이지를 찾을 수 없음",
+			"message": "요청한 페이지가 존재하지 않습니다(또는 이동되었습니다).",
+			"hint": "경로를 확인하세요"
+		},
+		"408": {
+			"title": "요청 시간 초과",
+			"message": "응답이 너무 오래 걸렸습니다.",
+			"hint": "요청을 다시 시도"
+		},
+		"429": {
+			"title": "요청이 너무 많습니다",
+			"message": "요청 제한이 적용되었습니다. 잠시 후 다시 시도해 주세요.",
+			"hint": "잠깐 기다려 주세요"
+		},
+		"500": {
+			"title": "서버 오류",
+			"message": "예기치 않게 문제가 발생했습니다. 새로고침해 보세요.",
+			"hint": "페이지 다시 로드"
+		},
+		"502": {
+			"title": "Bad gateway",
+			"message": "상위 서비스가 잘못된 응답을 반환했습니다.",
+			"hint": "나중에 다시 시도"
+		},
+		"503": {
+			"title": "서비스를 사용할 수 없음",
+			"message": "서비스가 일시적으로 사용할 수 없습니다.",
+			"hint": "나중에 다시 시도"
+		}
+	}
+}

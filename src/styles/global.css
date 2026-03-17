@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00ff84;
+  --color-dark: #0a0a0a;
+  --color-dark-lighter: #1a1a1a;
+  
+  --font-sans: Inter, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: white;
+  font-family: var(--font-sans);
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Skills progress (Home) */
+.skill-progress {
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.skill-progress::-webkit-progress-bar {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.skill-progress::-webkit-progress-value {
+  background: linear-gradient(to right, var(--color-primary), #3B82F6, #A855F7);
+}
+
+.skill-progress::-moz-progress-bar {
+  background: linear-gradient(to right, var(--color-primary), #3B82F6, #A855F7);
+}
+
+/* Landscape on phones often has large width (>=768) but short height.
+   Use max-height so it applies to real devices like A51 in landscape.
+   This is scoped to Home/NavBar hooks, so portrait stays unchanged. */
+@media (max-height: 520px) and (orientation: landscape) {
+  /* NavBar: force hamburger layout in short-height landscape */
+  .navbar-desktop-links {
+    display: none !important;
+  }
+  .navbar-desktop-social {
+    display: none !important;
+  }
+  .navbar-mobile-controls {
+    display: flex !important;
+  }
+  .navbar-mobile-menu {
+    display: block !important;
+  }
+
+  /* Home hero: force mobile layout & reduce vertical pressure */
+  .home-hero {
+    min-height: 100svh;
+    align-items: flex-start;
+    padding-top: 5rem; /* navbar (h-20) */
+    padding-bottom: 1rem;
+  }
+
+  .home-hero-desktop {
+    display: none !important;
+  }
+
+  .home-hero-mobile {
+    display: block !important;
+    max-width: 100% !important;
+    padding: 0 1.5rem !important;
+  }
+
+  .home-hero-mobile h1 {
+    font-size: 1.75rem;
+    line-height: 1.15;
+    margin-top: 0 !important;
+  }
+
+  /* Float the avatar to the right so text wraps like desktop */
+  .home-hero-imageWrap {
+    float: right;
+    margin: -1.25rem 2rem 0rem 3rem;
+    display: block !important;
+  }
+
+  .home-hero-avatar {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  /* Let the page scroll naturally; avoid nested scroll in landscape */
+  .home-hero-about {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .home-hero-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .home-hero-actions a {
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+  }
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: rgba(0, 255, 132, 0.9);
+  transform: scale(1.05);
+}
+
+.card {
+  background-color: var(--color-dark-lighter);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 255, 132, 0.2);
+}
+
+/* Variante con color personalizable - mantiene el padding y border pero sin background */
+.card-custom {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.card-custom:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, var(--color-primary), #3B82F6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+/* Prose utilities */
+.prose pre {
+  overflow-x: auto;
+}
+
+/* Visible horizontal scrollbar for long code blocks */
+.prose pre::-webkit-scrollbar,
+.code-scrollbar::-webkit-scrollbar {
+  height: 10px;
+}
+
+.prose pre::-webkit-scrollbar-track,
+.code-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.40);
+  border-radius: 999px;
+}
+
+.prose pre::-webkit-scrollbar-thumb,
+.code-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 132, 0.30);
+  border-radius: 999px;
+}
+
+.prose pre::-webkit-scrollbar-thumb:hover,
+.code-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 132, 0.45);
+}
+
+/* Firefox (and any browser that supports it) */
+@supports (scrollbar-color: auto) {
+  .prose pre,
+  .code-scrollbar {
+    scrollbar-color: rgba(0, 255, 132, 0.45) rgba(0, 0, 0, 0.40);
+    scrollbar-width: thin;
+  }
+}
+
+/* Clamp floated media inserted via raw HTML in Markdown so the remaining text column doesn't collapse.
+   This targets legacy templates like: <img style="float:right;width:420px;..." />
+   and newer templates with <figure style="float:right;...">...
+*/
+.prose img[style*="float:right"],
+.prose img[style*="float: right"],
+.prose figure[style*="float:right"],
+.prose figure[style*="float: right"],
+.prose img[style*="float:left"],
+.prose img[style*="float: left"],
+.prose figure[style*="float:left"],
+.prose figure[style*="float: left"] {
+  max-width: 45% !important;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+}
+

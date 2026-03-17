@@ -1,0 +1,267 @@
+{
+	"seo": {
+		"siteName": "Happyuky7",
+		"description": "Strona, blog, projekty i więcej. GitHub: https://github.com/Happyuky7"
+	},
+	"nav": {
+		"home": "Strona główna",
+		"skills": "Umiejętności",
+		"projects": "Projekty",
+		"contact": "Kontakt",
+		"blog": "Blog"
+	},
+	"home": {
+		"available": "Dostępny do nowych projektów",
+		"title-h1": "Cześć, jestem",
+		"view-projects": "Zobacz projekty",
+		"contact-me": "Skontaktuj się",
+		"skills": {
+			"title": "Umiejętności",
+			"subtitle": "Technologie i narzędzia, których często używam.",
+			"tabs": {
+				"all": "Wszystko",
+				"programming": "Języki",
+				"tools": "Narzędzia",
+				"creative": "Kreatywne",
+				"other": "Inne"
+			}
+		},
+		"about-paragraphs": [
+			"Jestem programistą i twórcą treści, skupionym na budowaniu **użytecznego oprogramowania** i realnych projektów. Pracuję z **JavaScript/Node.js** oraz **Java**, a także używam **Pythona** i **C++** w zależności od wymagań pomysłu.",
+			"Interesuje mnie łączenie **hardware z software** przy użyciu **ESP32** i **Raspberry Pi**, a także projekty związane z **AI i LLM** w narzędziach oraz automatyzacji.",
+			"Czasem pokazuję swój proces na **Twitch** i **YouTube** oraz wrzucam **szybkie projekty/kod** na **X (Twitter)**."
+		]
+	},
+	"footer": {
+		"rights": "Wszelkie prawa zastrzeżone.",
+		"made-with": "Stworzone z",
+		"by": "przez"
+	},
+	"relevantProjects": {
+		"title": "Wybrane projekty",
+		"subtitle": "Mała selekcja projektów, z których jestem dumny — wybrane i stale ulepszane.",
+		"viewMore": "Zobacz więcej"
+	},
+	"projects": {
+		"title": "Projekty",
+		"description": "Oto niektóre z moich projektów.",
+		"searchPlaceholder": "Szukaj projektów po nazwie, tagach…",
+		"loading": "Ładowanie projektów…",
+		"error": {
+			"loading": "Błąd podczas ładowania projektów",
+			"description": "Wystąpił problem podczas ładowania projektów. Odśwież stronę.",
+			"noProjects": "Brak dostępnych projektów",
+			"noProjectsDescription": "Obecnie nie ma projektów do wyświetlenia."
+		},
+		"refreshPage": "Odśwież stronę",
+		"filter": {
+			"title": "Filtruj projekty",
+			"description": "Wybierz jeden lub więcej tagów, aby filtrować projekty. Kliknij ponownie, aby usunąć filtr.",
+			"allProjects": "Wszystkie projekty",
+			"activeFilters": "Aktywne filtry:",
+			"clearAllFilters": "Wyczyść wszystkie filtry"
+		},
+		"noProjectsWithFilters": "Żadne projekty nie pasują do filtrów",
+		"tryDifferentFilters": "Spróbuj wybrać inne tagi lub wyczyść wszystkie filtry.",
+		"noProjects": "Brak dostępnych projektów",
+		"noProjectsDescription": "Obecnie nie ma projektów do wyświetlenia.",
+		"noDescriptionAvailable": "Brak opisu.",
+		"card": {
+			"nolinkavailable": {
+				"title": "Projekt niedostępny",
+				"description": "Przepraszam, ten projekt nie ma obecnie dostępnego linku. Spróbuj ponownie później."
+			}
+		},
+		"showing": "Wyświetlanie",
+		"of": "z",
+		"projectsText": "projektów"
+	},
+	"projectsDetails": {
+		"backToProjects": "Powrót do projektów",
+		"loading": "Ładowanie szczegółów projektu…",
+		"error": {
+			"loading": "Błąd podczas ładowania szczegółów projektu",
+			"description": "Wystąpił problem podczas ładowania szczegółów projektu. Odśwież stronę."
+		},
+		"refreshPage": "Odśwież stronę",
+		"viewDemo": "Zobacz demo",
+		"viewOnGithub": "Zobacz na GitHub",
+		"visitProject": "Odwiedź projekt",
+		"noReadme": "Brak README dla tego projektu",
+		"readmeError429": "Przekroczono limit. Spróbuj ponownie później.",
+		"readmeError404": "Nie znaleziono pliku README",
+		"readmeErrorInvalid": "Nieprawidłowy format README",
+		"readmeErrorGeneric": "Błąd podczas ładowania README",
+		"readmeNotTranslated": "To README jest dostępne tylko po angielsku i nie zostało przetłumaczone."
+	},
+	"blog": {
+		"title": "Blog",
+		"description": "Przeczytaj moje najnowsze artykuły i aktualizacje.",
+		"subtitle": "Przeczytaj moje najnowsze artykuły i aktualizacje.",
+		"searchPlaceholder": "Szukaj postów po tytule, id, tagach…",
+		"minuteRead": "min czytania",
+		"readMore": "Czytaj dalej",
+		"noResults": "Nie znaleziono postów",
+		"noResultsDesc": "Spróbuj zmienić wyszukiwanie lub filtry.",
+		"clearFilters": "Wyczyść filtry",
+		"allCategories": "Wszystkie kategorie",
+		"allTags": "Wszystkie tagi",
+		"allYears": "Wszystkie lata",
+		"allMonths": "Wszystkie miesiące",
+		"loading": "Ładowanie postów…",
+		"error": {
+			"loading": "Błąd podczas ładowania postów",
+			"description": "Wystąpił problem podczas ładowania postów na blogu. Odśwież stronę."
+		},
+		"refreshPage": "Odśwież stronę",
+		"showing": "Wyświetlanie",
+		"of": "z",
+		"postsText": "postów",
+		"postsPerPage": "Posty na stronę",
+		"backToBlog": "Powrót do bloga",
+		"postNotFound": "Nie znaleziono posta",
+		"tryAgain": "Spróbuj ponownie",
+		"availableLanguages": "Dostępne języki",
+		"mainAuthor": "Główny autor",
+		"collaborators": "Współautorzy",
+		"translators": "Tłumacze",
+		"translatedBy": "Przetłumaczone przez",
+		"share": "Udostępnij",
+		"shareAriaLabel": "Udostępnij ten post",
+		"linkCopied": "Link skopiowany",
+		"sharePost": "Udostępnij post",
+		"copyLink": "Kopiuj link",
+		"shareDefaultText": "Sprawdź ten wpis na blogu!",
+		"tocTitle": "Spis treści",
+		"cite": {
+			"button": "Cytuj",
+			"buttonAriaLabel": "Jak cytować ten post",
+			"modalTitle": "Jak cytować ten post",
+			"modalSubtitle": "Skopiuj gotową referencję",
+			"close": "Zamknij",
+			"copy": "Kopiuj",
+			"copied": "Skopiowano",
+			"copyAriaLabel": "Skopiuj cytowanie",
+			"apa7": "APA 7",
+			"mla": "MLA",
+			"chicago": "Chicago",
+			"bibtex": "BibTeX"
+		},
+		"translatorOf": "Tłumacz",
+		"contentNotAvailableTitle": "Treść niedostępna",
+		"contentNotAvailableDesc": "Treść tego artykułu nie jest jeszcze dostępna. Plik może nie istnieć lub jest w trakcie przygotowania. Spróbuj ponownie wkrótce!",
+		"viewAllArticles": "Zobacz wszystkie artykuły",
+		"retry": "Ponów",
+		"languageNotAvailable": "Język niedostępny:",
+		"showingInstead": "Wyświetlam zamiast tego:"
+	},
+	"categories": {
+		"all": "Wszystkie kategorie",
+		"tutorial": "Poradnik",
+		"development": "Tworzenie",
+		"technology": "Technologia",
+		"programming": "Programowanie",
+		"lifestyle": "Styl życia",
+		"travel": "Podróże",
+		"food": "Jedzenie",
+		"education": "Edukacja",
+		"health": "Zdrowie",
+		"entertainment": "Rozrywka",
+		"web-development": "Tworzenie stron",
+		"backend-development": "Backend",
+		"ai-ml": "AI i ML",
+		"anime-analysis": "Analiza anime",
+		"mathematics": "Matematyka",
+		"security": "Bezpieczeństwo",
+		"devops": "DevOps",
+		"photography": "Fotografia",
+		"personal": "Osobiste",
+		"3d-design": "Projektowanie 3D",
+		"language-learning": "Nauka języków"
+	},
+	"contact": {
+		"title": "Kontakt",
+		"description": "Skontaktuj się ze mną w sprawie współpracy lub pytań.",
+		"socialMedia": "Obserwuj mnie i kontaktuj się ze mną w mediach społecznościowych.",
+		"quickTitle": "Kontakt bezpośredni",
+		"emailTitle": "Email",
+		"xTitle": "X (Twitter)",
+		"discordTitle": "Discord",
+		"discordServerTitle": "Serwer Discord",
+		"copy": "Kopiuj",
+		"copied": "Skopiowano",
+		"sendEmail": "Wyślij",
+		"openX": "Otwórz",
+		"openDiscord": "Otwórz",
+		"responseTitle": "Czas odpowiedzi",
+		"responseText": "Zwykle odpowiadam w ciągu",
+		"timezoneTitle": "Strefa czasowa",
+		"timezoneText": "Jestem w",
+		"formTitle": "Wyślij mi wiadomość",
+		"formName": "Imię",
+		"formEmail": "Email",
+		"formMessage": "Opowiedz mi o swoim pomyśle lub projekcie…",
+		"formHint": "To otworzy aplikację pocztową z gotową wiadomością.",
+		"formButton": "Wyślij wiadomość"
+	},
+	"errors": {
+		"banner": "// obsługa błędów :: portfolio",
+		"hintLabel": "wskazówka",
+		"traceTitle": "info debug:",
+		"actions": {
+			"back": "Wróć",
+			"home": "Strona główna",
+			"retry": "Ponów"
+		},
+		"common": {
+			"title": "Coś poszło nie tak",
+			"message": "Wystąpił nieoczekiwany błąd.",
+			"hint": "Spróbuj wrócić lub odświeżyć"
+		},
+		"400": {
+			"title": "Nieprawidłowe żądanie",
+			"message": "Żądanie wygląda na nieprawidłowe.",
+			"hint": "Sprawdź URL"
+		},
+		"401": {
+			"title": "Brak autoryzacji",
+			"message": "Musisz się zalogować, aby kontynuować.",
+			"hint": "Zaloguj się i spróbuj ponownie"
+		},
+		"403": {
+			"title": "Brak dostępu",
+			"message": "Nie masz uprawnień do tej strony.",
+			"hint": "Odmowa dostępu"
+		},
+		"404": {
+			"title": "Nie znaleziono strony",
+			"message": "Strona, której szukasz, nie istnieje (albo została przeniesiona).",
+			"hint": "Może zła ścieżka"
+		},
+		"408": {
+			"title": "Przekroczono limit czasu",
+			"message": "Odpowiedź trwała zbyt długo.",
+			"hint": "Ponów żądanie"
+		},
+		"429": {
+			"title": "Zbyt wiele żądań",
+			"message": "Zostałeś ograniczony. Spróbuj ponownie za chwilę.",
+			"hint": "Poczekaj chwilę"
+		},
+		"500": {
+			"title": "Błąd serwera",
+			"message": "Coś niespodziewanie się zepsuło. Spróbuj odświeżyć.",
+			"hint": "Odśwież stronę"
+		},
+		"502": {
+			"title": "Błędna brama",
+			"message": "Usługa nadrzędna zwróciła nieprawidłową odpowiedź.",
+			"hint": "Spróbuj później"
+		},
+		"503": {
+			"title": "Usługa niedostępna",
+			"message": "Usługa jest tymczasowo niedostępna.",
+			"hint": "Spróbuj później"
+		}
+	}
+}

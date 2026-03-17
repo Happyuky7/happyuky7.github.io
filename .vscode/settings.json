@@ -1,0 +1,19 @@
+{
+    // Keep the repo tidy in VS Code without affecting Vite build output.
+    // These folders are multi-page HTML entrypoints used by vite.config.ts.
+    "files.exclude": {
+        "**/dist": false,
+        "**/en": true,
+        "**/es": true,
+        "**/ja": true,
+        "**/fr": true,
+        "**/de": true,
+        "**/pt": true,
+        "**/pl": true,
+        "**/ru": true,
+        "**/zh": true,
+        "**/ko": true,
+        "**/th": true,
+        "**/fil": true
+    }
+}

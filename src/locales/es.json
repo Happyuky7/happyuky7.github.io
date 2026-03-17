@@ -1,0 +1,302 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "skills": "Skills",
+        "projects": "Proyectos",
+        "contact": "Contacto",
+        "blog": "Blog"
+    },
+        "seo": {
+            "siteName": "Happyuky7",
+            "description": "Sitio web, blog, proyectos y más. GitHub: https://github.com/Happyuky7"
+        },
+    "home": {
+        "available": "Disponible para nuevos proyectos",
+        "title-h1": "Hola, soy",
+        "view-projects": "Ver Proyectos",
+        "contact-me": "Contáctame",
+        "languages": {
+            "title": "Idiomas",
+            "subtitle": "Lo que hablo y lo que estoy aprendiendo.",
+            "spokenTitle": "Hablados",
+            "learningTitle": "Aprendiendo",
+            "items": {
+                "es-cl": {
+                    "name": "Español (Chile)",
+                    "note": "Nativo (primer idioma)"
+                },
+                "en": {
+                    "name": "Inglés",
+                    "note": "Buen nivel"
+                },
+                "ja": {
+                    "name": "Japonés",
+                    "note": "Nivel inicial"
+                },
+                "zh": {
+                    "name": "Chino mandarín (simplificado)",
+                    "note": "Sin experiencia práctica (por ahora)"
+                }
+            }
+        },
+        "skills": {
+            "title": "Skills",
+            "subtitle": "Tecnologías y herramientas que uso a menudo.",
+            "tabs": {
+                "all": "Todo",
+                "programming": "Lenguajes",
+                "tools": "Tools",
+                "creative": "Creativo",
+                "other": "Otros"
+            }
+        },
+        "about-paragraphs": [
+            "Soy desarrollador y creador de contenido, enfocado en crear **software útil** y proyectos reales. Trabajo con **JavaScript/Node.js** y **Java**, y también utilizo **Python** y **C++** según lo que requiera cada idea.",
+            "Me interesa la integración de **hardware con software** usando **ESP32** y **Raspberry Pi**, además de proyectos con **IA y LLMs** aplicados a herramientas y automatizaciones.",
+            "A veces comparto mi proceso en **Twitch** y **YouTube**, y publico **proyectos rápidos/código** en **X (Twitter)**."
+        ]
+    },
+    "footer": {
+        "rights": "Todos los derechos reservados.",
+        "made-with": "Hecho con",
+        "by": "por"
+    },
+    "relevantProjects": {
+        "title": "Proyectos relevantes",
+        "subtitle": "Una pequeña selección de proyectos de los que estoy orgulloso — curados y mejorando continuamente.",
+        "viewMore": "Ver más"
+    },
+    "projects": {
+        "title": "Proyectos",
+        "description": "Aquí hay algunos de mis proyectos.",
+        "searchPlaceholder": "Buscar proyectos por nombre, tags...",
+        "loading": "Cargando proyectos...",
+        "error": {
+            "loading": "Error al cargar los proyectos",
+            "description": "Hubo un problema al cargar los proyectos. Por favor, intenta recargar la página."
+        },
+        "refreshPage": "Recargar Página",
+        "filter": {
+            "title": "Filtrar Proyectos",
+            "description": "Selecciona una o más etiquetas para filtrar proyectos. Haz clic nuevamente para quitar el filtro.",
+            "allProjects": "Todos los Proyectos",
+            "activeFilters": "Filtros Activos:",
+            "clearAllFilters": "Limpiar Todos los Filtros"
+        },
+        "noProjectsWithFilters": "No hay proyectos con estos filtros",
+        "tryDifferentFilters": "Intenta seleccionar diferentes etiquetas o limpia todos los filtros.",
+        "noProjects": "No hay proyectos disponibles",
+        "noProjectsDescription": "No hay proyectos para mostrar en este momento.",
+        "noDescriptionAvailable": "No hay descripción disponible.",
+        "card": {
+            "nolinkavailable": {
+                "title": "Proyecto no disponible",
+                "description": "Lo sentimos, este proyecto no tiene un enlace disponible en este momento. Por favor, inténtalo más tarde."
+            }
+        },
+        "showing": "Mostrando",
+        "of": "de",
+        "projectsText": "proyectos"
+    },
+    "projectsDetails": {
+        "backToProjects": "Volver a Proyectos",
+        "loading": "Cargando detalles del proyecto...",
+        "error": {
+            "loading": "Error al cargar los detalles del proyecto",
+            "description": "Hubo un problema al cargar los detalles del proyecto. Por favor, intenta recargar la página."
+        },
+        "refreshPage": "Recargar Página",
+        "viewDemo": "Ver Demo",
+        "viewOnGithub": "Ver en GitHub",
+        "visitProject": "Visitar Proyecto",
+        "noReadme": "No hay README disponible para este proyecto",
+        "readmeError429": "README temporalmente no disponible (Límite de solicitudes excedido - Demasiadas solicitudes). Por favor, inténtalo más tarde.",
+        "readmeError404": "README no encontrado. El archivo puede haber sido movido o eliminado.",
+        "readmeErrorGeneric": "Error al cargar el README. Por favor, inténtalo más tarde.",
+        "readmeErrorInvalid": "Archivo README inválido. El archivo debe ser un Markdown válido (.md), no una página HTML u otro formato.",
+        "readmeNotTranslated": "Este README es del repositorio oficial y puede no estar disponible en tu idioma seleccionado."
+    },
+    "blog": {
+        "title": "Blog",
+        "description": "Lee mis últimos artículos y actualizaciones.",
+        "subtitle": "Lee mis últimos artículos y actualizaciones.",
+        "searchPlaceholder": "Buscar posts por título, id, tags...",
+        "minuteRead": "min lectura",
+        "readMore": "Leer más",
+        "noResults": "No se encontraron posts",
+        "noResultsDesc": "Prueba cambiando la búsqueda o los filtros.",
+        "clearFilters": "Limpiar Filtros",
+        "allCategories": "Todas las Categorías",
+        "allTags": "Todos los Tags",
+        "allYears": "Todos los Años",
+        "allMonths": "Todos los Meses",
+        "loading": "Cargando posts...",
+        "error": {
+            "loading": "Error al cargar los posts",
+            "description": "Hubo un problema al cargar los posts del blog. Por favor, intenta recargar la página."
+        },
+        "refreshPage": "Recargar Página",
+        "showing": "Mostrando",
+        "of": "de",
+        "postsText": "posts",
+        "postsPerPage": "Posts por página",
+        "backToBlog": "Volver al Blog",
+        "postNotFound": "Post no encontrado",
+        "tryAgain": "Intentar de nuevo",
+        "availableLanguages": "Idiomas disponibles",
+        "mainAuthor": "Autor principal",
+        "collaborators": "Colaboradores",
+        "translators": "Traductores",
+        "translatedBy": "Traducido por",
+        "share": "Compartir",
+        "shareAriaLabel": "Compartir este post",
+        "linkCopied": "Enlace copiado",
+        "sharePost": "Compartir Post",
+        "copyLink": "Copiar Enlace",
+        "shareDefaultText": "¡Mira este post!",
+        "tocTitle": "Tabla de contenidos",
+        "cite": {
+            "button": "Citar",
+            "buttonAriaLabel": "Cómo citar este post",
+            "modalTitle": "Cómo citar este post",
+            "modalSubtitle": "Copia una referencia lista para usar",
+            "close": "Cerrar",
+            "copy": "Copiar",
+            "copied": "Copiado",
+            "copyAriaLabel": "Copiar cita",
+            "apa7": "APA 7",
+            "mla": "MLA",
+            "chicago": "Chicago",
+            "bibtex": "BibTeX"
+        },
+        "translatorOf": "Traductor de",
+        "contentNotAvailableTitle": "Contenido No Disponible",
+        "contentNotAvailableDesc": "El contenido de este artículo aún no está disponible. Puede que el archivo no exista o esté en proceso de publicación. ¡Vuelve pronto!",
+        "viewAllArticles": "Ver Todos los Artículos",
+        "retry": "Reintentar",
+        "languageNotAvailable": "Idioma no disponible:",
+        "showingInstead": "Mostrando en su lugar:"
+    },
+    "categories": {
+        "all": "Todas las Categorías",
+        "tutorial": "Tutorial",
+        "development": "Desarrollo",
+        "technology": "Tecnología",
+        "programming": "Programación",
+        "lifestyle": "Estilo de vida",
+        "travel": "Viajes",
+        "food": "Comida",
+        "education": "Educación",
+        "health": "Salud",
+        "entertainment": "Entretenimiento",
+        "web-development": "Desarrollo Web",
+        "backend-development": "Desarrollo Backend",
+        "ai-ml": "IA y ML",
+        "anime-analysis": "Análisis de Anime",
+        "mathematics": "Matemáticas",
+        "security": "Seguridad",
+        "devops": "DevOps",
+        "photography": "Fotografía",
+        "personal": "Personal",
+        "3d-design": "Diseño 3D",
+        "language-learning": "Aprendizaje de Idiomas"
+    },
+    "contact": {
+        "title": "Contacto",
+        "description": "Ponte en contacto conmigo para colaboraciones o consultas.",
+        "socialMedia": "Sígueme y contactame en las redes sociales.",
+        "quickTitle": "Contacto directo",
+        "emailTitle": "Correo",
+        "xTitle": "X (Twitter)",
+        "discordTitle": "Discord",
+        "discordServerTitle": "Servidor de Discord",
+        "copy": "Copiar",
+        "copied": "Copiado",
+        "sendEmail": "Enviar",
+        "openX": "Abrir",
+        "openDiscord": "Abrir",
+        "responseTitle": "Tiempo de respuesta",
+        "responseText": "Normalmente respondo en",
+        "timezoneTitle": "Zona horaria",
+        "timezoneText": "Estoy en",
+        "formTitle": "Envíame un mensaje",
+        "formName": "Nombre",
+        "formEmail": "Correo",
+        "formMessage": "Cuéntame sobre tu idea o proyecto...",
+        "formHint": "Esto abrirá tu app de correo con el mensaje listo.",
+        "formButton": "Enviar mensaje"
+    },
+    "errors": {
+        "banner": "// manejador de errores :: portfolio",
+        "hintLabel": "pista",
+        "traceTitle": "info de debug:",
+        "actions": {
+            "back": "Volver",
+            "home": "Ir al inicio",
+            "retry": "Reintentar"
+        },
+        "common": {
+            "title": "Algo salió mal",
+            "message": "Ocurrió un error inesperado.",
+            "hint": "Vuelve atrás o recarga"
+        },
+        "400": {
+            "title": "Solicitud inválida",
+            "message": "La solicitud parece inválida.",
+            "hint": "Revisa la URL"
+        },
+        "401": {
+            "title": "No autorizado",
+            "message": "Necesitas iniciar sesión para continuar.",
+            "hint": "Inicia sesión y reintenta"
+        },
+        "403": {
+            "title": "Prohibido",
+            "message": "No tienes permiso para acceder a esta página.",
+            "hint": "Acceso denegado"
+        },
+        "404": {
+            "title": "Página no encontrada",
+            "message": "La página que buscas no existe (o fue movida).",
+            "hint": "Quizá la ruta está mal"
+        },
+        "408": {
+            "title": "Tiempo de espera agotado",
+            "message": "La respuesta tardó demasiado.",
+            "hint": "Reintenta la solicitud"
+        },
+        "429": {
+            "title": "Demasiadas solicitudes",
+            "message": "Estás siendo limitado por rate limit. Intenta de nuevo en un momento.",
+            "hint": "Espera un poco"
+        },
+        "500": {
+            "title": "Error del servidor",
+            "message": "Algo se rompió inesperadamente. Prueba recargando.",
+            "hint": "Recarga la página"
+        },
+        "502": {
+            "title": "Puerta de enlace incorrecta",
+            "message": "Un servicio upstream devolvió una respuesta inválida.",
+            "hint": "Intenta más tarde"
+        },
+        "503": {
+            "title": "Servicio no disponible",
+            "message": "El servicio no está disponible temporalmente.",
+            "hint": "Intenta más tarde"
+        }
+    },
+    "musicwidget": {
+        "music": "Música",
+        "queue": "Cola",
+        "songs": "Canciones",
+        "playlists": "Listas de reproducción",
+        "noTracks": "No hay pistas disponibles",
+        "playing": "Reproduciendo ahora",
+        "play": "Reproducir",
+        "pause": "Pausar",
+        "next": "Siguiente",
+        "previous": "Anterior",
+        "volume": "Volumen"
+    }
+}

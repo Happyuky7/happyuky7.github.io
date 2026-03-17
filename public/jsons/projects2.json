@@ -1,0 +1,194 @@
+[
+    {
+        "name": "SEPARE-WORLD-ITEMS",
+        "description": {
+            "en": "A Minecraft plugin for separating world items and managing inventory across different worlds",
+            "es": "Un plugin de Minecraft para separar items del mundo y gestionar el inventario entre diferentes mundos",
+            "jp": "異なるワールド間でアイテムとインベントリを管理するためのMinecraftプラグイン"
+        },
+        "image": null,
+        "link": "https://github.com/Happyuky7/SEPARE-WORLD-ITEMS",
+        "demo": null,
+        "github": "https://github.com/Happyuky7/SEPARE-WORLD-ITEMS",
+        "directLink": false,
+        "tags": [
+            {"name": "minecraft", "readable": true},
+            {"name": "plugin", "readable": true},
+            {"name": "java", "readable": true},
+            {"name": "spigot", "readable": true},
+            {"name": "bukkit", "readable": true},
+            {"name": "inventory", "readable": true}
+        ]
+    },
+    {
+        "name": "Awesome Project Example",
+        "description": {
+            "en": "A comprehensive example project showcasing modern web development with React, TypeScript, and cutting-edge technologies. Includes complete documentation with badges, images, code examples, and more.",
+            "es": "Un proyecto de ejemplo completo que muestra desarrollo web moderno con React, TypeScript y tecnologías de vanguardia. Incluye documentación completa con badges, imágenes, ejemplos de código y más.",
+            "jp": "React、TypeScript、最先端技術を使用した現代的なWeb開発を紹介する包括的なサンプルプロジェクト。バッジ、画像、コード例などを含む完全なドキュメントが含まれています。"
+        },
+        "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=450&fit=crop&q=80",
+        "link": "https://awesome-project.com",
+        "demo": "https://demo.awesome-project.com",
+        "github": "https://github.com/username/awesome-project",
+        "readme": "/projects-content/example-complete/example-complete.md",
+        "directLink": false,
+        "tags": [
+            {"name": "react", "readable": true},
+            {"name": "typescript", "readable": true},
+            {"name": "vite", "readable": true},
+            {"name": "tailwindcss", "readable": true},
+            {"name": "nodejs", "readable": true},
+            {"name": "postgresql", "readable": true},
+            {"name": "docker", "readable": true},
+            {"name": "frontend", "readable": true},
+            {"name": "fullstack", "readable": true}
+        ]
+    },
+    {
+        "tags": [
+            {"name": "test", "readable": true},
+            {"name": "uwu", "readable": true}
+        ]
+    },
+    {
+        "name": "React",
+        "description": {
+            "en": "The library for web and native user interfaces. A JavaScript library for building user interfaces with component-based architecture.",
+            "es": "La biblioteca para interfaces de usuario web y nativas. Una biblioteca JavaScript para construir interfaces de usuario con arquitectura basada en componentes.",
+            "jp": "ウェブおよびネイティブユーザーインターフェース用のライブラリ。コンポーネントベースのアーキテクチャでユーザーインターフェースを構築するためのJavaScriptライブラリ。"
+        },
+        "image": "https://repository-images.githubusercontent.com/10270250/9e3c5080-bbf8-11e9-8a60-1b0ef1b4781e",
+        "github": "https://github.com/facebook/react",
+        "link": "https://react.dev",
+        "demo": "https://react.dev/learn",
+        "readme": "https://raw.githubusercontent.com/facebook/react/refs/heads/main/README.md",
+        "directLink": false,
+        "tags": [
+            {"name": "javascript", "readable": true},
+            {"name": "react", "readable": true},
+            {"name": "ui", "readable": true},
+            {"name": "frontend", "readable": true},
+            {"name": "library", "readable": true}
+        ]
+    },
+    {
+        "name": "All options Projects (Description multi-language | No direct link | No readme link)",
+        "description": {
+            "en": "A collection of projects using OpenAI's API",
+            "es": "Una colección de proyectos que utilizan la API de OpenAI"
+        },
+        "image": "https://c.tenor.com/3Y2bYI6J8XIAAAAC/robot-ai.gif",
+        "link": "all-openai-projects.html",
+        "directLink": false,
+        "github": "https://github.com/yourusername/all-openai-projects",
+        "demo": "https://yourusername.github.io/all-openai-projects/",
+        "tags": [
+            {"name": "openai", "readable": true},
+            {"name": "api", "readable": true},
+            {"name": "collection", "readable": true}
+        ]
+    },
+    {
+        "name": "All options Projects (Description multi-language | No direct link | No readme link)",
+        "description": {
+            "en": "A collection of projects using OpenAI's API",
+            "es": "Una colección de proyectos que utilizan la API de OpenAI"
+        },
+        "image": "https://c.tenor.com/3Y2bYI6J8XIAAAAC/robot-ai.gif",
+        "link": "all-openai-projects.html",
+        "directLink": false,
+        "github": "https://github.com/yourusername/all-openai-projects",
+        "demo": "https://yourusername.github.io/all-openai-projects/",
+        "readme": "https://yourusername.github.io/all-openai-projects/README.md",
+        "tags": [
+            {"name": "openai", "readable": true},
+            {"name": "api", "readable": true},
+            {"name": "collection", "readable": true}
+        ]
+    },
+    {
+        "name": "All options Projects (Description multi-language | Direct link)",
+        "description": {
+            "en": "A collection of projects using OpenAI's API",
+            "es": "Una colección de proyectos que utilizan la API de OpenAI"
+        },
+        "image": "https://c.tenor.com/3Y2bYI6J8XIAAAAC/robot-ai.gif",
+        "link": "all-openai-projects.html",
+        "directLink": true,
+        "tags": [
+            {"name": "openai", "readable": true},
+            {"name": "api", "readable": true},
+            {"name": "collection", "readable": true}
+        ]
+    },
+    {
+        "name": "Project 1",
+        "description": {
+            "en": "This is project 1",
+            "es": "Este es el proyecto 1"
+        },
+        "image": "",
+        "link": "project1.html",
+        "tags": [
+            {"name": "web", "readable": true},
+            {"name": "javascript", "readable": true}
+        ]
+    },
+    {
+        "name": "Project 2",
+        "description": {
+            "en": "This is project 2",
+            "es": "Este es el proyecto 2"
+        },
+        "image": "",
+        "link": "",
+        "tags": [
+            {"name": "python", "readable": true}
+        ]
+    },
+    {
+        "name": "Project 3",
+        "description": {
+            "en": "This is project 3",
+            "es": "Este es el proyecto 3"
+        },
+        "image": null,
+        "link": "project3.html",
+        "tags": [
+            {"name": "others", "readable": true},
+            {"name": "python", "readable": true},
+            {"name": "sadas", "readable": true},
+            {"name": "more1", "readable": true},
+            {"name": "more2", "readable": true},
+            {"name": "more3", "readable": true},
+            {"name": "more4", "readable": true},
+            {"name": "more5", "readable": true},
+            {"name": "more6", "readable": true}
+        ]
+    },
+    {
+        "name": "Task Manager App",
+        "description": {
+            "en": "A modern task management application built with React and TypeScript. Features include task creation, editing, categorization, search, and dark mode support.",
+            "es": "Una aplicación moderna de gestión de tareas construida con React y TypeScript. Incluye creación de tareas, edición, categorización, búsqueda y soporte para modo oscuro.",
+            "jp": "ReactとTypeScriptで構築されたモダンなタスク管理アプリケーション。タスクの作成、編集、分類、検索、ダークモードサポートが含まれています。"
+        },
+        "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=400&fit=crop",
+        "github": "https://github.com/yourusername/task-manager-app",
+        "link": "https://yourusername.github.io/task-manager-app/",
+        "demo": "https://yourusername.github.io/task-manager-app/",
+        "readme": "/projects-content/task-manager-app/task-manager-app.md",
+        "directLink": false,
+        "tags": [
+            {"name": "react", "readable": true},
+            {"name": "typescript", "readable": true},
+            {"name": "tailwindcss", "readable": true},
+            {"name": "task-management", "readable": true},
+            {"name": "frontend", "readable": true},
+            {"name": "responsive", "readable": true},
+            {"name": "dark-mode", "readable": true},
+            {"name": "localStorage", "readable": true}
+        ]
+    }
+]

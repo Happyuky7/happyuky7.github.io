@@ -1,0 +1,267 @@
+{
+	"seo": {
+		"siteName": "Happyuky7",
+		"description": "Website, Blog, Projects at iba pa. GitHub: https://github.com/Happyuky7"
+	},
+	"nav": {
+		"home": "Home",
+		"skills": "Kasanayan",
+		"projects": "Mga Proyekto",
+		"contact": "Makipag-ugnayan",
+		"blog": "Blog"
+	},
+	"home": {
+		"available": "Available para sa bagong projects",
+		"title-h1": "Hi, ako si",
+		"view-projects": "Tingnan ang mga Proyekto",
+		"contact-me": "Makipag-ugnayan",
+		"skills": {
+			"title": "Kasanayan",
+			"subtitle": "Tech at tools na madalas kong ginagamit.",
+			"tabs": {
+				"all": "Lahat",
+				"programming": "Mga Wika",
+				"tools": "Tools",
+				"creative": "Creative",
+				"other": "Iba pa"
+			}
+		},
+		"about-paragraphs": [
+			"Ako ay developer at content creator na nakatuon sa paggawa ng **kapaki-pakinabang na software** at tunay na projects. Gumagamit ako ng **JavaScript/Node.js** at **Java**, at gumagamit din ng **Python** at **C++** depende sa requirements ng bawat idea.",
+			"Interesado ako sa pag-integrate ng **hardware at software** gamit ang **ESP32** at **Raspberry Pi**, pati na rin sa **AI at LLMs** na ina-apply sa tools at automation.",
+			"Minsan, shinashare ko ang process ko sa **Twitch** at **YouTube**, at nagpo-post ng **quick projects/code** sa **X (Twitter)**."
+		]
+	},
+	"footer": {
+		"rights": "All rights reserved.",
+		"made-with": "Made with",
+		"by": "by"
+	},
+	"relevantProjects": {
+		"title": "Mga relevant na proyekto",
+		"subtitle": "Isang maliit na selection ng projects na ipinagmamalaki ko — curated at laging pinapabuti.",
+		"viewMore": "Tingnan pa"
+	},
+	"projects": {
+		"title": "Mga Proyekto",
+		"description": "Narito ang ilan sa mga proyekto ko.",
+		"searchPlaceholder": "Maghanap ng projects ayon sa pangalan, tags…",
+		"loading": "Loading projects…",
+		"error": {
+			"loading": "Error sa pag-load ng projects",
+			"description": "Nagkaroon ng problema sa pag-load ng projects. Paki-refresh ang page.",
+			"noProjects": "Walang available na projects",
+			"noProjectsDescription": "Walang projects na maipapakita ngayon."
+		},
+		"refreshPage": "I-refresh ang page",
+		"filter": {
+			"title": "I-filter ang Projects",
+			"description": "Pumili ng isa o higit pang tags para i-filter ang projects. I-click ulit para alisin ang filter.",
+			"allProjects": "Lahat ng Projects",
+			"activeFilters": "Active Filters:",
+			"clearAllFilters": "I-clear lahat ng filters"
+		},
+		"noProjectsWithFilters": "Walang projects na tugma sa filters",
+		"tryDifferentFilters": "Subukang pumili ng ibang tags o i-clear lahat ng filters.",
+		"noProjects": "Walang available na projects",
+		"noProjectsDescription": "Walang projects na maipapakita ngayon.",
+		"noDescriptionAvailable": "Walang description.",
+		"card": {
+			"nolinkavailable": {
+				"title": "Hindi available ang Project",
+				"description": "Pasensya, walang link na available para sa project na ito ngayon. Subukan ulit mamaya."
+			}
+		},
+		"showing": "Showing",
+		"of": "of",
+		"projectsText": "projects"
+	},
+	"projectsDetails": {
+		"backToProjects": "Bumalik sa Projects",
+		"loading": "Loading project details…",
+		"error": {
+			"loading": "Error sa pag-load ng project details",
+			"description": "Nagkaroon ng problema sa pag-load ng project details. Paki-refresh ang page."
+		},
+		"refreshPage": "I-refresh ang page",
+		"viewDemo": "Tingnan ang Demo",
+		"viewOnGithub": "Tingnan sa GitHub",
+		"visitProject": "Bisitahin ang Project",
+		"noReadme": "Walang README para sa project na ito",
+		"readmeError429": "Lumampas sa rate limit. Subukan ulit mamaya.",
+		"readmeError404": "Hindi nahanap ang README file",
+		"readmeErrorInvalid": "Invalid na README format",
+		"readmeErrorGeneric": "Error sa pag-load ng README",
+		"readmeNotTranslated": "Ang README na ito ay available lang sa English at hindi pa naisalin."
+	},
+	"blog": {
+		"title": "Blog",
+		"description": "Basahin ang mga latest articles at updates ko.",
+		"subtitle": "Basahin ang mga latest articles at updates ko.",
+		"searchPlaceholder": "Maghanap ng posts ayon sa title, id, tags…",
+		"minuteRead": "min read",
+		"readMore": "Basahin pa",
+		"noResults": "Walang nahanap na posts",
+		"noResultsDesc": "Subukang i-adjust ang search o filters.",
+		"clearFilters": "I-clear ang Filters",
+		"allCategories": "Lahat ng Categories",
+		"allTags": "Lahat ng Tags",
+		"allYears": "Lahat ng Years",
+		"allMonths": "Lahat ng Months",
+		"loading": "Loading posts…",
+		"error": {
+			"loading": "Error sa pag-load ng posts",
+			"description": "Nagkaroon ng problema sa pag-load ng blog posts. Paki-refresh ang page."
+		},
+		"refreshPage": "I-refresh ang page",
+		"showing": "Showing",
+		"of": "of",
+		"postsText": "posts",
+		"postsPerPage": "Posts per page",
+		"backToBlog": "Bumalik sa Blog",
+		"postNotFound": "Hindi nahanap ang post",
+		"tryAgain": "Subukan ulit",
+		"availableLanguages": "Available na languages",
+		"mainAuthor": "Main author",
+		"collaborators": "Collaborators",
+		"translators": "Translators",
+		"translatedBy": "Translated by",
+		"share": "I-share",
+		"shareAriaLabel": "I-share ang post na ito",
+		"linkCopied": "Nakopya ang link",
+		"sharePost": "I-share ang Post",
+		"copyLink": "Kopyahin ang Link",
+		"shareDefaultText": "Tingnan ang blog post na ito!",
+		"tocTitle": "Contents",
+		"cite": {
+			"button": "Cite",
+			"buttonAriaLabel": "Paano i-cite ang post na ito",
+			"modalTitle": "Paano i-cite ang post na ito",
+			"modalSubtitle": "Kopyahin ang ready-to-use na reference",
+			"close": "Isara",
+			"copy": "Kopyahin",
+			"copied": "Nakopya",
+			"copyAriaLabel": "Kopyahin ang citation",
+			"apa7": "APA 7",
+			"mla": "MLA",
+			"chicago": "Chicago",
+			"bibtex": "BibTeX"
+		},
+		"translatorOf": "Translator of",
+		"contentNotAvailableTitle": "Walang available na content",
+		"contentNotAvailableDesc": "Hindi pa available ang content para sa article na ito. Maaaring wala ang file o nasa paggawa pa. Subukan ulit soon!",
+		"viewAllArticles": "Tingnan lahat ng articles",
+		"retry": "Retry",
+		"languageNotAvailable": "Hindi available ang language:",
+		"showingInstead": "Ito ang ipapakita:"
+	},
+	"categories": {
+		"all": "Lahat ng Categories",
+		"tutorial": "Tutorial",
+		"development": "Development",
+		"technology": "Technology",
+		"programming": "Programming",
+		"lifestyle": "Lifestyle",
+		"travel": "Travel",
+		"food": "Food",
+		"education": "Education",
+		"health": "Health",
+		"entertainment": "Entertainment",
+		"web-development": "Web Development",
+		"backend-development": "Backend Development",
+		"ai-ml": "AI & ML",
+		"anime-analysis": "Anime Analysis",
+		"mathematics": "Mathematics",
+		"security": "Security",
+		"devops": "DevOps",
+		"photography": "Photography",
+		"personal": "Personal",
+		"3d-design": "3D Design",
+		"language-learning": "Language Learning"
+	},
+	"contact": {
+		"title": "Makipag-ugnayan",
+		"description": "Makipag-ugnayan para sa collaborations o inquiries.",
+		"socialMedia": "I-follow ako at makipag-ugnayan sa social media.",
+		"quickTitle": "Direct Contact",
+		"emailTitle": "Email",
+		"xTitle": "X (Twitter)",
+		"discordTitle": "Discord",
+		"discordServerTitle": "Discord Server",
+		"copy": "Kopyahin",
+		"copied": "Nakopya",
+		"sendEmail": "Send",
+		"openX": "Open",
+		"openDiscord": "Open",
+		"responseTitle": "Response Time",
+		"responseText": "Karaniwan akong sumasagot sa loob ng",
+		"timezoneTitle": "Time Zone",
+		"timezoneText": "Nasa",
+		"formTitle": "Magpadala ng mensahe",
+		"formName": "Pangalan",
+		"formEmail": "Email",
+		"formMessage": "Ikwento ang idea o project mo…",
+		"formHint": "Bubukas ang email app mo na ready na ang message.",
+		"formButton": "Send Message"
+	},
+	"errors": {
+		"banner": "// error handler :: portfolio",
+		"hintLabel": "hint",
+		"traceTitle": "debug info:",
+		"actions": {
+			"back": "Bumalik",
+			"home": "Home",
+			"retry": "Retry"
+		},
+		"common": {
+			"title": "May nangyaring mali",
+			"message": "May hindi inaasahang error.",
+			"hint": "Bumalik o i-reload"
+		},
+		"400": {
+			"title": "Bad request",
+			"message": "Mukhang invalid ang request.",
+			"hint": "I-check ang URL"
+		},
+		"401": {
+			"title": "Unauthorized",
+			"message": "Kailangan mong mag-sign in para magpatuloy.",
+			"hint": "Mag-sign in at subukan ulit"
+		},
+		"403": {
+			"title": "Forbidden",
+			"message": "Wala kang permission para ma-access ang page na ito.",
+			"hint": "Access denied"
+		},
+		"404": {
+			"title": "Page not found",
+			"message": "Ang page na hinahanap mo ay wala (o nailipat).",
+			"hint": "Baka maling path"
+		},
+		"408": {
+			"title": "Request timeout",
+			"message": "Sobrang tagal bago sumagot.",
+			"hint": "Subukan ulit"
+		},
+		"429": {
+			"title": "Too many requests",
+			"message": "Na-rate limit ka. Subukan ulit maya-maya.",
+			"hint": "Maghintay muna"
+		},
+		"500": {
+			"title": "Server error",
+			"message": "May nasira nang hindi inaasahan. Subukang i-refresh.",
+			"hint": "I-reload ang page"
+		},
+		"502": {
+			"title": "Bad gateway",
+			"message": "Nagbalik ng invalid response ang upstream service.",
+			"hint": "Subukan ulit mamaya"
+		},
+		"503": {
+			"title": "Service unavailable",
+			"message": "Temporary na unavailable ang service.",
+			"hint": "Subukan ulit mamaya"
+		}
+	}
+}

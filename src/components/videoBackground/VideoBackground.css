@@ -1,0 +1,3 @@
+.vb-image-render-auto { image-rendering: auto; }
+.vb-image-render-crisp { image-rendering: crisp-edges; }
+.vb-image-render-pixel { image-rendering: pixelated; }
