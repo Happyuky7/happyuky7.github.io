@@ -35,7 +35,13 @@ jobs:
       - name: Compute deploy env
         shell: bash
         run: |
-          if [ -f public/CNAME ]; then
+          if [ -f CNAME ]; then
+            CNAME=$(tr -d '\r\n' < CNAME)
+            echo "VITE_BASE=/" >> $GITHUB_ENV
+            echo "SITE_URL=https://$CNAME" >> $GITHUB_ENV
+            echo "VITE_SITE_URL=https://$CNAME" >> $GITHUB_ENV
+            echo "Using custom domain (root CNAME): $CNAME"
+          elif [ -f public/CNAME ]; then
             CNAME=$(tr -d '\r\n' < public/CNAME)
             echo "VITE_BASE=/" >> $GITHUB_ENV
             echo "SITE_URL=https://$CNAME" >> $GITHUB_ENV
