@@ -743,16 +743,69 @@ export default function MusicWidget() {
         */
         .mw-panel {
           max-height: calc(100dvh - 7rem);
+          max-width: calc(100vw - 1.5rem);
           overflow-y: auto;
+          overflow-x: hidden;
           overscroll-behavior: contain;
+          position: absolute;
+          bottom: 5rem;
+          left: 0.75rem;
+          right: 0.75rem;
         }
-        @media (orientation: landscape) and (max-height: 520px) {
+        /* Desktop (md breakpoint and up) */
+        @media (min-width: 768px) {
           .mw-panel {
-            left: 0.75rem !important;
-            right: 0.75rem !important;
+            bottom: 1rem;
+            left: 50%;
+            right: auto;
+            width: min(94vw, 920px);
+            transform: translateX(-50%);
+          }
+        }
+        /* Mobile landscape (all widths in landscape) */
+        @media (orientation: landscape) and (max-width: 1024px) {
+          .mw-panel {
+            position: fixed !important;
+            left: 50% !important;
+            right: auto !important;
+            bottom: 4.25rem !important;
+            width: min(35rem, calc(100vw - 1rem)) !important;
+            max-width: calc(100vw - 1rem) !important;
+            transform: translateX(-50%) !important;
+            max-height: calc(100dvh - 5rem) !important;
+          }
+          .mw-header {
+            gap: 0.5rem;
+          }
+          .mw-track-cover {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.75rem;
+          }
+          .mw-track-title {
+            font-size: 0.95rem;
+          }
+          .mw-track-artist {
+            display: none;
+          }
+          .mw-controls-row {
+            gap: 0.35rem;
+          }
+          .mw-controls-divider {
+            display: none;
+          }
+          .mw-queue-label {
+            display: none;
+          }
+          .mw-time {
+            width: 2rem;
+          }
+        }
+        /* Extra short landscape (max-height 520px) */
+        @media (orientation: landscape) and (max-height: 520px) and (max-width: 1024px) {
+          .mw-panel {
             bottom: 4.5rem !important;
-            width: auto !important;
-            transform: none !important;
+            max-height: calc(100dvh - 5.5rem) !important;
           }
         }
 
@@ -789,6 +842,14 @@ export default function MusicWidget() {
           background: rgba(255,255,255,0.12);
           border-radius: 999px;
         }
+        
+        /* Base mobile positioning */
+        .mw-panel {
+          position: absolute;
+          bottom: 5rem;
+          left: 0.75rem;
+          right: 0.75rem;
+        }
       `}</style>
 
       <div className="pointer-events-auto absolute bottom-4 left-4">
@@ -810,12 +871,12 @@ export default function MusicWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.985 }}
             transition={{ duration: 0.2 }}
-            className="mw-panel mw-no-scrollbar pointer-events-auto absolute bottom-20 left-3 right-3 rounded-[1.45rem] border border-white/10 bg-[#091317]/80 px-4 py-4 text-white shadow-[0_22px_70px_rgba(0,0,0,0.52)] backdrop-blur-2xl sm:bottom-4 sm:left-1/2 sm:right-auto sm:w-[min(94vw,920px)] sm:-translate-x-1/2 sm:rounded-[1.6rem] sm:px-5"
+            className="mw-panel mw-no-scrollbar pointer-events-auto rounded-[1.45rem] border border-white/10 bg-[#091317]/80 px-4 py-4 text-white shadow-[0_22px_70px_rgba(0,0,0,0.52)] backdrop-blur-2xl md:rounded-[1.6rem] md:px-5"
             style={{ boxShadow: `0 22px 70px rgba(0,0,0,0.52), 0 0 0 1px rgba(255,255,255,0.04), 0 0 30px rgba(${ACCENT.rgb}, 0.08)` }}
           >
             <div className="flex flex-col gap-3">
               <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-                <div className="flex min-w-0 items-center gap-3 sm:gap-4">
+                <div className="mw-header flex min-w-0 items-center gap-3 sm:gap-4">
                   {currentCover ? (
                     <motion.img
                       key={currentCover}
@@ -824,13 +885,13 @@ export default function MusicWidget() {
                       initial={{ opacity: 0.4, scale: 0.96 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.25 }}
-                      className={`h-12 w-12 shrink-0 rounded-2xl ring-1 ring-white/10 sm:h-14 sm:w-14 ${
+                      className={`mw-track-cover h-12 w-12 shrink-0 rounded-2xl ring-1 ring-white/10 sm:h-14 sm:w-14 ${
                         isEmbeddedCurrentCover ? "bg-[#0b171c] p-1 object-contain" : "object-cover"
                       }`}
                     />
                   ) : (
                     <div
-                      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ring-1 ring-white/10 sm:h-14 sm:w-14"
+                      className="mw-track-cover flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ring-1 ring-white/10 sm:h-14 sm:w-14"
                       style={{ backgroundColor: accentSoft }}
                     >
                       <LuMusic2 className="h-5 w-5" style={{ color: ACCENT.color }} />
@@ -842,15 +903,15 @@ export default function MusicWidget() {
                       <LuMusic2 className="h-3.5 w-3.5" style={{ color: ACCENT.color }} />
                       Música
                     </div>
-                    <p className="truncate text-sm font-semibold sm:text-base md:text-lg">
+                    <p className="mw-track-title truncate text-sm font-semibold sm:text-base md:text-lg">
                       {currentTrack?.title ?? (tracks.length ? "Sin título" : "Sin tracks")}
                     </p>
-                    <p className="truncate text-xs text-white/60 sm:text-sm">{currentTrack?.artist ?? ""}</p>
+                    <p className="mw-track-artist truncate text-xs text-white/60 sm:text-sm">{currentTrack?.artist ?? ""}</p>
                   </div>
                 </div>
 
                 <div className="w-full md:w-auto">
-                  <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 md:justify-end">
+                  <div className="mw-controls-row mw-no-scrollbar flex items-center gap-2 sm:gap-2.5 md:justify-end">
                     <button
                       onClick={prevTrack}
                       className="rounded-full border border-white/10 bg-white/5 p-2 transition hover:bg-white/10 disabled:opacity-50"
@@ -911,7 +972,7 @@ export default function MusicWidget() {
                       <LuShuffle className="h-4 w-4" />
                     </button>
 
-                    <div className="mx-1 h-5 w-px shrink-0 bg-white/10 sm:h-6" />
+                    <div className="mw-controls-divider mx-1 h-5 w-px shrink-0 bg-white/10 sm:h-6" />
 
                     <div className="relative">
                       <button
@@ -963,7 +1024,7 @@ export default function MusicWidget() {
 
                     <button
                       onClick={() => togglePanel("queue")}
-                      className="inline-flex items-center gap-2 rounded-full border px-2.5 py-2 text-xs font-medium transition hover:bg-white/10 sm:px-3 sm:text-[13px]"
+                      className="inline-flex shrink-0 items-center gap-2 rounded-full border px-2.5 py-2 text-xs font-medium transition hover:bg-white/10 sm:px-3 sm:text-[13px]"
                       style={
                         activePanel === "queue"
                           ? { borderColor: accentBorder, backgroundColor: accentSoft, color: ACCENT.color }
@@ -973,15 +1034,15 @@ export default function MusicWidget() {
                       type="button"
                     >
                       <LuListMusic className="h-4 w-4" />
-                      <span className="hidden sm:inline">Cola</span>
+                      <span className="mw-queue-label hidden sm:inline">Cola</span>
                       <span className="rounded-full bg-white/10 px-1.5 py-0.5 text-[10px] text-white/60">{tracks.length}</span>
                     </button>
                   </div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 sm:gap-3">
-                <span className="w-9 shrink-0 text-[10px] text-white/45 sm:w-10 sm:text-[11px]">{formatTime(currentTime)}</span>
+              <div className="mw-progress-row flex items-center gap-2 sm:gap-3">
+                <span className="mw-time w-9 shrink-0 text-[10px] text-white/45 sm:w-10 sm:text-[11px]">{formatTime(currentTime)}</span>
                 <input
                   className="mw-slider"
                   type="range"
@@ -997,7 +1058,7 @@ export default function MusicWidget() {
                   }}
                   style={{ background: progressGradient }}
                 />
-                <span className="w-9 shrink-0 text-right text-[10px] text-white/45 sm:w-10 sm:text-[11px]">{formatTime(duration)}</span>
+                <span className="mw-time w-9 shrink-0 text-right text-[10px] text-white/45 sm:w-10 sm:text-[11px]">{formatTime(duration)}</span>
               </div>
 
               <AnimatePresence>
@@ -1031,13 +1092,7 @@ export default function MusicWidget() {
                       </div>
                     </div>
 
-                    <div
-                      className={
-                        tracks.length > 3
-                          ? "mw-queue-scroll max-h-52 overflow-y-auto pr-1"
-                          : "pr-1"
-                      }
-                    >
+                    <div className={tracks.length > 3 ? "mw-queue-scroll max-h-[38dvh] overflow-y-auto pr-1 sm:max-h-52" : "pr-1"}>
                       {tracks.map((track, index) => {
                         const active = index === currentIndex;
                         const resolvedSrc = resolveTrackSrc(track, selectedPlaylist?.basePath);

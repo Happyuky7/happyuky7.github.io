@@ -85,7 +85,7 @@ const ProjectReadme: React.FC<ProjectReadmeProps> = ({ readme, readmeError, read
                 <h2 className="text-2xl font-bold">README</h2>
               </div>
               
-              <div className="prose prose-invert prose-lg max-w-none prose-headings:text-left prose-p:text-left prose-ul:text-left prose-ol:text-left prose-li:text-left prose-blockquote:text-left prose-table:text-left">
+              <div className="prose prose-invert prose-lg max-w-none overflow-x-hidden wrap-break-word prose-headings:text-left prose-p:text-left prose-ul:text-left prose-ol:text-left prose-li:text-left prose-blockquote:text-left prose-table:text-left">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   rehypePlugins={[rehypeHighlight]}
@@ -210,8 +210,8 @@ const ProjectReadme: React.FC<ProjectReadmeProps> = ({ readme, readmeError, read
                     h2: ({ node, ...props }) => <h2 className="text-3xl font-bold mb-4 mt-6 text-white text-left wrap-break-word" {...props} />,
                     h3: ({ node, ...props }) => <h3 className="text-2xl font-bold mb-3 mt-4 text-white text-left wrap-break-word" {...props} />,
                     p: ({ node, ...props }) => <p className="text-gray-300 mb-4 leading-relaxed text-left wrap-break-word" {...props} />,
-                    ul: ({ node, ...props }) => <ul className="list-disc list-inside mb-4 text-gray-300 space-y-2 text-left" {...props} />,
-                    ol: ({ node, ...props }) => <ol className="list-decimal list-inside mb-4 text-gray-300 space-y-2 text-left" {...props} />,
+                    ul: ({ node, ...props }) => <ul className="list-disc list-inside mb-4 text-gray-300 space-y-2 text-left wrap-break-word" {...props} />,
+                    ol: ({ node, ...props }) => <ol className="list-decimal list-inside mb-4 text-gray-300 space-y-2 text-left wrap-break-word" {...props} />,
                     blockquote: ({ node, ...props }) => (
                       <blockquote className="border-l-4 border-primary pl-4 italic text-gray-400 my-4 text-left" {...props} />
                     ),
@@ -301,7 +301,7 @@ const ProjectReadme: React.FC<ProjectReadmeProps> = ({ readme, readmeError, read
                     td: ({ node, ...props }) => <td className="border border-primary/20 px-4 py-2 text-gray-300" {...props} />,
                     code: ({ node, inline, className, children, ...props }: any) => {
                       if (inline) {
-                        return <code className="bg-dark-lighter px-2 py-1 rounded text-primary font-mono text-sm" {...props}>{children}</code>;
+                        return <code className="bg-dark-lighter px-2 py-1 rounded text-primary font-mono text-sm break-all" {...props}>{children}</code>;
                       }
                       return <CodeBlock className={className} {...props}>{children}</CodeBlock>;
                     },

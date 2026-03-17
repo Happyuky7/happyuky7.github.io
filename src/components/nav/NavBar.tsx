@@ -147,11 +147,11 @@ const NavBar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to={withLang("/")} className="flex min-w-0 items-center space-x-3 group">
+          <Link to={withLang("/")} className="navbar-brand flex min-w-0 flex-1 items-center space-x-3 group pr-2 lg:flex-none lg:pr-0">
             <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full overflow-hidden ring-2 ring-primary/50 group-hover:ring-primary transition-all">
               <img src={publicPath('/assets/img/logo.png')} alt="Happy7" className="w-full h-full object-cover" loading="eager" decoding="async" />
             </div>
-            <span className="max-w-[40vw] truncate text-2xl font-bold bg-linear-to-r from-primary to-blue-500 bg-clip-text text-transparent">
+            <span className="navbar-brand-text whitespace-nowrap text-xl sm:text-2xl font-bold bg-linear-to-r from-primary to-blue-500 bg-clip-text text-transparent">
               Happyuky7
             </span>
           </Link>
@@ -218,11 +218,11 @@ const NavBar: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button + Language Selector */}
-          <div className="navbar-mobile-controls flex items-center gap-2 lg:hidden">
+          <div className="navbar-mobile-controls shrink-0 flex items-center gap-2 lg:hidden max-[430px]:gap-1">
             <LanguageSelector />
             <label
               title={mode === "static" ? "Animated background" : "Static background"}
-                className="flex items-center gap-2 px-2 py-2 rounded-lg bg-dark-lighter hover:bg-primary/20 transition-all duration-300 border border-primary/30 cursor-pointer select-none max-[360px]:hidden"
+                className="navbar-mobile-bg-toggle flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-lighter hover:bg-primary/20 transition-all duration-300 border border-primary/30 cursor-pointer select-none"
             >
               <input
                 type="checkbox"
@@ -244,7 +244,7 @@ const NavBar: React.FC = () => {
             </label>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-white text-3xl focus:outline-none hover:text-primary transition-colors"
+              className="text-white text-3xl focus:outline-none hover:text-primary transition-colors max-[430px]:text-2xl"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <HiX /> : <HiMenu />}
