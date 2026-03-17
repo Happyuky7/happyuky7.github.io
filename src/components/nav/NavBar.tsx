@@ -28,7 +28,7 @@ const NavBar: React.FC = () => {
 
   // ✅ helper para detectar activo ignorando /en /es /ja
   const stripLangPrefix = (pathname: string) => {
-    return pathname.replace(/^\/(en|es|ja|zh|pt|pl|de|ru|th|fil|fr|ko)(\/|$)/, "/");
+    return pathname.replace(/^\/(en|es|ja|jp|zh|pt|pl|de|ru|th|fil|fr|ko)(\/|$)/, "/");
   };
 
   useEffect(() => {

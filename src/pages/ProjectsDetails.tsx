@@ -263,7 +263,7 @@ const ProjectsDetails: React.FC = () => {
             
             // Determine if it's a local file or external URL
             const isLocalFile = !readmePath.startsWith('http');
-            const supportedLangPrefix = /^\/(en|es|ja|zh|pt|pl|de|ru|th|fil|fr|ko)\//i;
+            const supportedLangPrefix = /^\/(en|es|ja|jp|zh|pt|pl|de|ru|th|fil|fr|ko)\//i;
             const normalizedPath = isLocalFile ? readmePath.replace(supportedLangPrefix, '/') : readmePath;
 
             const candidates = isLocalFile

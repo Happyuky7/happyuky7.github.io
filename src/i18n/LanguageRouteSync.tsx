@@ -4,8 +4,10 @@ import { useLanguage } from "./LanguageContext";
 
 function getLangFromPath(pathname: string): string | null {
   // match: /en, /es, /ja
-  const match = pathname.match(/^\/(en|es|ja|zh|pt|pl|de|ru|th|fil|fr|ko)(\/|$)/);
-  return match?.[1] ?? null;
+  const match = pathname.match(/^\/(en|es|ja|jp|zh|pt|pl|de|ru|th|fil|fr|ko)(\/|$)/);
+  const lang = match?.[1] ?? null;
+  // Legacy alias: /jp/* should behave like Japanese (/ja/*)
+  return lang === 'jp' ? 'ja' : lang;
 }
 
 export default function LanguageRouteSync() {

@@ -841,6 +841,7 @@ export default defineConfig(({ mode }) => {
           en: resolve(__dirname, 'en/index.html'),
           es: resolve(__dirname, 'es/index.html'),
           ja: resolve(__dirname, 'ja/index.html'),
+          jp: resolve(__dirname, 'jp/index.html'),
           fr: resolve(__dirname, 'fr/index.html'),
           de: resolve(__dirname, 'de/index.html'),
           pt: resolve(__dirname, 'pt/index.html'),

@@ -28,7 +28,7 @@ let cachePromiseBlog: Promise<any[] | null> | null = null;
 let cachePromiseProjects: Promise<any[] | null> | null = null;
 
 function stripLangPrefix(pathname: string) {
-  return (pathname || '/').replace(/^\/(en|es|ja|zh|pt|pl|de|ru|th|fil|fr|ko)(\/|$)/, '/');
+  return (pathname || '/').replace(/^\/(en|es|ja|jp|zh|pt|pl|de|ru|th|fil|fr|ko)(\/|$)/, '/');
 }
 
 function normalizePath(pathname: string) {

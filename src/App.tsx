@@ -30,9 +30,10 @@ const DevProjectsEditorEditor = import.meta.env.DEV ? lazy(() => import("./dev/P
 
 function getPreferredLang() {
   const saved = localStorage.getItem("language");
+  const savedNorm = (saved || '').toLowerCase() === 'jp' ? 'ja' : saved;
   const browser = navigator.language.split("-")[0];
   const supported = ["en", "es", "ja", "fr", "de", "pt", "pl", "ru", "zh", "ko", "th", "fil"];
-  return saved || (supported.includes(browser) ? browser : "en");
+  return savedNorm || (supported.includes(browser) ? browser : "en");
 }
 
 /*function RedirectMissingBlogPrefix() {
@@ -47,8 +48,14 @@ function getPreferredLang() {
 
 function LangGuard({ children }: { children: React.ReactNode }) {
   const { lang } = useParams();
+  const location = useLocation();
 
   const supported = ["en", "es", "ja", "fr", "de", "pt", "pl", "ru", "zh", "ko", "th", "fil"];
+  // Legacy alias: redirect /jp/* to /ja/*
+  if (lang && lang.toLowerCase() === 'jp') {
+    const targetPath = location.pathname.replace(/^\/(jp)(?=\/|$)/i, '/ja');
+    return <Navigate to={targetPath + location.search + location.hash} replace />;
+  }
   if (lang && supported.includes(lang)) return <>{children}</>;
 
   // If the first path segment isn't a supported lang, treat it as an unprefixed URL.
@@ -57,6 +64,12 @@ function LangGuard({ children }: { children: React.ReactNode }) {
   const parts = pathname.split("/").filter(Boolean);
   const rest = parts.length > 1 ? `/${parts.slice(1).join("/")}` : "/";
   return <Navigate to={`/${preferred}${rest}` + location.search + location.hash} replace />;
+}
+
+function RedirectLegacyJpToJa() {
+  const location = useLocation();
+  const targetPath = location.pathname.replace(/^\/(jp)(?=\/|$)/i, '/ja');
+  return <Navigate to={targetPath + location.search + location.hash} replace />;
 }
 
 function RedirectLegacyBlogLang() {
@@ -92,6 +105,8 @@ export default function App() {
             <ScrollToHash />
 
           <Routes>
+            {/* Legacy language alias: /jp/* -> /ja/* */}
+            <Route path="/jp/*" element={<RedirectLegacyJpToJa />} />
             {/* root (global) */}
             <Route path="/" element={<AppLayout />}>
               <Route index element={<Home />} />

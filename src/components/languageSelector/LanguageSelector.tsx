@@ -40,7 +40,7 @@ const LanguageSelector: React.FC = () => {
 
   const handleLanguageChange = (code: string) => {
     // ✅ quitamos prefijo anterior si existe y lo reemplazamos
-    const cleanPath = location.pathname.replace(/^\/(en|es|ja|zh|pt|pl|de|ru|th|fil|fr|ko)(\/|$)/, "/");
+    const cleanPath = location.pathname.replace(/^\/(en|es|ja|jp|zh|pt|pl|de|ru|th|fil|fr|ko)(\/|$)/, "/");
 
     // evita doble //
     const finalPath = `/${code}${cleanPath.startsWith("/") ? cleanPath : `/${cleanPath}`}`;
