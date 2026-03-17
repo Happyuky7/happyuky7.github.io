@@ -1,0 +1,267 @@
+{
+	"seo": {
+		"siteName": "Happyuky7",
+		"description": "Website, Blog, Projekte und mehr. GitHub: https://github.com/Happyuky7"
+	},
+	"nav": {
+		"home": "Start",
+		"skills": "Skills",
+		"projects": "Projekte",
+		"contact": "Kontakt",
+		"blog": "Blog"
+	},
+	"home": {
+		"available": "Verfügbar für neue Projekte",
+		"title-h1": "Hi, ich bin",
+		"view-projects": "Projekte ansehen",
+		"contact-me": "Kontakt aufnehmen",
+		"skills": {
+			"title": "Skills",
+			"subtitle": "Technik und Tools, die ich oft nutze.",
+			"tabs": {
+				"all": "Alle",
+				"programming": "Sprachen",
+				"tools": "Tools",
+				"creative": "Kreativ",
+				"other": "Sonstiges"
+			}
+		},
+		"about-paragraphs": [
+			"Ich bin Entwickler und Content Creator mit Fokus auf **nützliche Software** und echte Projekte. Ich arbeite mit **JavaScript/Node.js** und **Java** und nutze je nach Bedarf auch **Python** und **C++**.",
+			"Mich interessiert die Verbindung von **Hardware und Software** mit **ESP32** und **Raspberry Pi** sowie Projekte rund um **KI und LLMs** für Tools und Automatisierung.",
+			"Manchmal teile ich meinen Prozess auf **Twitch** und **YouTube** und poste **kleine Projekte/Code** auf **X (Twitter)**."
+		]
+	},
+	"footer": {
+		"rights": "Alle Rechte vorbehalten.",
+		"made-with": "Gemacht mit",
+		"by": "von"
+	},
+	"relevantProjects": {
+		"title": "Relevante Projekte",
+		"subtitle": "Eine kleine Auswahl an Projekten, auf die ich stolz bin — kuratiert und ständig verbessert.",
+		"viewMore": "Mehr anzeigen"
+	},
+	"projects": {
+		"title": "Projekte",
+		"description": "Hier sind einige meiner Projekte.",
+		"searchPlaceholder": "Projekte nach Name, Tags suchen…",
+		"loading": "Projekte werden geladen…",
+		"error": {
+			"loading": "Fehler beim Laden der Projekte",
+			"description": "Beim Laden der Projekte ist ein Problem aufgetreten. Bitte aktualisiere die Seite.",
+			"noProjects": "Keine Projekte verfügbar",
+			"noProjectsDescription": "Zurzeit gibt es keine Projekte zum Anzeigen."
+		},
+		"refreshPage": "Seite aktualisieren",
+		"filter": {
+			"title": "Projekte filtern",
+			"description": "Wähle ein oder mehrere Tags, um Projekte zu filtern. Klicke erneut, um den Filter zu entfernen.",
+			"allProjects": "Alle Projekte",
+			"activeFilters": "Aktive Filter:",
+			"clearAllFilters": "Alle Filter löschen"
+		},
+		"noProjectsWithFilters": "Keine Projekte passen zu deinen Filtern",
+		"tryDifferentFilters": "Wähle andere Tags oder lösche alle Filter.",
+		"noProjects": "Keine Projekte verfügbar",
+		"noProjectsDescription": "Zurzeit gibt es keine Projekte zum Anzeigen.",
+		"noDescriptionAvailable": "Keine Beschreibung verfügbar.",
+		"card": {
+			"nolinkavailable": {
+				"title": "Projekt nicht verfügbar",
+				"description": "Sorry, für dieses Projekt ist derzeit kein Link verfügbar. Bitte versuche es später erneut."
+			}
+		},
+		"showing": "Anzeige",
+		"of": "von",
+		"projectsText": "Projekten"
+	},
+	"projectsDetails": {
+		"backToProjects": "Zurück zu den Projekten",
+		"loading": "Projektdetails werden geladen…",
+		"error": {
+			"loading": "Fehler beim Laden der Projektdetails",
+			"description": "Beim Laden der Projektdetails ist ein Problem aufgetreten. Bitte aktualisiere die Seite."
+		},
+		"refreshPage": "Seite aktualisieren",
+		"viewDemo": "Demo ansehen",
+		"viewOnGithub": "Auf GitHub ansehen",
+		"visitProject": "Projekt besuchen",
+		"noReadme": "Für dieses Projekt ist kein README verfügbar",
+		"readmeError429": "Rate-Limit überschritten. Bitte später erneut versuchen.",
+		"readmeError404": "README-Datei nicht gefunden",
+		"readmeErrorInvalid": "Ungültiges README-Format",
+		"readmeErrorGeneric": "Fehler beim Laden des READMEs",
+		"readmeNotTranslated": "Dieses README ist nur auf Englisch verfügbar und wurde nicht übersetzt."
+	},
+	"blog": {
+		"title": "Blog",
+		"description": "Lies meine neuesten Artikel und Updates.",
+		"subtitle": "Lies meine neuesten Artikel und Updates.",
+		"searchPlaceholder": "Beiträge nach Titel, ID, Tags suchen…",
+		"minuteRead": "Min. Lesezeit",
+		"readMore": "Mehr lesen",
+		"noResults": "Keine Beiträge gefunden",
+		"noResultsDesc": "Passe deine Suche oder Filter an.",
+		"clearFilters": "Filter löschen",
+		"allCategories": "Alle Kategorien",
+		"allTags": "Alle Tags",
+		"allYears": "Alle Jahre",
+		"allMonths": "Alle Monate",
+		"loading": "Beiträge werden geladen…",
+		"error": {
+			"loading": "Fehler beim Laden der Beiträge",
+			"description": "Beim Laden der Blogbeiträge ist ein Problem aufgetreten. Bitte aktualisiere die Seite."
+		},
+		"refreshPage": "Seite aktualisieren",
+		"showing": "Anzeige",
+		"of": "von",
+		"postsText": "Beiträgen",
+		"postsPerPage": "Beiträge pro Seite",
+		"backToBlog": "Zurück zum Blog",
+		"postNotFound": "Beitrag nicht gefunden",
+		"tryAgain": "Erneut versuchen",
+		"availableLanguages": "Verfügbare Sprachen",
+		"mainAuthor": "Hauptautor",
+		"collaborators": "Mitwirkende",
+		"translators": "Übersetzer",
+		"translatedBy": "Übersetzt von",
+		"share": "Teilen",
+		"shareAriaLabel": "Diesen Beitrag teilen",
+		"linkCopied": "Link kopiert",
+		"sharePost": "Beitrag teilen",
+		"copyLink": "Link kopieren",
+		"shareDefaultText": "Schau dir diesen Blogbeitrag an!",
+		"tocTitle": "Inhalt",
+		"cite": {
+			"button": "Zitieren",
+			"buttonAriaLabel": "Wie man diesen Beitrag zitiert",
+			"modalTitle": "Wie man diesen Beitrag zitiert",
+			"modalSubtitle": "Kopiere eine fertige Referenz",
+			"close": "Schließen",
+			"copy": "Kopieren",
+			"copied": "Kopiert",
+			"copyAriaLabel": "Zitat kopieren",
+			"apa7": "APA 7",
+			"mla": "MLA",
+			"chicago": "Chicago",
+			"bibtex": "BibTeX"
+		},
+		"translatorOf": "Übersetzer von",
+		"contentNotAvailableTitle": "Inhalt nicht verfügbar",
+		"contentNotAvailableDesc": "Der Inhalt für diesen Artikel ist noch nicht verfügbar. Die Datei existiert möglicherweise nicht oder ist noch in Arbeit. Bitte versuche es bald wieder!",
+		"viewAllArticles": "Alle Artikel anzeigen",
+		"retry": "Wiederholen",
+		"languageNotAvailable": "Sprache nicht verfügbar:",
+		"showingInstead": "Stattdessen angezeigt:"
+	},
+	"categories": {
+		"all": "Alle Kategorien",
+		"tutorial": "Tutorial",
+		"development": "Entwicklung",
+		"technology": "Technologie",
+		"programming": "Programmierung",
+		"lifestyle": "Lifestyle",
+		"travel": "Reisen",
+		"food": "Essen",
+		"education": "Bildung",
+		"health": "Gesundheit",
+		"entertainment": "Unterhaltung",
+		"web-development": "Webentwicklung",
+		"backend-development": "Backend-Entwicklung",
+		"ai-ml": "KI & ML",
+		"anime-analysis": "Anime-Analyse",
+		"mathematics": "Mathematik",
+		"security": "Sicherheit",
+		"devops": "DevOps",
+		"photography": "Fotografie",
+		"personal": "Persönlich",
+		"3d-design": "3D-Design",
+		"language-learning": "Sprachen lernen"
+	},
+	"contact": {
+		"title": "Kontakt",
+		"description": "Kontaktiere mich für Kooperationen oder Anfragen.",
+		"socialMedia": "Folge mir und kontaktiere mich über soziale Medien.",
+		"quickTitle": "Direktkontakt",
+		"emailTitle": "E-Mail",
+		"xTitle": "X (Twitter)",
+		"discordTitle": "Discord",
+		"discordServerTitle": "Discord-Server",
+		"copy": "Kopieren",
+		"copied": "Kopiert",
+		"sendEmail": "Senden",
+		"openX": "Öffnen",
+		"openDiscord": "Öffnen",
+		"responseTitle": "Antwortzeit",
+		"responseText": "Ich antworte normalerweise innerhalb von",
+		"timezoneTitle": "Zeitzone",
+		"timezoneText": "Ich bin in",
+		"formTitle": "Schreib mir eine Nachricht",
+		"formName": "Name",
+		"formEmail": "E-Mail",
+		"formMessage": "Erzähl mir von deiner Idee oder deinem Projekt…",
+		"formHint": "Dadurch wird deine E-Mail-App mit der fertigen Nachricht geöffnet.",
+		"formButton": "Nachricht senden"
+	},
+	"errors": {
+		"banner": "// Fehler-Handler :: portfolio",
+		"hintLabel": "Hinweis",
+		"traceTitle": "Debug-Info:",
+		"actions": {
+			"back": "Zurück",
+			"home": "Zur Startseite",
+			"retry": "Wiederholen"
+		},
+		"common": {
+			"title": "Etwas ist schiefgelaufen",
+			"message": "Ein unerwarteter Fehler ist aufgetreten.",
+			"hint": "Geh zurück oder lade neu"
+		},
+		"400": {
+			"title": "Ungültige Anfrage",
+			"message": "Die Anfrage scheint ungültig zu sein.",
+			"hint": "URL prüfen"
+		},
+		"401": {
+			"title": "Nicht autorisiert",
+			"message": "Du musst dich anmelden, um fortzufahren.",
+			"hint": "Anmelden und erneut versuchen"
+		},
+		"403": {
+			"title": "Verboten",
+			"message": "Du hast keine Berechtigung, auf diese Seite zuzugreifen.",
+			"hint": "Zugriff verweigert"
+		},
+		"404": {
+			"title": "Seite nicht gefunden",
+			"message": "Die gesuchte Seite existiert nicht (oder wurde verschoben).",
+			"hint": "Vielleicht falscher Pfad"
+		},
+		"408": {
+			"title": "Zeitüberschreitung",
+			"message": "Die Antwort hat zu lange gedauert.",
+			"hint": "Anfrage erneut versuchen"
+		},
+		"429": {
+			"title": "Zu viele Anfragen",
+			"message": "Du wirst rate-limitiert. Bitte versuche es gleich noch einmal.",
+			"hint": "Kurz warten"
+		},
+		"500": {
+			"title": "Serverfehler",
+			"message": "Unerwartet ist etwas kaputtgegangen. Versuche zu aktualisieren.",
+			"hint": "Seite neu laden"
+		},
+		"502": {
+			"title": "Bad Gateway",
+			"message": "Der Upstream-Dienst hat eine ungültige Antwort zurückgegeben.",
+			"hint": "Später erneut versuchen"
+		},
+		"503": {
+			"title": "Dienst nicht verfügbar",
+			"message": "Der Dienst ist vorübergehend nicht verfügbar.",
+			"hint": "Später erneut versuchen"
+		}
+	}
+}

@@ -1,0 +1,304 @@
+{
+    "seo": {
+        "siteName": "Happyuky7",
+        "description": "Website, Blog, Projects and more. GitHub: https://github.com/Happyuky7"
+    },
+    "nav": {
+        "home": "Home",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact",
+        "blog": "Blog"
+    },
+    "home": {
+        "available": "Available for new projects",
+        "title-h1": "Hi, I'm",
+        "view-projects": "View Projects",
+        "contact-me": "Contact Me",
+        "languages": {
+            "title": "Languages",
+            "subtitle": "What I speak and what I'm learning.",
+            "spokenTitle": "Spoken",
+            "learningTitle": "Learning",
+            "items": {
+                "es-cl": {
+                    "name": "Spanish (Chile)",
+                    "note": "Native (first language)"
+                },
+                "en": {
+                    "name": "English",
+                    "note": "Good level"
+                },
+                "ja": {
+                    "name": "Japanese",
+                    "note": "Beginner"
+                },
+                "zh": {
+                    "name": "Mandarin Chinese (Simplified)",
+                    "note": "No practical experience yet"
+                }
+            }
+        },
+        "skills": {
+            "title": "Skills",
+            "subtitle": "Tech and tools I use often.",
+            "tabs": {
+                "all": "All",
+                "programming": "Languages",
+                "tools": "Tools",
+                "creative": "Creative",
+                "other": "Other"
+            }
+        },
+        "about-paragraphs": [
+            "I am a developer and content creator focused on building **useful software** and real projects. I work with **JavaScript/Node.js** and **Java**, and also use **Python** and **C++** depending on the requirements of each idea.",
+            "I am interested in integrating **hardware with software** using **ESP32** and **Raspberry Pi**, as well as projects involving **AI and LLMs** applied to tools and automation.",
+            "Sometimes I share my process on **Twitch** and **YouTube**, and post **quick projects/code** on **X (Twitter)**."
+        ]
+    },
+    "footer": {
+        "rights": "All rights reserved.",
+        "made-with": "Made with",
+        "by": "by"
+    },
+    "relevantProjects": {
+        "title": "Relevant projects",
+        "subtitle": "A small selection of projects I’m proud of — curated and always improving.",
+        "viewMore": "View more"
+    },
+    "projects": {
+        "title": "Projects",
+        "description": "Here are some of my projects.",
+        "searchPlaceholder": "Search projects by name, tags...",
+        "loading": "Loading projects...",
+        "error": {
+            "loading": "Error loading projects",
+            "description": "There was a problem loading the projects. Please try refreshing the page.",
+            "noProjects": "No projects available",
+            "noProjectsDescription": "There are no projects to display at this time."
+        },
+        "refreshPage": "Refresh Page",
+        "filter": {
+            "title": "Filter Projects",
+            "description": "Select one or more tags to filter projects. Click again to remove the filter.",
+            "allProjects": "All Projects",
+            "activeFilters": "Active Filters:",
+            "clearAllFilters": "Clear All Filters"
+        },
+        "noProjectsWithFilters": "No projects match your filters",
+        "tryDifferentFilters": "Try selecting different tags or clear all filters.",
+        "noProjects": "No projects available",
+        "noProjectsDescription": "There are no projects to display at this time.",
+        "noDescriptionAvailable": "No description available.",
+        "card": {
+            "nolinkavailable": {
+                "title": "Project Not Available",
+                "description": "Sorry, this project does not have a link available at this time. Please try again later."
+            }
+        },
+        "showing": "Showing",
+        "of": "of",
+        "projectsText": "projects"
+    },
+    "projectsDetails": {
+        "backToProjects": "Back to Projects",
+        "loading": "Loading project details...",
+        "error": {
+            "loading": "Error loading project details",
+            "description": "There was a problem loading the project details. Please try refreshing the page."
+        },
+        "refreshPage": "Refresh Page",
+        "viewDemo": "View Demo",
+        "viewOnGithub": "View on GitHub",
+        "visitProject": "Visit Project",
+        "noReadme": "No README available for this project",
+        "readmeError429": "Rate limit exceeded. Please try again later.",
+        "readmeError404": "README file not found",
+        "readmeErrorInvalid": "Invalid README format",
+        "readmeErrorGeneric": "Error loading README",
+        "readmeNotTranslated": "This README is only available in English and has not been translated."
+    },
+    "blog": {
+        "title": "Blog",
+        "description": "Read my latest articles and updates.",
+        "subtitle": "Read my latest articles and updates.",
+        "searchPlaceholder": "Search posts by title, id, tags...",
+        "minuteRead": "min read",
+        "readMore": "Read more",
+        "noResults": "No posts found",
+        "noResultsDesc": "Try adjusting your search or filters.",
+        "clearFilters": "Clear Filters",
+        "allCategories": "All Categories",
+        "allTags": "All Tags",
+        "allYears": "All Years",
+        "allMonths": "All Months",
+        "loading": "Loading posts...",
+        "error": {
+            "loading": "Error loading posts",
+            "description": "There was a problem loading the blog posts. Please try refreshing the page."
+        },
+        "refreshPage": "Refresh Page",
+        "showing": "Showing",
+        "of": "of",
+        "postsText": "posts",
+        "postsPerPage": "Posts per page",
+        "backToBlog": "Back to Blog",
+        "postNotFound": "Post not found",
+        "tryAgain": "Try again",
+        "availableLanguages": "Available languages",
+        "mainAuthor": "Main author",
+        "collaborators": "Collaborators",
+        "translators": "Translators",
+        "translatedBy": "Translated by",
+        "share": "Share",
+        "shareAriaLabel": "Share this post",
+        "linkCopied": "Link copied",
+        "sharePost": "Share Post",
+        "copyLink": "Copy Link",
+        "shareDefaultText": "Check out this blog post!",
+        "tocTitle": "Contents",
+        "cite": {
+            "button": "Cite",
+            "buttonAriaLabel": "How to cite this post",
+            "modalTitle": "How to cite this post",
+            "modalSubtitle": "Copy a ready-to-use reference",
+            "close": "Close",
+            "copy": "Copy",
+            "copied": "Copied",
+            "copyAriaLabel": "Copy citation",
+            "apa7": "APA 7",
+            "mla": "MLA",
+            "chicago": "Chicago",
+            "bibtex": "BibTeX"
+        },
+        "translatorOf": "Translator of",
+        "contentNotAvailableTitle": "Content Not Available",
+        "contentNotAvailableDesc": "The content for this article is not available yet. The file may not exist or it may still be in progress. Please try again soon!",
+        "viewAllArticles": "View All Articles",
+        "retry": "Retry",
+        "languageNotAvailable": "Language not available:",
+        "showingInstead": "Showing instead:"
+    },
+    "categories": {
+        "all": "All Categories",
+        "tutorial": "Tutorial",
+        "development": "Development",
+        "technology": "Technology",
+        "programming": "Programming",
+        "lifestyle": "Lifestyle",
+        "travel": "Travel",
+        "food": "Food",
+        "education": "Education",
+        "health": "Health",
+        "entertainment": "Entertainment",
+        "web-development": "Web Development",
+        "backend-development": "Backend Development",
+        "ai-ml": "AI & ML",
+        "anime-analysis": "Anime Analysis",
+        "mathematics": "Mathematics",
+        "security": "Security",
+        "devops": "DevOps",
+        "photography": "Photography",
+        "personal": "Personal",
+        "3d-design": "3D Design",
+        "language-learning": "Language Learning"
+    },
+    "contact": {
+        "title": "Contact",
+        "description": "Get in touch with me for collaborations or inquiries.",
+        "socialMedia": "Follow me and contact me on social media.",
+        "quickTitle": "Direct Contact",
+        "emailTitle": "Email",
+        "xTitle": "X (Twitter)",
+        "discordTitle": "Discord",
+        "discordServerTitle": "Discord Server",
+        "copy": "Copy",
+        "copied": "Copied",
+        "sendEmail": "Send",
+        "openX": "Open",
+        "openDiscord": "Open",
+        "responseTitle": "Response Time",
+        "responseText": "I usually respond within",
+        "timezoneTitle": "Time Zone",
+        "timezoneText": "I am in",
+        "formTitle": "Send me a message",
+        "formName": "Name",
+        "formEmail": "Email",
+        "formMessage": "Tell me about your idea or project...",
+        "formHint": "This will open your email app with the message ready.",
+        "formButton": "Send Message"
+    },
+    "errors": {
+        "banner": "// error handler :: portfolio",
+        "hintLabel": "hint",
+        "traceTitle": "debug info:",
+        "actions": {
+            "back": "Go Back",
+            "home": "Go Home",
+            "retry": "Retry"
+        },
+        "common": {
+            "title": "Something went wrong",
+            "message": "An unexpected error occurred.",
+            "hint": "Try going back or reloading"
+        },
+        "400": {
+            "title": "Bad request",
+            "message": "The request looks invalid.",
+            "hint": "Check the URL"
+        },
+        "401": {
+            "title": "Unauthorized",
+            "message": "You need to sign in to continue.",
+            "hint": "Sign in and try again"
+        },
+        "403": {
+            "title": "Forbidden",
+            "message": "You don’t have permission to access this page.",
+            "hint": "Access denied"
+        },
+        "404": {
+            "title": "Page not found",
+            "message": "The page you’re looking for doesn’t exist (or was moved).",
+            "hint": "Maybe wrong path"
+        },
+        "408": {
+            "title": "Request timeout",
+            "message": "This took too long to respond.",
+            "hint": "Retry the request"
+        },
+        "429": {
+            "title": "Too many requests",
+            "message": "You’re being rate-limited. Please try again in a moment.",
+            "hint": "Wait a bit"
+        },
+        "500": {
+            "title": "Server error",
+            "message": "Something broke unexpectedly. Try refreshing.",
+            "hint": "Reload the page"
+        },
+        "502": {
+            "title": "Bad gateway",
+            "message": "Upstream service returned an invalid response.",
+            "hint": "Try again later"
+        },
+        "503": {
+            "title": "Service unavailable",
+            "message": "Service is temporarily unavailable.",
+            "hint": "Try again later"
+        }
+    },
+    "musicwidget": {
+        "music": "Music",
+        "queue": "Queue",
+        "songs": "Songs",
+        "playlists": "Playlists",
+        "noTracks": "No tracks available",
+        "playing": "Now Playing",
+        "play": "Play",
+        "pause": "Pause",
+        "next": "Next",
+        "previous": "Previous",
+        "volume": "Volume"
+    }
+}

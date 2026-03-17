@@ -1,0 +1,118 @@
+[
+    {
+        "name": "example",
+        "description": "example",
+        "image": "https://media.tenor.com/7dr3AgyEiN0AAAAi/anime-girl-wave.gif",
+        "link": "",
+        "tags": [
+            {"name": "example", "readable": true}
+        ]
+    },
+    {
+        "name": "Kaory Network",
+        "description": "Servidor de Minecraft con modalidades y cosas programadas desde 0 y unicas.",
+        "image": "https://media.tenor.com/7dr3AgyEiN0AAAAi/anime-girl-wave.gif",
+        "link": "https://web.kaory.xyz/",
+        "tags": [
+            {"name": "Minecraft", "readable": true},
+            {"name": "Java", "readable": true},
+            {"name": "Web", "readable": true},
+            {"name": "JavaScript", "readable": true},
+            {"name": "NodeJS", "readable": true}
+        ]
+    },
+    {
+        "name": "Convert Minecraft Server Icon",
+        "description": "Herramienta para convertir imagenes a iconos de servidor de Minecraft.",
+        "image": "assets/img/projects/convertmcservericon-logo.png",
+        "link": "https://convertmcservericon.happy7.xyz/",
+        "tags": [
+            {"name": "Minecraft", "readable": true},
+            {"name": "Web", "readable": true},
+            {"name": "JavaScript", "readable": true},
+            {"name": "NodeJS", "readable": true},
+            {"name": "API", "readable": true}
+        ]
+    },
+    {
+        "name": "MTA-API-SERVERINFO",
+        "description": "API para obtener informacion de servidores de MTA:SA.",
+        "image": "https://media.tenor.com/7dr3AgyEiN0AAAAi/anime-girl-wave.gif",
+        "link": "https://github.com/Happyuky7/MTA-API-SERVERINFO",
+        "tags": [
+            {"name": "Web", "readable": true},
+            {"name": "JavaScript", "readable": true},
+            {"name": "NodeJS", "readable": true},
+            {"name": "MTA:SA", "readable": true},
+            {"name": "API", "readable": true}
+        ]
+    },
+    {
+        "name": "Basic WebServer NodeJS V1",
+        "description": "Basic WebServer NodeJS V1",
+        "image": "https://media.tenor.com/7dr3AgyEiN0AAAAi/anime-girl-wave.gif",
+        "link": "https://github.com/Happyuky7/Basic-WebServer-NodeJS-V1",
+        "tags": [
+            {"name": "Web", "readable": true},
+            {"name": "JavaScript", "readable": true},
+            {"name": "NodeJS", "readable": true},
+            {"name": "css", "readable": true}
+        ]
+    },
+    {
+        "name": "Draggable-Cards-in-web",
+        "description": "Draggable-Cards-in-web is a simple Script Draggable Cards + Website for example using and implementing.",
+        "image": "https://media.tenor.com/7dr3AgyEiN0AAAAi/anime-girl-wave.gif",
+        "link": "https://github.com/Happyuky7/Draggable-Cards-in-web",
+        "tags": [
+            {"name": "Web", "readable": true},
+            {"name": "JavaScript", "readable": true},
+            {"name": "css", "readable": true}
+        ]
+    },
+    {
+        "name": "SEPARE-WORLD-ITEMS",
+        "description": "It's a echo plugin to be for your invention by world.",
+        "image": "assets/img/projects/separeworlditem-logo.png",
+        "link": "https://github.com/Happyuky7/SEPARE-WORLD-ITEMS",
+        "tags": [
+            {"name": "Minecraft", "readable": true},
+            {"name": "Java", "readable": true}
+        ]
+    },
+    {
+        "name": "CobwebRemoveBoxPvP",
+        "description": "is a plugin that allows you to remove cobwebs from the box pvp.",
+        "image": "assets/img/projects/CobwebRemoveBoxPvP-logo.png",
+        "link": "https://github.com/Happyuky7/CobwebRemoveBoxPvP",
+        "tags": [
+            {"name": "Minecraft", "readable": true},
+            {"name": "Java", "readable": true}
+        ]
+    },
+    {
+        "name": "NameMC-API-ServersMC",
+        "description": "Use of the NameMC API for Minecraft Servers.",
+        "image": "assets/img/projects/NameMC-API-ServersMC-logo.jpg",
+        "link": "https://github.com/Happyuky7/NameMC-API-ServersMC",
+        "tags": [
+            {"name": "Minecraft", "readable": true},
+            {"name": "Java", "readable": true},
+            {"name": "API", "readable": true}
+        ]
+    },
+    {
+        "name": "Mojang Authlib All Versions Information",
+        "description": "This is a repository which helps you find the Mojang AuthLib, the versions of it and how to implement it by Maven and Gradle.",
+        "image": "assets/img/projects/Mojang-Authlib-All-Versions-Information-logo.jpg",
+        "link": "https://github.com/Happyuky7/MojangAuthlibAllVersions1",
+        "tags": [
+            {"name": "Minecraft", "readable": true},
+            {"name": "Java", "readable": true},
+            {"name": "Maven", "readable": true},
+            {"name": "Gradle", "readable": true},
+            {"name": "API", "readable": true}
+        ]
+    }
+
+]

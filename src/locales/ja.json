@@ -1,0 +1,291 @@
+{
+    "nav": {
+        "home": "ホーム",
+        "skills": "スキル",
+        "projects": "プロジェクト",
+        "contact": "お問い合わせ",
+        "blog": "ブログ"
+    },
+        "seo": {
+            "siteName": "Happyuky7",
+            "description": "ウェブサイト、ブログ、プロジェクトなど。GitHub: https://github.com/Happyuky7"
+        },
+    "home": {
+        "available": "新しいプロジェクトに対応可能",
+        "title-h1": "こんにちは、私は",
+        "view-projects": "プロジェクトを見る",
+        "contact-me": "お問い合わせ",
+        "languages": {
+            "title": "言語",
+            "subtitle": "話せる言語と学習中の言語。",
+            "spokenTitle": "話せる",
+            "learningTitle": "学習中",
+            "items": {
+                "es-cl": {
+                    "name": "スペイン語（チリ）",
+                    "note": "母語（第一言語）"
+                },
+                "en": {
+                    "name": "英語",
+                    "note": "良好"
+                },
+                "ja": {
+                    "name": "日本語",
+                    "note": "初級"
+                },
+                "zh": {
+                    "name": "中国語（普通話・簡体字）",
+                    "note": "実務経験なし（現時点）"
+                }
+            }
+        },
+        "skills": {
+            "title": "スキル",
+            "subtitle": "よく使う技術・ツール。",
+            "tabs": {
+                "all": "すべて",
+                "programming": "言語",
+                "tools": "ツール",
+                "creative": "クリエイティブ",
+                "other": "その他"
+            }
+        },
+        "about-paragraphs": [
+            "私は**役立つソフトウェア**と実際のプロジェクトの構築に注力する開発者兼コンテンツクリエイターです。**JavaScript/Node.js**や**Java**を使い、必要に応じて**Python**や**C++**も利用します。",
+            "**ESP32**や**Raspberry Pi**を使った**ハードウェアとソフトウェアの統合**、**AIやLLM**を活用したツールや自動化プロジェクトに興味があります。",
+            "時々**Twitch**や**YouTube**でプロセスを共有し、**X (Twitter)**で**簡単なプロジェクトやコード**を投稿しています。"
+        ]
+    },
+    "footer": {
+        "rights": "全著作権所有。",
+        "made-with": "作成技術：",
+        "by": "作成者："
+    },
+    "relevantProjects": {
+        "title": "注目プロジェクト",
+        "subtitle": "誇れるプロジェクトを少しだけ厳選して紹介します。継続的に改善中。",
+        "viewMore": "もっと見る"
+    },
+    "projects": {
+        "title": "プロジェクト",
+        "description": "私のプロジェクトをご紹介します。",
+        "searchPlaceholder": "名前やタグでプロジェクトを検索...",
+        "loading": "プロジェクトを読み込み中...",
+        "error": {
+            "loading": "プロジェクトの読み込みエラー",
+            "description": "プロジェクトの読み込み中に問題が発生しました。ページを更新してください。",
+            "noProjects": "利用可能なプロジェクトはありません",
+            "noProjectsDescription": "現在表示できるプロジェクトはありません。"
+        },
+        "refreshPage": "ページを更新",
+        "filter": {
+            "title": "プロジェクトを絞り込む",
+            "description": "タグを選択してプロジェクトを絞り込めます。もう一度クリックするとフィルターを解除します。",
+            "allProjects": "すべてのプロジェクト",
+            "activeFilters": "有効なフィルター：",
+            "clearAllFilters": "すべてのフィルターを解除"
+        },
+        "noProjectsWithFilters": "フィルターに一致するプロジェクトはありません",
+        "tryDifferentFilters": "他のタグを選択するか、すべてのフィルターを解除してください。",
+        "noProjects": "利用可能なプロジェクトはありません",
+        "noProjectsDescription": "現在表示できるプロジェクトはありません。",
+        "noDescriptionAvailable": "説明はありません。",
+        "card": {
+            "nolinkavailable": {
+                "title": "プロジェクトは利用できません",
+                "description": "申し訳ありませんが、このプロジェクトのリンクは現在利用できません。後でもう一度お試しください。"
+            }
+        },
+        "showing": "表示中",
+        "of": "／",
+        "projectsText": "プロジェクト"
+    },
+    "projectsDetails": {
+        "backToProjects": "プロジェクト一覧に戻る",
+        "loading": "プロジェクト詳細を読み込み中...",
+        "error": {
+            "loading": "プロジェクト詳細の読み込みエラー",
+            "description": "プロジェクト詳細の読み込み中に問題が発生しました。ページを更新してください。"
+        },
+        "refreshPage": "ページを更新",
+        "viewDemo": "デモを見る",
+        "viewOnGithub": "GitHubで見る",
+        "visitProject": "プロジェクトを見る",
+        "noReadme": "このプロジェクトのREADMEはありません",
+        "readmeError429": "レート制限を超えました。後でもう一度お試しください。",
+        "readmeError404": "READMEファイルが見つかりません",
+        "readmeErrorInvalid": "READMEの形式が無効です",
+        "readmeErrorGeneric": "READMEの読み込みエラー",
+        "readmeNotTranslated": "このREADMEは英語のみで、翻訳されていません。"
+    },
+    "blog": {
+        "title": "ブログ",
+        "description": "最新の記事と更新情報を読む。",
+        "subtitle": "最新の記事と更新情報を読む。",
+        "searchPlaceholder": "タイトル、ID、タグで投稿を検索...",
+        "minuteRead": "分で読めます",
+        "readMore": "続きを読む",
+        "noResults": "投稿が見つかりません",
+        "noResultsDesc": "検索やフィルターを調整してください。",
+        "clearFilters": "フィルターを解除",
+        "allCategories": "すべてのカテゴリ",
+        "allTags": "すべてのタグ",
+        "allYears": "すべての年",
+        "allMonths": "すべての月",
+        "loading": "投稿を読み込み中...",
+        "error": {
+            "loading": "投稿の読み込みエラー",
+            "description": "ブログ投稿の読み込み中に問題が発生しました。ページを更新してください。"
+        },
+        "refreshPage": "ページを更新",
+        "showing": "表示中",
+        "of": "／",
+        "postsText": "投稿",
+        "postsPerPage": "ページごとの投稿数",
+        "backToBlog": "ブログ一覧に戻る",
+        "postNotFound": "投稿が見つかりません",
+        "tryAgain": "もう一度試す",
+        "availableLanguages": "利用可能な言語",
+        "mainAuthor": "主な著者",
+        "collaborators": "協力者",
+        "translators": "翻訳者",
+        "translatedBy": "翻訳：",
+        "share": "共有",
+        "shareAriaLabel": "この投稿を共有",
+        "linkCopied": "リンクをコピーしました",
+        "sharePost": "投稿を共有",
+        "copyLink": "リンクをコピー",
+        "shareDefaultText": "このブログ投稿をチェックしてください！",
+        "tocTitle": "目次",
+        "cite": {
+            "button": "引用",
+            "buttonAriaLabel": "この投稿の引用方法",
+            "modalTitle": "この投稿の引用方法",
+            "modalSubtitle": "すぐ使える参考文献をコピー",
+            "close": "閉じる",
+            "copy": "コピー",
+            "copied": "コピーしました",
+            "copyAriaLabel": "引用をコピー",
+            "apa7": "APA 7",
+            "mla": "MLA",
+            "chicago": "Chicago",
+            "bibtex": "BibTeX"
+        },
+        "translatorOf": "翻訳者：",
+        "contentNotAvailableTitle": "コンテンツは利用できません",
+        "contentNotAvailableDesc": "この記事のコンテンツはまだ利用できません。ファイルが存在しないか、作成中の可能性があります。後でもう一度お試しください！",
+        "viewAllArticles": "すべての記事を見る",
+        "retry": "再試行",
+        "languageNotAvailable": "利用できない言語：",
+        "showingInstead": "代わりに表示："
+    },
+    "categories": {
+        "all": "すべてのカテゴリ",
+        "tutorial": "チュートリアル",
+        "development": "開発",
+        "technology": "技術",
+        "programming": "プログラミング",
+        "lifestyle": "ライフスタイル",
+        "travel": "旅行",
+        "food": "食べ物",
+        "education": "教育",
+        "health": "健康",
+        "entertainment": "エンターテインメント",
+        "web-development": "ウェブ開発",
+        "backend-development": "バックエンド開発",
+        "ai-ml": "AI・機械学習",
+        "anime-analysis": "アニメ分析",
+        "mathematics": "数学",
+        "security": "セキュリティ",
+        "devops": "DevOps",
+        "photography": "写真",
+        "personal": "個人",
+        "3d-design": "3Dデザイン",
+        "language-learning": "語学学習"
+    },
+    "contact": {
+        "title": "お問い合わせ",
+        "description": "コラボレーションやご質問はお気軽にご連絡ください。",
+        "socialMedia": "ソーシャルメディアでフォロー＆コンタクト",
+        "quickTitle": "直接連絡",
+        "emailTitle": "メール",
+        "xTitle": "X (Twitter)",
+        "discordTitle": "Discord",
+        "discordServerTitle": "Discordサーバー",
+        "copy": "コピー",
+        "copied": "コピーしました",
+        "sendEmail": "送信",
+        "openX": "開く",
+        "openDiscord": "開く",
+        "responseTitle": "応答時間",
+        "responseText": "通常は以下の時間内に返信します",
+        "timezoneTitle": "タイムゾーン",
+        "timezoneText": "私は以下のタイムゾーンにいます",
+        "formTitle": "メッセージを送る",
+        "formName": "名前",
+        "formEmail": "メール",
+        "formMessage": "あなたのアイデアやプロジェクトについて教えてください...",
+        "formHint": "これにより、メッセージが準備された状態でメールアプリが開きます。",
+        "formButton": "メッセージを送信"
+    },
+    "errors": {
+        "banner": "// エラーハンドラ :: portfolio",
+        "hintLabel": "ヒント",
+        "traceTitle": "デバッグ情報:",
+        "actions": {
+            "back": "戻る",
+            "home": "ホームへ",
+            "retry": "再試行"
+        },
+        "common": {
+            "title": "問題が発生しました",
+            "message": "予期しないエラーが発生しました。",
+            "hint": "戻るか再読み込み"
+        },
+        "400": {
+            "title": "不正なリクエスト",
+            "message": "リクエストが無効のようです。",
+            "hint": "URLを確認"
+        },
+        "401": {
+            "title": "認証が必要です",
+            "message": "続行するにはサインインが必要です。",
+            "hint": "サインインして再試行"
+        },
+        "403": {
+            "title": "アクセス禁止",
+            "message": "このページへのアクセス権限がありません。",
+            "hint": "権限がありません"
+        },
+        "404": {
+            "title": "ページが見つかりません",
+            "message": "お探しのページは存在しないか移動されました。",
+            "hint": "パスを確認"
+        },
+        "408": {
+            "title": "タイムアウト",
+            "message": "応答に時間がかかりすぎました。",
+            "hint": "再試行"
+        },
+        "429": {
+            "title": "リクエストが多すぎます",
+            "message": "レート制限中です。しばらくしてからお試しください。",
+            "hint": "少し待つ"
+        },
+        "500": {
+            "title": "サーバーエラー",
+            "message": "予期しない問題が発生しました。再読み込みしてください。",
+            "hint": "ページを再読み込み"
+        },
+        "502": {
+            "title": "不正なゲートウェイ",
+            "message": "上流サービスが無効な応答を返しました。",
+            "hint": "後で再試行"
+        },
+        "503": {
+            "title": "サービス利用不可",
+            "message": "サービスは一時的に利用できません。",
+            "hint": "後で再試行"
+        }
+    }
+}

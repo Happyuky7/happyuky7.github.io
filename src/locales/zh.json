@@ -1,0 +1,267 @@
+{
+	"seo": {
+		"siteName": "Happyuky7",
+		"description": "网站、博客、项目等。GitHub: https://github.com/Happyuky7"
+	},
+	"nav": {
+		"home": "首页",
+		"skills": "技能",
+		"projects": "项目",
+		"contact": "联系",
+		"blog": "博客"
+	},
+	"home": {
+		"available": "可接新项目",
+		"title-h1": "你好，我是",
+		"view-projects": "查看项目",
+		"contact-me": "联系我",
+		"skills": {
+			"title": "技能",
+			"subtitle": "我经常使用的技术与工具。",
+			"tabs": {
+				"all": "全部",
+				"programming": "语言",
+				"tools": "工具",
+				"creative": "创作",
+				"other": "其他"
+			}
+		},
+		"about-paragraphs": [
+			"我是开发者和内容创作者，专注于打造**有用的软件**和真实项目。我主要使用 **JavaScript/Node.js** 和 **Java**，也会根据需求使用 **Python** 和 **C++**。",
+			"我对使用 **ESP32** 与 **Raspberry Pi** 进行**软硬件结合**很感兴趣，也喜欢把 **AI 与 LLM** 应用到工具与自动化相关的项目中。",
+			"有时我会在 **Twitch** 和 **YouTube** 分享过程，并在 **X (Twitter)** 发布**快速项目/代码**。"
+		]
+	},
+	"footer": {
+		"rights": "保留所有权利。",
+		"made-with": "使用",
+		"by": "制作"
+	},
+	"relevantProjects": {
+		"title": "精选项目",
+		"subtitle": "我引以为豪的一小部分项目——精选并持续改进。",
+		"viewMore": "查看更多"
+	},
+	"projects": {
+		"title": "项目",
+		"description": "这里是我的一些项目。",
+		"searchPlaceholder": "按名称、标签搜索项目…",
+		"loading": "正在加载项目…",
+		"error": {
+			"loading": "加载项目时出错",
+			"description": "加载项目时出现问题。请刷新页面后重试。",
+			"noProjects": "暂无项目",
+			"noProjectsDescription": "目前没有可显示的项目。"
+		},
+		"refreshPage": "刷新页面",
+		"filter": {
+			"title": "筛选项目",
+			"description": "选择一个或多个标签来筛选项目。再次点击可取消筛选。",
+			"allProjects": "全部项目",
+			"activeFilters": "已启用筛选：",
+			"clearAllFilters": "清除所有筛选"
+		},
+		"noProjectsWithFilters": "没有符合筛选条件的项目",
+		"tryDifferentFilters": "尝试选择其他标签或清除所有筛选。",
+		"noProjects": "暂无项目",
+		"noProjectsDescription": "目前没有可显示的项目。",
+		"noDescriptionAvailable": "暂无描述。",
+		"card": {
+			"nolinkavailable": {
+				"title": "项目暂不可用",
+				"description": "抱歉，该项目目前没有可用链接。请稍后再试。"
+			}
+		},
+		"showing": "显示",
+		"of": "共",
+		"projectsText": "个项目"
+	},
+	"projectsDetails": {
+		"backToProjects": "返回项目列表",
+		"loading": "正在加载项目详情…",
+		"error": {
+			"loading": "加载项目详情时出错",
+			"description": "加载项目详情时出现问题。请刷新页面后重试。"
+		},
+		"refreshPage": "刷新页面",
+		"viewDemo": "查看演示",
+		"viewOnGithub": "在 GitHub 查看",
+		"visitProject": "访问项目",
+		"noReadme": "该项目没有可用的 README",
+		"readmeError429": "请求过于频繁，请稍后再试。",
+		"readmeError404": "未找到 README 文件",
+		"readmeErrorInvalid": "README 格式无效",
+		"readmeErrorGeneric": "加载 README 时出错",
+		"readmeNotTranslated": "该 README 仅提供英文版本，尚未翻译。"
+	},
+	"blog": {
+		"title": "博客",
+		"description": "阅读我最新的文章与更新。",
+		"subtitle": "阅读我最新的文章与更新。",
+		"searchPlaceholder": "按标题、id、标签搜索文章…",
+		"minuteRead": "分钟阅读",
+		"readMore": "阅读全文",
+		"noResults": "未找到文章",
+		"noResultsDesc": "尝试调整搜索或筛选条件。",
+		"clearFilters": "清除筛选",
+		"allCategories": "所有分类",
+		"allTags": "所有标签",
+		"allYears": "所有年份",
+		"allMonths": "所有月份",
+		"loading": "正在加载文章…",
+		"error": {
+			"loading": "加载文章时出错",
+			"description": "加载博客文章时出现问题。请刷新页面后重试。"
+		},
+		"refreshPage": "刷新页面",
+		"showing": "显示",
+		"of": "共",
+		"postsText": "篇文章",
+		"postsPerPage": "每页文章数",
+		"backToBlog": "返回博客",
+		"postNotFound": "文章未找到",
+		"tryAgain": "重试",
+		"availableLanguages": "可用语言",
+		"mainAuthor": "主要作者",
+		"collaborators": "协作者",
+		"translators": "翻译者",
+		"translatedBy": "译者",
+		"share": "分享",
+		"shareAriaLabel": "分享这篇文章",
+		"linkCopied": "链接已复制",
+		"sharePost": "分享文章",
+		"copyLink": "复制链接",
+		"shareDefaultText": "看看这篇博客文章！",
+		"tocTitle": "目录",
+		"cite": {
+			"button": "引用",
+			"buttonAriaLabel": "如何引用这篇文章",
+			"modalTitle": "如何引用这篇文章",
+			"modalSubtitle": "复制可直接使用的参考格式",
+			"close": "关闭",
+			"copy": "复制",
+			"copied": "已复制",
+			"copyAriaLabel": "复制引用",
+			"apa7": "APA 7",
+			"mla": "MLA",
+			"chicago": "Chicago",
+			"bibtex": "BibTeX"
+		},
+		"translatorOf": "翻译",
+		"contentNotAvailableTitle": "内容不可用",
+		"contentNotAvailableDesc": "该文章内容尚不可用。文件可能不存在，或仍在撰写中。请稍后再试！",
+		"viewAllArticles": "查看全部文章",
+		"retry": "重试",
+		"languageNotAvailable": "语言不可用：",
+		"showingInstead": "改为显示："
+	},
+	"categories": {
+		"all": "所有分类",
+		"tutorial": "教程",
+		"development": "开发",
+		"technology": "技术",
+		"programming": "编程",
+		"lifestyle": "生活方式",
+		"travel": "旅行",
+		"food": "美食",
+		"education": "教育",
+		"health": "健康",
+		"entertainment": "娱乐",
+		"web-development": "Web 开发",
+		"backend-development": "后端开发",
+		"ai-ml": "AI 与 ML",
+		"anime-analysis": "动漫分析",
+		"mathematics": "数学",
+		"security": "安全",
+		"devops": "DevOps",
+		"photography": "摄影",
+		"personal": "个人",
+		"3d-design": "3D 设计",
+		"language-learning": "语言学习"
+	},
+	"contact": {
+		"title": "联系",
+		"description": "如果有合作或咨询，欢迎联系我。",
+		"socialMedia": "在社交媒体上关注我并与我联系。",
+		"quickTitle": "直接联系",
+		"emailTitle": "邮箱",
+		"xTitle": "X (Twitter)",
+		"discordTitle": "Discord",
+		"discordServerTitle": "Discord 服务器",
+		"copy": "复制",
+		"copied": "已复制",
+		"sendEmail": "发送",
+		"openX": "打开",
+		"openDiscord": "打开",
+		"responseTitle": "响应时间",
+		"responseText": "我通常会在以下时间内回复",
+		"timezoneTitle": "时区",
+		"timezoneText": "我位于",
+		"formTitle": "给我留言",
+		"formName": "姓名",
+		"formEmail": "邮箱",
+		"formMessage": "说说你的想法或项目…",
+		"formHint": "这将打开你的邮件应用，并自动填好消息内容。",
+		"formButton": "发送消息"
+	},
+	"errors": {
+		"banner": "// 错误处理 :: portfolio",
+		"hintLabel": "提示",
+		"traceTitle": "调试信息：",
+		"actions": {
+			"back": "返回",
+			"home": "回到首页",
+			"retry": "重试"
+		},
+		"common": {
+			"title": "出现问题",
+			"message": "发生了意外错误。",
+			"hint": "尝试返回或刷新"
+		},
+		"400": {
+			"title": "错误请求",
+			"message": "请求似乎无效。",
+			"hint": "检查 URL"
+		},
+		"401": {
+			"title": "未授权",
+			"message": "需要登录后才能继续。",
+			"hint": "登录后重试"
+		},
+		"403": {
+			"title": "禁止访问",
+			"message": "你没有权限访问此页面。",
+			"hint": "访问被拒绝"
+		},
+		"404": {
+			"title": "页面未找到",
+			"message": "你访问的页面不存在（或已移动）。",
+			"hint": "路径可能不对"
+		},
+		"408": {
+			"title": "请求超时",
+			"message": "响应时间过长。",
+			"hint": "重试请求"
+		},
+		"429": {
+			"title": "请求过多",
+			"message": "请求过于频繁，请稍后再试。",
+			"hint": "稍等一下"
+		},
+		"500": {
+			"title": "服务器错误",
+			"message": "出现了意外故障。试试刷新页面。",
+			"hint": "重新加载页面"
+		},
+		"502": {
+			"title": "网关错误",
+			"message": "上游服务返回了无效响应。",
+			"hint": "稍后再试"
+		},
+		"503": {
+			"title": "服务不可用",
+			"message": "服务暂时不可用。",
+			"hint": "稍后再试"
+		}
+	}
+}

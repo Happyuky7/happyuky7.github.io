@@ -1,0 +1,363 @@
+[
+  {
+    "name": "anime-codes",
+    "displayName": "anime.codes",
+    "description": {
+      "en": "A larger project focused on anime-related content/tools, built and iterated over time.",
+      "es": "Un proyecto grande enfocado en contenido/herramientas relacionadas con anime, desarrollado e iterado con el tiempo.",
+      "ja": "アニメ関連のコンテンツ/ツールにフォーカスした大きめのプロジェクト。"
+    },
+    "image": "/assets/img/projects/animecodes-logo.png",
+    "link": "https://anime.codes/",
+    "demo": null,
+    "github": "https://github.com/AnimeCodesCommunity/",
+    "readme": "/projects-content/anime-codes/anime-codes.md",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Web",
+        "readable": true
+      },
+      {
+        "name": "Frontend",
+        "readable": true
+      },
+      {
+        "name": "Gradle",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
+    "name": "theserverjars",
+    "displayName": "TheServerJars",
+    "description": {
+      "en": "Project around Minecraft server JARs/tools and related utilities.",
+      "es": "Proyecto relacionado con JARs/herramientas de servidores de Minecraft y utilidades asociadas.",
+      "ja": "MinecraftサーバーのJARや関連ツール/ユーティリティのプロジェクト。"
+    },
+    "image": "/assets/img/projects/theserverjars-logo.png",
+    "link": "/project/theserverjars",
+    "demo": "https://theserverjars.github.io/",
+    "github": "https://github.com/TheServerJars",
+    "readme": "",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Minecraft",
+        "readable": true
+      },
+      {
+        "name": "Web",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
+    "name": "Kaory Network",
+    "description": {
+      "en": "Minecraft server with custom gamemodes and systems built from scratch.",
+      "es": "Servidor de Minecraft con modalidades y sistemas programados desde 0 y únicos.",
+      "ja": "ゼロから独自に開発したシステムやモードを備えたMinecraftサーバー。"
+    },
+    "image": "/assets/img/projects/kaory-network-logo.png",
+    "link": "https://web.kaory.xyz/",
+    "demo": null,
+    "github": null,
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Minecraft",
+        "readable": true
+      },
+      {
+        "name": "Java",
+        "readable": true
+      },
+      {
+        "name": "Web",
+        "readable": true
+      },
+      {
+        "name": "JavaScript",
+        "readable": true
+      },
+      {
+        "name": "NodeJS",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
+    "name": "Convert Minecraft Server Icon",
+    "description": {
+      "en": "Web tool to convert images into Minecraft server icons.",
+      "es": "Herramienta web para convertir imágenes a iconos de servidor de Minecraft.",
+      "ja": "画像をMinecraftサーバーアイコンに変換するWebツール。"
+    },
+    "image": "/assets/img/projects/convertmcservericon-logo.png",
+    "link": "https://convertmcservericon.happy7.xyz/",
+    "demo": "https://convertmcservericon.happy7.xyz/",
+    "github": "https://github.com/ConvertMCServerIcon",
+    "readme": "https://raw.githubusercontent.com/ConvertMCServerIcon/.github/refs/heads/main/profile/README.md",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Minecraft",
+        "readable": true
+      },
+      {
+        "name": "Web",
+        "readable": true
+      },
+      {
+        "name": "JavaScript",
+        "readable": true
+      },
+      {
+        "name": "NodeJS",
+        "readable": true
+      },
+      {
+        "name": "API",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
+    "name": "MTA-API-SERVERINFO",
+    "description": {
+      "en": "API to fetch information from MTA:SA servers.",
+      "es": "API para obtener información de servidores de MTA:SA.",
+      "ja": "MTA:SAサーバーの情報を取得するためのAPI。"
+    },
+    "image": "",
+    "link": "https://github.com/Happyuky7/MTA-API-SERVERINFO",
+    "demo": null,
+    "github": "https://github.com/Happyuky7/MTA-API-SERVERINFO",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Web",
+        "readable": true
+      },
+      {
+        "name": "JavaScript",
+        "readable": true
+      },
+      {
+        "name": "NodeJS",
+        "readable": true
+      },
+      {
+        "name": "MTA:SA",
+        "readable": true
+      },
+      {
+        "name": "API",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
+    "name": "Basic WebServer NodeJS V1",
+    "description": {
+      "en": "A basic Node.js web server starter project.",
+      "es": "Proyecto base de servidor web en Node.js.",
+      "ja": "Node.jsの基本的なWebサーバーのスタータープロジェクト。"
+    },
+    "image": "",
+    "link": "https://github.com/Happyuky7/Basic-WebServer-NodeJS-V1",
+    "demo": null,
+    "github": "https://github.com/Happyuky7/Basic-WebServer-NodeJS-V1",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Web",
+        "readable": true
+      },
+      {
+        "name": "JavaScript",
+        "readable": true
+      },
+      {
+        "name": "NodeJS",
+        "readable": true
+      },
+      {
+        "name": "CSS",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
+    "name": "Draggable-Cards-in-web",
+    "description": {
+      "en": "Small example project: draggable cards UI for the web.",
+      "es": "Proyecto de ejemplo: UI de tarjetas arrastrables para web.",
+      "ja": "ドラッグ可能なカードUIの小さなサンプルプロジェクト。"
+    },
+    "image": "",
+    "link": "https://github.com/Happyuky7/Draggable-Cards-in-web",
+    "demo": null,
+    "github": "https://github.com/Happyuky7/Draggable-Cards-in-web",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Web",
+        "readable": true
+      },
+      {
+        "name": "JavaScript",
+        "readable": true
+      },
+      {
+        "name": "CSS",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
+    "name": "SEPARE-WORLD-ITEMS",
+    "description": {
+      "en": "Minecraft plugin to separate items/inventory by world.",
+      "es": "Plugin de Minecraft para separar el inventario por mundos.",
+      "ja": "ワールドごとにアイテム/インベントリを分離するMinecraftプラグイン。"
+    },
+    "image": "/assets/img/projects/separeworlditem-logo.png",
+    "link": "https://github.com/Happyuky7/SEPARE-WORLD-ITEMS",
+    "demo": null,
+    "github": "https://github.com/Happyuky7/SEPARE-WORLD-ITEMS",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Minecraft",
+        "readable": true
+      },
+      {
+        "name": "Plugin",
+        "readable": true
+      },
+      {
+        "name": "Java",
+        "readable": true
+      },
+      {
+        "name": "Spigot",
+        "readable": true
+      },
+      {
+        "name": "Bukkit",
+        "readable": true
+      },
+      {
+        "name": "Paper",
+        "readable": true
+      },
+      {
+        "name": "Folia",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
+    "name": "CobwebRemoveBoxPvP",
+    "description": {
+      "en": "Minecraft plugin that removes cobwebs in BoxPvP.",
+      "es": "Plugin de Minecraft que permite remover telarañas en BoxPvP.",
+      "ja": "BoxPvPでクモの巣を削除できるMinecraftプラグイン。"
+    },
+    "image": "/assets/img/projects/CobwebRemoveBoxPvP-logo.png",
+    "link": "https://github.com/Happyuky7/CobwebRemoveBoxPvP",
+    "demo": null,
+    "github": "https://github.com/Happyuky7/CobwebRemoveBoxPvP",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Minecraft",
+        "readable": true
+      },
+      {
+        "name": "Plugin",
+        "readable": true
+      },
+      {
+        "name": "Java",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
+    "name": "NameMC-API-ServersMC",
+    "description": {
+      "en": "Project using the NameMC API for Minecraft servers.",
+      "es": "Uso de la API de NameMC para servidores de Minecraft.",
+      "ja": "Minecraftサーバー向けにNameMC APIを利用するプロジェクト。"
+    },
+    "image": "/assets/img/projects/NameMC-API-ServersMC-logo.jpg",
+    "link": "https://github.com/Happyuky7/NameMC-API-ServersMC",
+    "demo": null,
+    "github": "https://github.com/Happyuky7/NameMC-API-ServersMC",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Minecraft",
+        "readable": true
+      },
+      {
+        "name": "Java",
+        "readable": true
+      },
+      {
+        "name": "API",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
+    "name": "Mojang Authlib All Versions Information",
+    "description": {
+      "en": "Repository that lists Mojang AuthLib versions and how to integrate them with Maven/Gradle.",
+      "es": "Repositorio que lista versiones de Mojang AuthLib y cómo integrarlas con Maven/Gradle.",
+      "ja": "Mojang AuthLibの各バージョンとMaven/Gradleでの導入方法をまとめたリポジトリ。"
+    },
+    "image": "/assets/img/projects/Mojang-Authlib-All-Versions-Information-logo.jpg",
+    "link": "https://github.com/Happyuky7/MojangAuthlibAllVersions1",
+    "demo": null,
+    "github": "https://github.com/Happyuky7/MojangAuthlibAllVersions1",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Minecraft",
+        "readable": true
+      },
+      {
+        "name": "Java",
+        "readable": true
+      },
+      {
+        "name": "Maven",
+        "readable": true
+      },
+      {
+        "name": "Gradle",
+        "readable": true
+      },
+      {
+        "name": "API",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  }
+]

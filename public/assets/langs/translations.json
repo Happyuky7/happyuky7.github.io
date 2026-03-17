@@ -1,0 +1,38 @@
+{
+    "default": {
+        "all": "All",
+        "clear": "Clear Filters",
+        "orther": "Other",
+        "more": "Click to see more"
+    },
+    "es": {
+        "all": "Todos",
+        "clear": "Limpiar Filtros",
+        "orther": "Otro",
+        "more": "Haga clic para ver más"
+    },
+    "en": {
+        "all": "All",
+        "clear": "Clear Filters",
+        "orther": "Other",
+        "more": "Click to see more"
+    },
+    "jp": {
+        "all": "すべて",
+        "clear": "フィルタをクリア",
+        "orther": "その他",
+        "more": "もっと見る"
+    },
+    "pt": {
+        "all": "Todos",
+        "clear": "Limpar Filtros",
+        "orther": "Outro",
+        "more": "Clique para ver mais"
+    },
+    "de": {
+        "all": "Alle",
+        "clear": "Filter löschen",
+        "orther": "Andere",
+        "more": "Klicken Sie hier, um mehr zu sehen"
+    }
+}

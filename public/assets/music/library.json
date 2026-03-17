@@ -1,0 +1,81 @@
+{
+  "playlists": [
+    {
+      "id": "root",
+      "name": "Root Playlist",
+      "basePath": "/assets/music/root",
+      "tracks": [
+        {
+          "title": "Resonance",
+          "artist": "Home",
+          "src": "/assets/music/root/Resonance.mp3",
+          "cover": "/assets/music/root/resonance-home.jpg"
+        },
+        {
+            "title": "The PvP Song",
+            "artist": "enzipenzo",
+            "src": "/assets/music/root/Minemanner PvP Song [NrzBNM_o79U].mp3",
+            "cover": "/assets/music/root/the-pvp-song.jpg"
+        },
+        {
+            "title": "Blue Boi",
+            "artist": "LAKEY INSPIRED",
+            "src": "/assets/music/root/LAKEY INSPIRED - Blue Boi [wAukvwLCVbM].mp3",
+            "cover": "/assets/music/root/blue-boi-lakey-inspired.jpg"
+        },
+        {
+            "title": "MONTAGEM HIKARI",
+            "artist": "BellyJay",
+            "src": "/assets/music/root/BellyJay - MONTAGEM HIKARI [YO-6FsfdXbo].mp3"
+        },
+        {
+            "title": "Unstoppable",
+            "artist": "The Score",
+            "src": "/assets/music/root/Unstoppable - The Score.mp3"
+        },
+        {
+            "title": "I Need a Girl",
+            "artist": "",
+            "src": "/assets/music/root/I Need a Girl [cX_cEXDIrvk].mp3",
+            "cover": "/assets/img/defaultdev1.jpg"
+        },
+        {
+            "title": "Held Me Down",
+            "artist": "NAV & Metro Boomin",
+            "src": "/assets/music/root/NAV & Metro Boomin - Held Me Down (Official Audio) [r0zSLa_g9B8].mp3"
+        }
+      ]
+    },
+    {
+      "id": "chill1",
+      "name": "Chill Music 1",
+      "basePath": "/assets/music/chill1",
+      "tracks": [
+        {
+          "title": "Resonance",
+          "artist": "Home",
+          "src": "/assets/music/root/Resonance.mp3",
+          "cover": "/assets/music/root/resonance-home.jpg"
+        },
+        {
+            "title": "The PvP Song",
+            "artist": "enzipenzo",
+            "src": "/assets/music/root/Minemanner PvP Song [NrzBNM_o79U].mp3",
+            "cover": "/assets/music/root/the-pvp-song.jpg"
+        },
+        {
+            "title": "Blue Boi",
+            "artist": "LAKEY INSPIRED",
+            "src": "/assets/music/root/LAKEY INSPIRED - Blue Boi [wAukvwLCVbM].mp3",
+            "cover": "/assets/music/root/blue-boi-lakey-inspired.jpg"
+        },
+        {
+            "title": "I Need a Girl",
+            "artist": "",
+            "src": "/assets/music/root/I Need a Girl [cX_cEXDIrvk].mp3"
+        }
+      ]
+    }
+    
+  ]
+}

@@ -1,0 +1,273 @@
+[
+    {
+        "id": "exlocal-status-published",
+        "slug": "exlocal-status-published",
+        "date": "2026-03-15T12:00:00",
+        "year": "2026",
+        "month": "03",
+        "languages": [
+            "en"
+        ],
+        "defaultLanguage": "en",
+        "title": {
+            "en": "Status: Published"
+        },
+        "excerpt": {
+            "en": "A normal public post (baseline)."
+        },
+        "draft": false,
+        "private": false,
+        "unlisted": false,
+        "archived": false,
+        "localExample": true,
+        "tags": [
+            "status",
+            "published"
+        ],
+        "categories": [
+            "development"
+        ]
+    },
+    {
+        "id": "exlocal-status-archived",
+        "slug": "exlocal-status-archived",
+        "date": "2026-03-15T11:30:00",
+        "year": "2026",
+        "month": "03",
+        "languages": [
+            "en"
+        ],
+        "defaultLanguage": "en",
+        "title": {
+            "en": "Status: Archived"
+        },
+        "excerpt": {
+            "en": "Visible in public list, but marked as archived."
+        },
+        "draft": false,
+        "private": false,
+        "unlisted": false,
+        "archived": true,
+        "localExample": true,
+        "tags": [
+            "status",
+            "archived"
+        ],
+        "categories": [
+            "development"
+        ]
+    },
+    {
+        "id": "exlocal-status-unlisted",
+        "slug": "exlocal-status-unlisted",
+        "date": "2026-03-15T11:00:00",
+        "year": "2026",
+        "month": "03",
+        "languages": [
+            "en"
+        ],
+        "defaultLanguage": "en",
+        "title": {
+            "en": "Status: Unlisted"
+        },
+        "excerpt": {
+            "en": "Hidden from the public list, accessible by URL."
+        },
+        "draft": false,
+        "private": false,
+        "unlisted": true,
+        "archived": false,
+        "localExample": true,
+        "tags": [
+            "status",
+            "unlisted"
+        ],
+        "categories": [
+            "development"
+        ]
+    },
+    {
+        "id": "exlocal-status-private",
+        "slug": "exlocal-status-private",
+        "date": "2026-03-15T10:30:00",
+        "year": "2026",
+        "month": "03",
+        "languages": [
+            "en"
+        ],
+        "defaultLanguage": "en",
+        "title": {
+            "en": "Status: Private"
+        },
+        "excerpt": {
+            "en": "Hidden from public list; shows a private message if accessed by URL."
+        },
+        "draft": false,
+        "private": true,
+        "unlisted": false,
+        "archived": false,
+        "localExample": true,
+        "tags": [
+            "status",
+            "private"
+        ],
+        "categories": [
+            "development"
+        ]
+    },
+    {
+        "id": "exlocal-status-newer",
+        "slug": "exlocal-status-newer",
+        "date": "2026-03-15T10:15:00",
+        "year": "2026",
+        "month": "03",
+        "languages": [
+            "en"
+        ],
+        "defaultLanguage": "en",
+        "title": {
+            "en": "Status: Newer Version"
+        },
+        "excerpt": {
+            "en": "The newer version referenced by outdated posts."
+        },
+        "draft": false,
+        "private": false,
+        "unlisted": false,
+        "archived": false,
+        "localExample": true,
+        "tags": [
+            "status",
+            "new"
+        ],
+        "categories": [
+            "development"
+        ]
+    },
+    {
+        "id": "exlocal-status-outdated",
+        "slug": "exlocal-status-outdated",
+        "date": "2026-03-15T10:00:00",
+        "year": "2026",
+        "month": "03",
+        "languages": [
+            "en"
+        ],
+        "defaultLanguage": "en",
+        "title": {
+            "en": "Status: Outdated"
+        },
+        "excerpt": {
+            "en": "Shows a banner linking to the newer version."
+        },
+        "draft": false,
+        "private": false,
+        "unlisted": false,
+        "archived": false,
+        "supersededBy": "exlocal-status-newer",
+        "localExample": true,
+        "tags": [
+            "status",
+            "outdated"
+        ],
+        "categories": [
+            "development"
+        ]
+    },
+    {
+        "id": "exlocal-status-archived-outdated",
+        "slug": "exlocal-status-archived-outdated",
+        "date": "2026-03-15T09:30:00",
+        "year": "2026",
+        "month": "03",
+        "languages": [
+            "en"
+        ],
+        "defaultLanguage": "en",
+        "title": {
+            "en": "Status: Archived + New Version"
+        },
+        "excerpt": {
+            "en": "Archived and also points to a newer version."
+        },
+        "draft": false,
+        "private": false,
+        "unlisted": false,
+        "archived": true,
+        "supersededBy": "exlocal-status-newer",
+        "localExample": true,
+        "tags": [
+            "status",
+            "archived",
+            "outdated"
+        ],
+        "categories": [
+            "development"
+        ]
+    },
+    {
+        "id": "example-project",
+        "slug": "example-project",
+        "date": "2026-01-21",
+        "year": "2026",
+        "month": "01",
+        "readTime": 5,
+        "image": "https://cdn.discordapp.com/attachments/1213609984026214410/1461466516162609354/76B213DD-ACFF-47D2-92DB-1B3611B38CFD.gif?ex=698c4682&is=698af502&hm=b19b344f71e2cbbf16d26a7eea13758ef611aa360ba5755d7184b78857b2fc15",
+        "languages": [
+            "en",
+            "es",
+            "ja"
+        ],
+        "defaultLanguage": "en",
+        "author": {
+            "name": "Happyuky7",
+            "avatar": "/assets/img/logo.png",
+            "url": "https://happyuky7.com",
+            "role": {
+                "en": "Full Stack Developer",
+                "es": "Desarrollador Full Stack",
+                "ja": "フルスタック開発者"
+            }
+        },
+        "translators": [
+            {
+                "name": "Translator Name",
+                "avatar": "https://example.com/path-to-translator-avatar.jpg",
+                "url": "https://translator-website.com",
+                "language": "es"
+            }
+        ],
+        "colaborators": [
+            {
+                "name": "Collaborator Name",
+                "avatar": "https://example.com/path-to-collaborator-avatar.jpg",
+                "url": "https://collaborator-website.com",
+                "role": {
+                    "en": "Content Editor",
+                    "es": "Editor de Contenido",
+                    "ja": "コンテンツエディター"
+                }
+            }
+        ],
+        "title": {
+            "en": "Example Project",
+            "es": "Proyecto de Ejemplo",
+            "ja": "例のプロジェクト"
+        },
+        "description": {
+            "en": "This is an example description for the blog post in English.",
+            "es": "Esta es una descripción de ejemplo para la publicación del blog en español.",
+            "ja": "これは日本語のブログ投稿の例の説明です。"
+        },
+        "draft": true,
+        "tags": [
+            "example",
+            "blog",
+            "post"
+        ],
+        "categories": [
+            "tutorial",
+            "development"
+        ]
+    }
+]

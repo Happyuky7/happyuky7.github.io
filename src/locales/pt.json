@@ -1,0 +1,267 @@
+{
+	"seo": {
+		"siteName": "Happyuky7",
+		"description": "Website, Blog, Projetos e mais. GitHub: https://github.com/Happyuky7"
+	},
+	"nav": {
+		"home": "Início",
+		"skills": "Skills",
+		"projects": "Projetos",
+		"contact": "Contacto",
+		"blog": "Blog"
+	},
+	"home": {
+		"available": "Disponível para novos projetos",
+		"title-h1": "Olá, eu sou",
+		"view-projects": "Ver Projetos",
+		"contact-me": "Contactar-me",
+		"skills": {
+			"title": "Skills",
+			"subtitle": "Tecnologias e ferramentas que uso com frequência.",
+			"tabs": {
+				"all": "Tudo",
+				"programming": "Linguagens",
+				"tools": "Ferramentas",
+				"creative": "Criativo",
+				"other": "Outro"
+			}
+		},
+		"about-paragraphs": [
+			"Sou desenvolvedor e criador de conteúdo, focado em construir **software útil** e projetos reais. Trabalho com **JavaScript/Node.js** e **Java**, e também uso **Python** e **C++** conforme as necessidades de cada ideia.",
+			"Interesso-me por integrar **hardware com software** usando **ESP32** e **Raspberry Pi**, bem como por projetos com **IA e LLMs** aplicados a ferramentas e automação.",
+			"Às vezes partilho o meu processo na **Twitch** e no **YouTube**, e publico **projetos rápidos/código** no **X (Twitter)**."
+		]
+	},
+	"footer": {
+		"rights": "Todos os direitos reservados.",
+		"made-with": "Feito com",
+		"by": "por"
+	},
+	"relevantProjects": {
+		"title": "Projetos relevantes",
+		"subtitle": "Uma pequena seleção de projetos de que me orgulho — curados e sempre a melhorar.",
+		"viewMore": "Ver mais"
+	},
+	"projects": {
+		"title": "Projetos",
+		"description": "Aqui estão alguns dos meus projetos.",
+		"searchPlaceholder": "Pesquisar projetos por nome, tags…",
+		"loading": "A carregar projetos…",
+		"error": {
+			"loading": "Erro ao carregar projetos",
+			"description": "Houve um problema ao carregar os projetos. Por favor, atualize a página.",
+			"noProjects": "Não há projetos disponíveis",
+			"noProjectsDescription": "Não há projetos para mostrar neste momento."
+		},
+		"refreshPage": "Atualizar página",
+		"filter": {
+			"title": "Filtrar projetos",
+			"description": "Selecione uma ou mais tags para filtrar projetos. Clique novamente para remover o filtro.",
+			"allProjects": "Todos os projetos",
+			"activeFilters": "Filtros ativos:",
+			"clearAllFilters": "Limpar todos os filtros"
+		},
+		"noProjectsWithFilters": "Nenhum projeto corresponde aos seus filtros",
+		"tryDifferentFilters": "Tente selecionar tags diferentes ou limpe todos os filtros.",
+		"noProjects": "Não há projetos disponíveis",
+		"noProjectsDescription": "Não há projetos para mostrar neste momento.",
+		"noDescriptionAvailable": "Sem descrição disponível.",
+		"card": {
+			"nolinkavailable": {
+				"title": "Projeto indisponível",
+				"description": "Desculpe, este projeto não tem um link disponível neste momento. Por favor, tente novamente mais tarde."
+			}
+		},
+		"showing": "A mostrar",
+		"of": "de",
+		"projectsText": "projetos"
+	},
+	"projectsDetails": {
+		"backToProjects": "Voltar aos projetos",
+		"loading": "A carregar detalhes do projeto…",
+		"error": {
+			"loading": "Erro ao carregar detalhes do projeto",
+			"description": "Houve um problema ao carregar os detalhes do projeto. Por favor, atualize a página."
+		},
+		"refreshPage": "Atualizar página",
+		"viewDemo": "Ver demo",
+		"viewOnGithub": "Ver no GitHub",
+		"visitProject": "Visitar projeto",
+		"noReadme": "Não há README disponível para este projeto",
+		"readmeError429": "Limite de pedidos excedido. Por favor, tente novamente mais tarde.",
+		"readmeError404": "Ficheiro README não encontrado",
+		"readmeErrorInvalid": "Formato de README inválido",
+		"readmeErrorGeneric": "Erro ao carregar o README",
+		"readmeNotTranslated": "Este README só está disponível em inglês e não foi traduzido."
+	},
+	"blog": {
+		"title": "Blog",
+		"description": "Leia os meus artigos e atualizações mais recentes.",
+		"subtitle": "Leia os meus artigos e atualizações mais recentes.",
+		"searchPlaceholder": "Pesquisar posts por título, id, tags…",
+		"minuteRead": "min de leitura",
+		"readMore": "Ler mais",
+		"noResults": "Nenhum post encontrado",
+		"noResultsDesc": "Tente ajustar a pesquisa ou os filtros.",
+		"clearFilters": "Limpar filtros",
+		"allCategories": "Todas as categorias",
+		"allTags": "Todas as tags",
+		"allYears": "Todos os anos",
+		"allMonths": "Todos os meses",
+		"loading": "A carregar posts…",
+		"error": {
+			"loading": "Erro ao carregar posts",
+			"description": "Houve um problema ao carregar os posts do blog. Por favor, atualize a página."
+		},
+		"refreshPage": "Atualizar página",
+		"showing": "A mostrar",
+		"of": "de",
+		"postsText": "posts",
+		"postsPerPage": "Posts por página",
+		"backToBlog": "Voltar ao blog",
+		"postNotFound": "Post não encontrado",
+		"tryAgain": "Tentar novamente",
+		"availableLanguages": "Idiomas disponíveis",
+		"mainAuthor": "Autor principal",
+		"collaborators": "Colaboradores",
+		"translators": "Tradutores",
+		"translatedBy": "Traduzido por",
+		"share": "Partilhar",
+		"shareAriaLabel": "Partilhar este post",
+		"linkCopied": "Link copiado",
+		"sharePost": "Partilhar post",
+		"copyLink": "Copiar link",
+		"shareDefaultText": "Veja este post do blog!",
+		"tocTitle": "Conteúdo",
+		"cite": {
+			"button": "Citar",
+			"buttonAriaLabel": "Como citar este post",
+			"modalTitle": "Como citar este post",
+			"modalSubtitle": "Copie uma referência pronta a usar",
+			"close": "Fechar",
+			"copy": "Copiar",
+			"copied": "Copiado",
+			"copyAriaLabel": "Copiar citação",
+			"apa7": "APA 7",
+			"mla": "MLA",
+			"chicago": "Chicago",
+			"bibtex": "BibTeX"
+		},
+		"translatorOf": "Tradutor de",
+		"contentNotAvailableTitle": "Conteúdo indisponível",
+		"contentNotAvailableDesc": "O conteúdo deste artigo ainda não está disponível. O ficheiro pode não existir ou ainda estar em progresso. Por favor, tente novamente em breve!",
+		"viewAllArticles": "Ver todos os artigos",
+		"retry": "Tentar novamente",
+		"languageNotAvailable": "Idioma não disponível:",
+		"showingInstead": "A mostrar em vez disso:"
+	},
+	"categories": {
+		"all": "Todas as categorias",
+		"tutorial": "Tutorial",
+		"development": "Desenvolvimento",
+		"technology": "Tecnologia",
+		"programming": "Programação",
+		"lifestyle": "Estilo de vida",
+		"travel": "Viagens",
+		"food": "Comida",
+		"education": "Educação",
+		"health": "Saúde",
+		"entertainment": "Entretenimento",
+		"web-development": "Desenvolvimento Web",
+		"backend-development": "Desenvolvimento Backend",
+		"ai-ml": "IA e ML",
+		"anime-analysis": "Análise de Anime",
+		"mathematics": "Matemática",
+		"security": "Segurança",
+		"devops": "DevOps",
+		"photography": "Fotografia",
+		"personal": "Pessoal",
+		"3d-design": "Design 3D",
+		"language-learning": "Aprendizagem de línguas"
+	},
+	"contact": {
+		"title": "Contacto",
+		"description": "Entre em contacto comigo para colaborações ou questões.",
+		"socialMedia": "Siga-me e contacte-me nas redes sociais.",
+		"quickTitle": "Contacto direto",
+		"emailTitle": "Email",
+		"xTitle": "X (Twitter)",
+		"discordTitle": "Discord",
+		"discordServerTitle": "Servidor Discord",
+		"copy": "Copiar",
+		"copied": "Copiado",
+		"sendEmail": "Enviar",
+		"openX": "Abrir",
+		"openDiscord": "Abrir",
+		"responseTitle": "Tempo de resposta",
+		"responseText": "Normalmente respondo dentro de",
+		"timezoneTitle": "Fuso horário",
+		"timezoneText": "Estou em",
+		"formTitle": "Envie-me uma mensagem",
+		"formName": "Nome",
+		"formEmail": "Email",
+		"formMessage": "Fale-me da sua ideia ou projeto…",
+		"formHint": "Isto abrirá a sua app de email com a mensagem pronta.",
+		"formButton": "Enviar mensagem"
+	},
+	"errors": {
+		"banner": "// manipulador de erros :: portfolio",
+		"hintLabel": "dica",
+		"traceTitle": "info de debug:",
+		"actions": {
+			"back": "Voltar",
+			"home": "Ir para o início",
+			"retry": "Tentar novamente"
+		},
+		"common": {
+			"title": "Algo correu mal",
+			"message": "Ocorreu um erro inesperado.",
+			"hint": "Tente voltar atrás ou recarregar"
+		},
+		"400": {
+			"title": "Pedido inválido",
+			"message": "O pedido parece inválido.",
+			"hint": "Verifique o URL"
+		},
+		"401": {
+			"title": "Não autorizado",
+			"message": "Precisa de iniciar sessão para continuar.",
+			"hint": "Inicie sessão e tente novamente"
+		},
+		"403": {
+			"title": "Proibido",
+			"message": "Não tem permissão para aceder a esta página.",
+			"hint": "Acesso negado"
+		},
+		"404": {
+			"title": "Página não encontrada",
+			"message": "A página que procura não existe (ou foi movida).",
+			"hint": "Talvez o caminho esteja errado"
+		},
+		"408": {
+			"title": "Tempo de pedido esgotado",
+			"message": "Isto demorou demasiado a responder.",
+			"hint": "Tentar novamente"
+		},
+		"429": {
+			"title": "Demasiados pedidos",
+			"message": "Está a ser limitado. Por favor, tente novamente dentro de momentos.",
+			"hint": "Aguarde um pouco"
+		},
+		"500": {
+			"title": "Erro do servidor",
+			"message": "Algo falhou inesperadamente. Tente atualizar.",
+			"hint": "Recarregar a página"
+		},
+		"502": {
+			"title": "Bad gateway",
+			"message": "O serviço a montante devolveu uma resposta inválida.",
+			"hint": "Tente mais tarde"
+		},
+		"503": {
+			"title": "Serviço indisponível",
+			"message": "O serviço está temporariamente indisponível.",
+			"hint": "Tente mais tarde"
+		}
+	}
+}
