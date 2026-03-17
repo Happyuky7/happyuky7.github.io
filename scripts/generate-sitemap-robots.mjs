@@ -76,6 +76,7 @@ async function generate() {
     }
 
     for (const proj of Array.isArray(projects) ? projects : []) {
+      if (proj?.hidden) continue;
       const slug = proj.name;
       if (!slug) continue;
       entries.push({ loc: `${base}/${lang}/project/${encodeURIComponent(slug)}/` });

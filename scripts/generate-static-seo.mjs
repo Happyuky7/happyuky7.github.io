@@ -310,6 +310,7 @@ async function generate() {
 
     // Project details
     for (const proj of Array.isArray(projects) ? projects : []) {
+      if (proj?.hidden) continue;
       const slug = proj.name || '';
       if (!slug) continue;
 

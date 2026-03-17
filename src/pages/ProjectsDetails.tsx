@@ -112,7 +112,7 @@ const ProjectsDetails: React.FC = () => {
                 return projectSlug === decodedSlug;
             });
 
-            if (!foundProject) {
+            if (!foundProject || (foundProject as any)?.hidden) {
                 console.log('Project not found for slug:', slug);
                 setError(true);
                 setLoading(false);

@@ -27,7 +27,7 @@
         "readable": true
       }
     ],
-    "hidden": false
+    "hidden": true
   },
   {
     "name": "theserverjars",
