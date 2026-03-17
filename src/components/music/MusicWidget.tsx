@@ -736,6 +736,26 @@ export default function MusicWidget() {
         .mw-no-scrollbar::-webkit-scrollbar { display: none; }
         .mw-no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
+        /*
+          Mobile landscape safety:
+          - Phones in landscape can hit the sm breakpoint (wide) but have very little height.
+          - Keep the player within viewport and prevent the toggle button from becoming unreachable.
+        */
+        .mw-panel {
+          max-height: calc(100dvh - 7rem);
+          overflow-y: auto;
+          overscroll-behavior: contain;
+        }
+        @media (orientation: landscape) and (max-height: 520px) {
+          .mw-panel {
+            left: 0.75rem !important;
+            right: 0.75rem !important;
+            bottom: 4.5rem !important;
+            width: auto !important;
+            transform: none !important;
+          }
+        }
+
         .mw-slider {
           -webkit-appearance: none;
           appearance: none;
@@ -790,7 +810,7 @@ export default function MusicWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.985 }}
             transition={{ duration: 0.2 }}
-            className="pointer-events-auto absolute bottom-20 left-3 right-3 rounded-[1.45rem] border border-white/10 bg-[#091317]/80 px-4 py-4 text-white shadow-[0_22px_70px_rgba(0,0,0,0.52)] backdrop-blur-2xl sm:bottom-4 sm:left-1/2 sm:right-auto sm:w-[min(94vw,920px)] sm:-translate-x-1/2 sm:rounded-[1.6rem] sm:px-5"
+            className="mw-panel mw-no-scrollbar pointer-events-auto absolute bottom-20 left-3 right-3 rounded-[1.45rem] border border-white/10 bg-[#091317]/80 px-4 py-4 text-white shadow-[0_22px_70px_rgba(0,0,0,0.52)] backdrop-blur-2xl sm:bottom-4 sm:left-1/2 sm:right-auto sm:w-[min(94vw,920px)] sm:-translate-x-1/2 sm:rounded-[1.6rem] sm:px-5"
             style={{ boxShadow: `0 22px 70px rgba(0,0,0,0.52), 0 0 0 1px rgba(255,255,255,0.04), 0 0 30px rgba(${ACCENT.rgb}, 0.08)` }}
           >
             <div className="flex flex-col gap-3">
