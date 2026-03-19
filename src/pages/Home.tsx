@@ -84,7 +84,7 @@ const Home: React.FC = () => {
     return (
         <>
             {/*<VideoBackground videoSrc="/assets/video/background4.mp4" overlay={true} />*/}
-            <VideoBackground videoSrc="/assets/video/background7.gif" overlay={false} staticOverlay={true} />
+            <VideoBackground videoSrc="/assets/video/background7.gif" overlay={true} staticOverlay={true} />
 
             <div className="relative z-10">
 
