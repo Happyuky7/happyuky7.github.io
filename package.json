@@ -14,7 +14,7 @@
   "dependencies": {
     "buffer": "^6.0.3",
     "flag-icons": "^7.5.0",
-    "framer-motion": "^12.23.24",
+    "framer-motion": "^12.38.0",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
     "jsmediatags": "^3.9.7",
