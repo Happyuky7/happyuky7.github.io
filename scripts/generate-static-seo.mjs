@@ -6,6 +6,9 @@ const DIST = path.join(ROOT, 'dist');
 const PUBLIC = path.join(ROOT, 'public');
 
 const SITE_URL = process.env.VITE_SITE_URL || process.env.SITE_URL || 'https://happyuky7.com';
+const PROFILE_NAME = 'Happy7';
+const PROFILE_ALIAS = 'Happyuky7';
+const SITE_TITLE_PREFIX = `${PROFILE_NAME} (${PROFILE_ALIAS})`;
 const LANGS = ['en', 'es', 'ja', 'fr', 'de', 'pt', 'pl', 'ru', 'zh', 'ko', 'th', 'fil'];
 
 const OG_LOCALE = {
@@ -45,6 +48,54 @@ function escapeHtml(s) {
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#39;');
+}
+
+function serializeJsonLd(jsonLd) {
+  return JSON.stringify(jsonLd)
+    .replaceAll('<', '\\u003c')
+    .replaceAll('>', '\\u003e')
+    .replaceAll('&', '\\u0026');
+}
+
+function baseDescription(lang) {
+  return {
+    en: `Official website of ${PROFILE_NAME}, also known as ${PROFILE_ALIAS}: portfolio, blog, projects, GitHub work and contact links.`,
+    es: `Sitio oficial de ${PROFILE_NAME}, también conocido como ${PROFILE_ALIAS}: portafolio, blog, proyectos, GitHub y enlaces de contacto.`,
+    ja: `${PROFILE_NAME}（${PROFILE_ALIAS}）の公式サイト。ポートフォリオ、ブログ、プロジェクト、GitHub、連絡先リンク。`,
+  }[lang] || `Official website of ${PROFILE_NAME}, also known as ${PROFILE_ALIAS}: portfolio, blog, projects, GitHub work and contact links.`;
+}
+
+function profileJsonLd(lang) {
+  const base = normalizeSiteUrl(SITE_URL);
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${base}/#website`,
+        url: `${base}/`,
+        name: PROFILE_NAME,
+        alternateName: [PROFILE_ALIAS, `${PROFILE_ALIAS}.com`],
+        inLanguage: lang,
+        publisher: { '@id': `${base}/#person` },
+      },
+      {
+        '@type': 'Person',
+        '@id': `${base}/#person`,
+        name: PROFILE_NAME,
+        alternateName: [PROFILE_ALIAS, `${PROFILE_ALIAS}.com`],
+        url: `${base}/`,
+        image: `${base}/assets/img/logo.png`,
+        sameAs: [
+          'https://github.com/Happyuky7',
+          'https://x.com/happyuky7',
+          'https://www.youtube.com/@Happyuky7',
+          'https://www.twitch.tv/happyuky7',
+        ],
+        knowsAbout: ['Web development', 'Full-stack development', 'Minecraft servers', 'JavaScript', 'TypeScript', 'React'],
+      },
+    ],
+  };
 }
 
 function pickLocalized(obj, lang, fallback = 'en') {
@@ -120,6 +171,7 @@ function applySeo(html, { lang, title, description, urlPath, image, ogType }) {
 
   // og
   html = replaceOrInsert(html, /<meta\s+property="og:type"\s+content="[^"]*"\s*\/>/i, `    <meta property="og:type" content="${ogType || 'website'}" />`);
+  html = replaceOrInsert(html, /<meta\s+property="og:site_name"\s+content="[^"]*"\s*\/>/i, `    <meta property="og:site_name" content="${SITE_TITLE_PREFIX}" />`);
   html = replaceOrInsert(html, /<meta\s+property="og:title"\s+content="[^"]*"\s*\/>/i, `    <meta property="og:title" content="${safeTitle}" />`);
   html = replaceOrInsert(html, /<meta\s+property="og:description"\s+content="[^"]*"\s*\/>/i, `    <meta property="og:description" content="${safeDesc}" />`);
   html = replaceOrInsert(html, /<meta\s+property="og:url"\s+content="[^"]*"\s*\/>/i, `    <meta property="og:url" content="${canonical}" />`);
@@ -147,7 +199,7 @@ function applySeo(html, { lang, title, description, urlPath, image, ogType }) {
 
 function insertOrReplaceJsonLd(html, jsonLd) {
   if (!jsonLd) return html;
-  const block = `    <script type="application/ld+json">${escapeHtml(JSON.stringify(jsonLd))}</script>`;
+  const block = `    <script type="application/ld+json">${serializeJsonLd(jsonLd)}</script>`;
   // Replace first existing ld+json script if present; otherwise insert.
   const re = /<script\s+type="application\/ld\+json">[\s\S]*?<\/script>/i;
   return replaceOrInsert(html, re, block);
@@ -175,11 +227,7 @@ async function generate() {
   for (const lang of LANGS) {
     const template = await readTemplate(lang);
 
-    const baseDesc = {
-      en: 'Website, Blog, Projects and more. GitHub: https://github.com/Happyuky7',
-      es: 'Sitio web, blog, proyectos y más. GitHub: https://github.com/Happyuky7',
-      ja: 'ウェブサイト、ブログ、プロジェクトなど。GitHub: https://github.com/Happyuky7',
-    }[lang] || 'Website, Blog, Projects and more. GitHub: https://github.com/Happyuky7';
+    const baseDesc = baseDescription(lang);
 
     const pageLabel = {
       en: { blog: 'Blog', projects: 'Projects', contact: 'Contact' },
@@ -192,14 +240,15 @@ async function generate() {
       const urlPath = `/${lang}/contact`;
       const html = applySeo(template, {
         lang,
-        title: `Happyuky7 | ${pageLabel.contact}`,
+        title: `${SITE_TITLE_PREFIX} | ${pageLabel.contact}`,
         description: baseDesc,
         urlPath,
         image: '/assets/img/logo.png',
         ogType: 'website',
       });
-      await writeHtml(path.join(DIST, lang, 'contact', 'index.html'), html);
-      if (lang === 'en') await writeHtml(path.join(DIST, 'contact', 'index.html'), html);
+      const htmlWithRich = insertOrReplaceJsonLd(html, profileJsonLd(lang));
+      await writeHtml(path.join(DIST, lang, 'contact', 'index.html'), htmlWithRich);
+      if (lang === 'en') await writeHtml(path.join(DIST, 'contact', 'index.html'), htmlWithRich);
     }
 
     // Blog index
@@ -207,15 +256,16 @@ async function generate() {
       const urlPath = `/${lang}/blog`;
       const html = applySeo(template, {
         lang,
-        title: `Happyuky7 | ${pageLabel.blog}`,
+        title: `${SITE_TITLE_PREFIX} | ${pageLabel.blog}`,
         description: baseDesc,
         urlPath,
         image: '/assets/img/logo.png',
         ogType: 'website',
       });
-      await writeHtml(path.join(DIST, lang, 'blog', 'index.html'), html);
+      const htmlWithRich = insertOrReplaceJsonLd(html, profileJsonLd(lang));
+      await writeHtml(path.join(DIST, lang, 'blog', 'index.html'), htmlWithRich);
       // unprefixed alias (English assumed)
-      if (lang === 'en') await writeHtml(path.join(DIST, 'blog', 'index.html'), html);
+      if (lang === 'en') await writeHtml(path.join(DIST, 'blog', 'index.html'), htmlWithRich);
     }
 
     // Projects index
@@ -223,14 +273,15 @@ async function generate() {
       const urlPath = `/${lang}/projects`;
       const html = applySeo(template, {
         lang,
-        title: `Happyuky7 | ${pageLabel.projects}`,
+        title: `${SITE_TITLE_PREFIX} | ${pageLabel.projects}`,
         description: baseDesc,
         urlPath,
         image: '/assets/img/logo.png',
         ogType: 'website',
       });
-      await writeHtml(path.join(DIST, lang, 'projects', 'index.html'), html);
-      if (lang === 'en') await writeHtml(path.join(DIST, 'projects', 'index.html'), html);
+      const htmlWithRich = insertOrReplaceJsonLd(html, profileJsonLd(lang));
+      await writeHtml(path.join(DIST, lang, 'projects', 'index.html'), htmlWithRich);
+      if (lang === 'en') await writeHtml(path.join(DIST, 'projects', 'index.html'), htmlWithRich);
     }
 
     // Blog posts
@@ -254,7 +305,7 @@ async function generate() {
 
       const html = applySeo(template, {
         lang,
-        title: `Happyuky7 | ${title}`,
+        title: `${SITE_TITLE_PREFIX} | ${title}`,
         description: desc,
         urlPath,
         image: img,
@@ -262,7 +313,7 @@ async function generate() {
       });
 
       const canonical = `${normalizeSiteUrl(SITE_URL)}${urlPath.startsWith('/') ? urlPath : `/${urlPath}`}/`;
-      const authorName = post.author?.name || 'Happyuky7';
+      const authorName = post.author?.name || PROFILE_NAME;
       const authorUrl = post.author?.url || normalizeSiteUrl(SITE_URL);
       const authorAvatar = post.author?.avatar || '/assets/img/logo.png';
       const published = post.date ? `${post.date}T00:00:00.000Z` : undefined;
@@ -279,12 +330,14 @@ async function generate() {
         author: {
           '@type': 'Person',
           name: authorName,
+          alternateName: PROFILE_ALIAS,
           url: authorUrl,
           image: toAbsUrl(authorAvatar),
         },
         publisher: {
           '@type': 'Person',
-          name: 'Happyuky7',
+          name: PROFILE_NAME,
+          alternateName: PROFILE_ALIAS,
           url: normalizeSiteUrl(SITE_URL),
           logo: { '@type': 'ImageObject', url: `${normalizeSiteUrl(SITE_URL)}/assets/img/logo.png` },
         },
@@ -321,7 +374,7 @@ async function generate() {
       const urlPath = `/${lang}/project/${encodeURIComponent(slug)}`;
       const html = applySeo(template, {
         lang,
-        title: `Happyuky7 | ${name}`,
+        title: `${SITE_TITLE_PREFIX} | ${name}`,
         description: desc,
         urlPath,
         image: img,
@@ -337,7 +390,7 @@ async function generate() {
         image: [toAbsUrl(img)],
         url: canonical,
         inLanguage: lang,
-        author: { '@type': 'Person', name: 'Happyuky7', url: normalizeSiteUrl(SITE_URL) },
+        author: { '@type': 'Person', name: PROFILE_NAME, alternateName: PROFILE_ALIAS, url: normalizeSiteUrl(SITE_URL) },
         sameAs: [proj.github, proj.link, proj.demo].filter(Boolean),
       };
 

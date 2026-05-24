@@ -22,7 +22,8 @@ const Home: React.FC = () => {
     const { t, tr, language } = useLanguage();
     const noWrapTitle = language !== "jp" && language !== "ja";
     const aboutParagraphs = tr("home.about-paragraphs") as string[];
-    const userName = "Happyuky7";
+    const userName = "Happy7";
+    const userAlias = "Happyuky7";
 
     const heroSkillChips = React.useMemo(() => {
         const chips: string[] = [];
@@ -109,6 +110,9 @@ const Home: React.FC = () => {
                                         </span>
                                     </span>
                                 </h1>
+                                <p className="mt-3 text-lg font-medium text-white/70">
+                                    {userAlias}
+                                </p>
                             </div>
 
                             <div className="relative max-w-xl pl-5">
@@ -182,6 +186,9 @@ const Home: React.FC = () => {
                                     </span>
                                 </span>
                             </h1>
+                            <p className="-mt-2 text-base font-medium text-white/70">
+                                {userAlias}
+                            </p>
 
                             <div className="home-hero-imageWrap flex justify-center">
                                 <div className="reveal delay-100 relative">
