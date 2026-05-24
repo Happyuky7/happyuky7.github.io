@@ -14,6 +14,7 @@
         "**/zh": true,
         "**/ko": true,
         "**/th": true,
-        "**/fil": true
+        "**/fil": true,
+        "**/jp": true,
     }
 }
