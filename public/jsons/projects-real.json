@@ -27,7 +27,7 @@
         "readable": true
       }
     ],
-    "hidden": true
+    "hidden": false
   },
   {
     "name": "theserverjars",
@@ -123,6 +123,39 @@
       },
       {
         "name": "API",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
+    "name": "rmguard-linux",
+    "displayName": "RMGUARD-Linux",
+    "description": {
+      "en": "Linux rm safety guard. RMGuard is a small protection layer for interactive shells that blocks dangerous top-level delete commands while keeping normal `rm` usage familiar.",
+      "es": "Linux rm safety guard. RMGuard es una pequeña capa de protección para shells interactivos que bloquea comandos de borrado peligrosos a nivel superior, manteniendo el uso normal de `rm` familiar.",
+      "ja": "Linux rm safety guard。RMGuardは対話型シェル向けの小さな保護レイヤーで、危険なトップレベルの削除コマンドをブロックしつつ、通常の`rm`の使い勝手を保ちます。"
+    },
+    "image": "/assets/img/projects/rmguard-logo.png",
+    "link": "https://github.com/Happyuky7/RMGUARD-Linux",
+    "demo": "https://happyuky7.github.io/RMGUARD-Linux",
+    "github": "https://github.com/Happyuky7/RMGUARD-Linux",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Linux",
+        "readable": true
+      },
+      {
+        "name": "Security",
+        "readable": true
+      },
+      {
+        "name": "Bash",
+        "readable": true
+      },
+      {
+        "name": "CLI",
         "readable": true
       }
     ],
