@@ -838,6 +838,7 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         input: {
           main: resolve(__dirname, 'index.html'),
+          probe: resolve(__dirname, '__probe/index.html'),
           en: resolve(__dirname, 'en/index.html'),
           es: resolve(__dirname, 'es/index.html'),
           ja: resolve(__dirname, 'ja/index.html'),
