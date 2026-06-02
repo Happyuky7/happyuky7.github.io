@@ -17,6 +17,7 @@ const ProjectsDetails = lazy(() => import("@pages/ProjectsDetails"));
 const Blog = lazy(() => import("@pages/Blog"));
 const BlogPost = lazy(() => import("@pages/BlogPost"));
 const Contact = lazy(() => import("@pages/Contact"));
+const MonitorProbe = lazy(() => import("@pages/MonitorProbe"));
 const ErrorRoute = lazy(() => import("@pages/erros/ErrorRoute"));
 const NotFound = lazy(() => import("@pages/erros/404"));
 
@@ -126,6 +127,7 @@ export default function App() {
               <Route path="blog/:slug" element={<BlogPost />} />
 
               <Route path="contact" element={<Contact />} />
+              <Route path="__probe" element={<MonitorProbe />} />
 
               {DevBlogEditorHub && DevBlogEditorEditor ? (
                 <>
@@ -178,6 +180,7 @@ export default function App() {
               <Route path="blog/:slug" element={<BlogPost />} />
 
               <Route path="contact" element={<Contact />} />
+              <Route path="__probe" element={<MonitorProbe />} />
 
               {DevBlogEditorHub && DevBlogEditorEditor ? (
                 <>
