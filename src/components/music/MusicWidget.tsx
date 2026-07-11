@@ -13,6 +13,7 @@ import {
   LuSkipForward,
   LuVolume2,
 } from "react-icons/lu";
+import { useLanguage } from "@i18n/LanguageContext";
 
 type Track = {
   title: string;
@@ -407,6 +408,7 @@ if (typeof window !== "undefined") {
 }
 
 export default function MusicWidget() {
+  const { t } = useLanguage();
   const location = useLocation();
 
   const [isOpen, setIsOpen] = useState<boolean>(() => {
@@ -860,10 +862,10 @@ export default function MusicWidget() {
           type="button"
           onClick={handleToggleOpen}
           className="flex items-center gap-2 rounded-full border border-white/10 bg-[#091317]/85 px-3 py-2 text-xs text-white/80 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl md:px-4 md:py-2.5 md:text-sm"
-          aria-label={isOpen ? "Cerrar música" : "Abrir música"}
+          aria-label={isOpen ? `${t("musicwidget.music")} - close` : `${t("musicwidget.music")} - open`}
         >
           <LuMusic2 className="h-4 w-4" style={{ color: ACCENT.color }} />
-          <span className="hidden sm:inline">Música</span>
+          <span className="hidden sm:inline">{t("musicwidget.music")}</span>
         </button>
       </div>
 
@@ -904,10 +906,10 @@ export default function MusicWidget() {
                   <div className="min-w-0 flex-1">
                     <div className="mb-1.5 flex items-center gap-2 text-[10px] uppercase tracking-[0.22em]" style={{ color: `rgba(${ACCENT.rgb}, 0.82)` }}>
                       <LuMusic2 className="h-3.5 w-3.5" style={{ color: ACCENT.color }} />
-                      Música
+                      {t("musicwidget.music")}
                     </div>
                     <p className="mw-track-title truncate text-sm font-semibold sm:text-base md:text-lg">
-                      {currentTrack?.title ?? (tracks.length ? "Sin título" : "Sin tracks")}
+                      {currentTrack?.title ?? (tracks.length ? "Untitled" : t("musicwidget.noTracks"))}
                     </p>
                     <p className="mw-track-artist truncate text-xs text-white/60 sm:text-sm">{currentTrack?.artist ?? ""}</p>
                   </div>
@@ -918,7 +920,7 @@ export default function MusicWidget() {
                     <button
                       onClick={prevTrack}
                       className="rounded-full border border-white/10 bg-white/5 p-2 transition hover:bg-white/10 disabled:opacity-50"
-                      aria-label="Anterior"
+                      aria-label={t("musicwidget.previous")}
                       disabled={!tracks.length}
                       type="button"
                     >
@@ -934,7 +936,7 @@ export default function MusicWidget() {
                         color: ACCENT.color,
                         boxShadow: `0 0 18px rgba(${ACCENT.rgb}, 0.12)`,
                       }}
-                      aria-label={isPlaying ? "Pausar" : "Reproducir"}
+                      aria-label={isPlaying ? t("musicwidget.pause") : t("musicwidget.play")}
                       disabled={!canPlay}
                       type="button"
                     >
@@ -944,7 +946,7 @@ export default function MusicWidget() {
                     <button
                       onClick={nextTrack}
                       className="rounded-full border border-white/10 bg-white/5 p-2 transition hover:bg-white/10 disabled:opacity-50"
-                      aria-label="Siguiente"
+                      aria-label={t("musicwidget.next")}
                       disabled={!tracks.length}
                       type="button"
                     >
@@ -986,7 +988,7 @@ export default function MusicWidget() {
                             ? { borderColor: accentBorder, backgroundColor: accentSoft, color: ACCENT.color }
                             : { borderColor: "rgba(255,255,255,0.10)", backgroundColor: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.75)" }
                         }
-                        aria-label="Volumen"
+                        aria-label={t("musicwidget.volume")}
                         type="button"
                       >
                         <LuVolume2 className="h-4 w-4" />
@@ -1003,7 +1005,7 @@ export default function MusicWidget() {
                             style={{ boxShadow: `0 18px 40px rgba(0,0,0,0.42), 0 0 24px rgba(${ACCENT.rgb}, 0.08)` }}
                           >
                             <div className="mb-2 flex items-center justify-between text-[10px] uppercase tracking-[0.18em]" style={{ color: "rgba(255,255,255,0.45)" }}>
-                              <span>Volumen</span>
+                              <span>{t("musicwidget.volume")}</span>
                               <span style={{ color: ACCENT.color }}>{Math.round(volume * 100)}%</span>
                             </div>
                             <div className="flex items-center gap-3">
@@ -1016,7 +1018,7 @@ export default function MusicWidget() {
                                 step={0.01}
                                 value={volume}
                                 onChange={(e) => setVolume(Number(e.target.value))}
-                                aria-label="Volumen"
+                                aria-label={t("musicwidget.volume")}
                                 style={{ background: volumeGradient }}
                               />
                             </div>
@@ -1033,11 +1035,11 @@ export default function MusicWidget() {
                           ? { borderColor: accentBorder, backgroundColor: accentSoft, color: ACCENT.color }
                           : { borderColor: "rgba(255,255,255,0.10)", backgroundColor: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.75)" }
                       }
-                      aria-label="Cola"
+                      aria-label={t("musicwidget.queue")}
                       type="button"
                     >
                       <LuListMusic className="h-4 w-4" />
-                      <span className="mw-queue-label hidden sm:inline">Cola</span>
+                      <span className="mw-queue-label hidden sm:inline">{t("musicwidget.queue")}</span>
                       <span className="rounded-full bg-white/10 px-1.5 py-0.5 text-[10px] text-white/60">{tracks.length}</span>
                     </button>
                   </div>
@@ -1074,7 +1076,7 @@ export default function MusicWidget() {
                     className="overflow-hidden border-t border-white/10 pt-3"
                   >
                     <div className="mb-2 flex flex-wrap items-center justify-between gap-2 px-1">
-                      <div className="text-[10px] uppercase tracking-[0.2em] text-white/45 sm:text-[11px]">Cola</div>
+                      <div className="text-[10px] uppercase tracking-[0.2em] text-white/45 sm:text-[11px]">{t("musicwidget.queue")}</div>
                       <div className="flex items-center gap-2">
                         {playlists.length > 1 && (
                           <select
@@ -1091,7 +1093,7 @@ export default function MusicWidget() {
                             ))}
                           </select>
                         )}
-                        <div className="text-[10px] text-white/35 sm:text-[11px]">{tracks.length} canciones</div>
+                        <div className="text-[10px] text-white/35 sm:text-[11px]">{tracks.length} {t("musicwidget.songs").toLowerCase()}</div>
                       </div>
                     </div>
 
@@ -1125,7 +1127,7 @@ export default function MusicWidget() {
                             </div>
                             <div className="flex shrink-0 items-center gap-2">
                               {active && <div className="h-2 w-2 rounded-full" style={{ backgroundColor: ACCENT.color, boxShadow: `0 0 10px ${accentGlow}` }} />}
-                              <span className="text-[10px] uppercase tracking-[0.14em] text-white/30">{active ? "Now" : "Play"}</span>
+                              <span className="text-[10px] uppercase tracking-[0.14em] text-white/30">{active ? t("musicwidget.playing") : t("musicwidget.play")}</span>
                             </div>
                           </button>
                         );
