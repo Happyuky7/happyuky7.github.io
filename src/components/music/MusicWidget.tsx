@@ -752,18 +752,32 @@ export default function MusicWidget() {
           left: 0.75rem;
           right: 0.75rem;
         }
-        /* Desktop (md breakpoint and up) */
-        @media (min-width: 768px) {
+        .mw-toggle {
+          position: absolute;
+          bottom: 1rem;
+          left: 1rem;
+        }
+        /* Desktop / laptop pointers */
+        @media (hover: hover) and (pointer: fine) {
+          .mw-toggle {
+            left: 50%;
+            transform: translateX(-50%);
+          }
           .mw-panel {
             bottom: 1rem;
             left: 50%;
             right: auto;
-            width: min(94vw, 920px);
+            width: min(94vw, 980px);
             transform: translateX(-50%);
+            max-width: min(94vw, 980px);
           }
         }
-        /* Mobile landscape (all widths in landscape) */
-        @media (orientation: landscape) and (max-width: 1024px) {
+        /* Mobile landscape only on touch devices */
+        @media (orientation: landscape) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+          .mw-toggle {
+            left: 1rem !important;
+            transform: none !important;
+          }
           .mw-panel {
             position: fixed !important;
             left: 50% !important;
@@ -802,7 +816,7 @@ export default function MusicWidget() {
           }
         }
         /* Extra short landscape (max-height 520px) */
-        @media (orientation: landscape) and (max-height: 520px) and (max-width: 1024px) {
+        @media (orientation: landscape) and (max-height: 520px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
           .mw-panel {
             bottom: 4.5rem !important;
             max-height: calc(100dvh - 5.5rem) !important;
@@ -852,11 +866,11 @@ export default function MusicWidget() {
         }
       `}</style>
 
-      <div className="pointer-events-auto absolute bottom-4 left-4">
+      <div className="mw-toggle pointer-events-auto">
         <button
           type="button"
           onClick={handleToggleOpen}
-          className="flex items-center gap-2 rounded-full border border-white/10 bg-[#091317]/85 px-3 py-2 text-xs text-white/80 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl"
+          className="flex items-center gap-2 rounded-full border border-white/10 bg-[#091317]/85 px-3 py-2 text-xs text-white/80 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl md:px-4 md:py-2.5 md:text-sm"
           aria-label={isOpen ? "Cerrar música" : "Abrir música"}
         >
           <LuMusic2 className="h-4 w-4" style={{ color: ACCENT.color }} />
@@ -911,7 +925,7 @@ export default function MusicWidget() {
                 </div>
 
                 <div className="w-full md:w-auto">
-                  <div className="mw-controls-row mw-no-scrollbar flex items-center gap-2 sm:gap-2.5 md:justify-end">
+                  <div className="mw-controls-row mw-no-scrollbar flex flex-wrap items-center gap-2 sm:gap-2.5 md:justify-end">
                     <button
                       onClick={prevTrack}
                       className="rounded-full border border-white/10 bg-white/5 p-2 transition hover:bg-white/10 disabled:opacity-50"
