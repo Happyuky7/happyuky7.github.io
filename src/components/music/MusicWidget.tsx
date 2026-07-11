@@ -755,14 +755,10 @@ export default function MusicWidget() {
         .mw-toggle {
           position: absolute;
           bottom: 1rem;
-          left: 1rem;
+          right: 1rem;
         }
         /* Desktop / laptop pointers */
         @media (hover: hover) and (pointer: fine) {
-          .mw-toggle {
-            left: 50%;
-            transform: translateX(-50%);
-          }
           .mw-panel {
             bottom: 1rem;
             left: 50%;
@@ -770,12 +766,13 @@ export default function MusicWidget() {
             width: min(94vw, 980px);
             transform: translateX(-50%);
             max-width: min(94vw, 980px);
+            overflow: visible;
           }
         }
         /* Mobile landscape only on touch devices */
         @media (orientation: landscape) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
           .mw-toggle {
-            left: 1rem !important;
+            right: 1rem !important;
             transform: none !important;
           }
           .mw-panel {
@@ -1010,7 +1007,7 @@ export default function MusicWidget() {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 6, scale: 0.98 }}
                             transition={{ duration: 0.18 }}
-                            className="absolute bottom-[calc(100%+12px)] right-0 z-30 w-56 max-w-[calc(100vw-2rem)] rounded-2xl border border-white/10 bg-[#0b171c]/96 p-3 shadow-2xl backdrop-blur-2xl sm:w-64 sm:max-w-[calc(100vw-3rem)]"
+                            className="absolute bottom-[calc(100%+12px)] right-0 z-40 w-56 max-w-[calc(100vw-2rem)] rounded-2xl border border-white/10 bg-[#0b171c]/96 p-3 shadow-2xl backdrop-blur-2xl sm:w-64 sm:max-w-[calc(100vw-3rem)]"
                             style={{ boxShadow: `0 18px 40px rgba(0,0,0,0.42), 0 0 24px rgba(${ACCENT.rgb}, 0.08)` }}
                           >
                             <div className="mb-2 flex items-center justify-between text-[10px] uppercase tracking-[0.18em]" style={{ color: "rgba(255,255,255,0.45)" }}>
