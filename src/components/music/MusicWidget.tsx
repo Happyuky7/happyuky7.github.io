@@ -763,10 +763,10 @@ export default function MusicWidget() {
         @media (hover: hover) and (pointer: fine) {
           .mw-panel {
             bottom: 1rem;
-            left: 50%;
-            right: auto;
+            left: 0;
+            right: 0;
             width: min(94vw, 980px);
-            transform: translateX(-50%);
+            margin-inline: auto;
             max-width: min(94vw, 980px);
             overflow: visible;
           }
@@ -785,6 +785,7 @@ export default function MusicWidget() {
             width: min(35rem, calc(100vw - 1rem)) !important;
             max-width: calc(100vw - 1rem) !important;
             transform: translateX(-50%) !important;
+            margin-inline: 0 !important;
             max-height: calc(100dvh - 5rem) !important;
           }
           .mw-header {
@@ -861,7 +862,7 @@ export default function MusicWidget() {
         <button
           type="button"
           onClick={handleToggleOpen}
-          className="flex items-center gap-2 rounded-full border border-white/10 bg-[#091317]/85 px-3 py-2 text-xs text-white/80 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl md:px-4 md:py-2.5 md:text-sm"
+          className="flex items-center gap-2 rounded-full border border-white/10 bg-[#091317]/85 px-3 py-2 text-xs text-white/80 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl"
           aria-label={isOpen ? `${t("musicwidget.music")} - close` : `${t("musicwidget.music")} - open`}
         >
           <LuMusic2 className="h-4 w-4" style={{ color: ACCENT.color }} />
