@@ -755,7 +755,7 @@ export default function MusicWidget() {
         .mw-toggle {
           position: absolute;
           bottom: 1rem;
-          right: 1rem;
+          left: 1rem;
         }
         /* Desktop / laptop pointers */
         @media (hover: hover) and (pointer: fine) {
@@ -772,7 +772,7 @@ export default function MusicWidget() {
         /* Mobile landscape only on touch devices */
         @media (orientation: landscape) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
           .mw-toggle {
-            right: 1rem !important;
+            left: 1rem !important;
             transform: none !important;
           }
           .mw-panel {
@@ -852,14 +852,6 @@ export default function MusicWidget() {
         .mw-queue-scroll::-webkit-scrollbar-thumb {
           background: rgba(255,255,255,0.12);
           border-radius: 999px;
-        }
-        
-        /* Base mobile positioning */
-        .mw-panel {
-          position: absolute;
-          bottom: 5rem;
-          left: 0.75rem;
-          right: 0.75rem;
         }
       `}</style>
 
