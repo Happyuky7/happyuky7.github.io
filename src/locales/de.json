@@ -264,4 +264,25 @@
 			"hint": "Später erneut versuchen"
 		}
 	}
+	,
+	"musicwidget": {
+		"music": "Musik",
+		"queue": "Warteschlange",
+		"songs": "Titel",
+		"playlists": "Wiedergabelisten",
+		"noTracks": "Keine Titel verfügbar",
+		"playing": "Läuft gerade",
+		"play": "Abspielen",
+		"pause": "Pause",
+		"next": "Weiter",
+		"previous": "Zurück",
+		"volume": "Lautstärke",
+		"open": "Öffnen",
+		"close": "Schließen",
+		"untitled": "Ohne Titel",
+		"loopTrack": "Titel wiederholen",
+		"loopPlaylist": "Playlist wiederholen",
+		"shuffle": "Zufallswiedergabe",
+		"selectPlaylist": "Playlist auswählen"
+	}
 }

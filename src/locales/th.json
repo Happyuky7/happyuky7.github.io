@@ -264,4 +264,25 @@
 			"hint": "ลองใหม่ภายหลัง"
 		}
 	}
+	,
+	"musicwidget": {
+		"music": "เพลง",
+		"queue": "คิว",
+		"songs": "เพลง",
+		"playlists": "เพลย์ลิสต์",
+		"noTracks": "ไม่มีเพลงให้เล่น",
+		"playing": "กำลังเล่น",
+		"play": "เล่น",
+		"pause": "หยุดชั่วคราว",
+		"next": "ถัดไป",
+		"previous": "ก่อนหน้า",
+		"volume": "ระดับเสียง",
+		"open": "เปิด",
+		"close": "ปิด",
+		"untitled": "ไม่มีชื่อ",
+		"loopTrack": "วนซ้ำเพลงนี้",
+		"loopPlaylist": "วนซ้ำเพลย์ลิสต์",
+		"shuffle": "สุ่มเพลง",
+		"selectPlaylist": "เลือกเพลย์ลิสต์"
+	}
 }

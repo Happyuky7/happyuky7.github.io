@@ -264,4 +264,25 @@
 			"hint": "Subukan ulit mamaya"
 		}
 	}
+	,
+	"musicwidget": {
+		"music": "Musika",
+		"queue": "Pila",
+		"songs": "Mga kanta",
+		"playlists": "Mga playlist",
+		"noTracks": "Walang available na track",
+		"playing": "Ngayong Tinutugtog",
+		"play": "I-play",
+		"pause": "I-pause",
+		"next": "Susunod",
+		"previous": "Nakaraan",
+		"volume": "Lakas",
+		"open": "Buksan",
+		"close": "Isara",
+		"untitled": "Walang pamagat",
+		"loopTrack": "Ulitin ang kanta",
+		"loopPlaylist": "Ulitin ang playlist",
+		"shuffle": "Shuffle",
+		"selectPlaylist": "Pumili ng playlist"
+	}
 }

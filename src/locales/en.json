@@ -299,6 +299,13 @@
         "pause": "Pause",
         "next": "Next",
         "previous": "Previous",
-        "volume": "Volume"
+        "volume": "Volume",
+        "open": "Open",
+        "close": "Close",
+        "untitled": "Untitled",
+        "loopTrack": "Repeat track",
+        "loopPlaylist": "Repeat playlist",
+        "shuffle": "Shuffle",
+        "selectPlaylist": "Select playlist"
     }
 }

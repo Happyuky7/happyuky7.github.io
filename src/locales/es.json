@@ -297,6 +297,13 @@
         "pause": "Pausar",
         "next": "Siguiente",
         "previous": "Anterior",
-        "volume": "Volumen"
+        "volume": "Volumen",
+        "open": "Abrir",
+        "close": "Cerrar",
+        "untitled": "Sin título",
+        "loopTrack": "Repetir canción",
+        "loopPlaylist": "Repetir lista",
+        "shuffle": "Aleatorio",
+        "selectPlaylist": "Seleccionar lista"
     }
 }

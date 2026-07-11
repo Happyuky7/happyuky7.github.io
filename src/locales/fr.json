@@ -264,4 +264,25 @@
 			"hint": "Réessayez plus tard"
 		}
 	}
+	,
+	"musicwidget": {
+		"music": "Musique",
+		"queue": "File",
+		"songs": "Titres",
+		"playlists": "Listes de lecture",
+		"noTracks": "Aucun titre disponible",
+		"playing": "En lecture",
+		"play": "Lire",
+		"pause": "Pause",
+		"next": "Suivant",
+		"previous": "Précédent",
+		"volume": "Volume",
+		"open": "Ouvrir",
+		"close": "Fermer",
+		"untitled": "Sans titre",
+		"loopTrack": "Répéter le titre",
+		"loopPlaylist": "Répéter la playlist",
+		"shuffle": "Lecture aléatoire",
+		"selectPlaylist": "Sélectionner une playlist"
+	}
 }

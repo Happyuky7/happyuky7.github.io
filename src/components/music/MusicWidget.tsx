@@ -328,7 +328,7 @@ function coerceTrack(input: unknown): Track | null {
   const raw = input as Track;
 
   return {
-    title: typeof raw.title === "string" && raw.title.trim() ? raw.title.trim() : "Untitled",
+    title: typeof raw.title === "string" ? raw.title.trim() : "",
     artist: typeof raw.artist === "string" ? raw.artist : undefined,
     src: typeof raw.src === "string" ? raw.src : undefined,
     file: typeof raw.file === "string" ? raw.file : undefined,
@@ -863,7 +863,7 @@ export default function MusicWidget() {
           type="button"
           onClick={handleToggleOpen}
           className="flex items-center gap-2 rounded-full border border-white/10 bg-[#091317]/85 px-3 py-2 text-xs text-white/80 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl"
-          aria-label={isOpen ? `${t("musicwidget.music")} - close` : `${t("musicwidget.music")} - open`}
+          aria-label={isOpen ? `${t("musicwidget.music")} - ${t("musicwidget.close")}` : `${t("musicwidget.music")} - ${t("musicwidget.open")}`}
         >
           <LuMusic2 className="h-4 w-4" style={{ color: ACCENT.color }} />
           <span className="hidden sm:inline">{t("musicwidget.music")}</span>
@@ -910,7 +910,7 @@ export default function MusicWidget() {
                       {t("musicwidget.music")}
                     </div>
                     <p className="mw-track-title truncate text-sm font-semibold sm:text-base md:text-lg">
-                      {currentTrack?.title ?? (tracks.length ? "Untitled" : t("musicwidget.noTracks"))}
+                      {currentTrack?.title || (tracks.length ? t("musicwidget.untitled") : t("musicwidget.noTracks"))}
                     </p>
                     <p className="mw-track-artist truncate text-xs text-white/60 sm:text-sm">{currentTrack?.artist ?? ""}</p>
                   </div>
@@ -958,7 +958,7 @@ export default function MusicWidget() {
                       onClick={cycleLoopMode}
                       className="rounded-full border p-2 transition hover:bg-white/10"
                       style={{ borderColor: accentBorder, backgroundColor: accentSoft, color: ACCENT.color }}
-                      aria-label={loopMode === "one" ? "Bucle canción" : "Bucle playlist"}
+                      aria-label={loopMode === "one" ? t("musicwidget.loopTrack") : t("musicwidget.loopPlaylist")}
                       type="button"
                     >
                       {loopMode === "one" ? <LuRepeat1 className="h-4 w-4" /> : <LuRepeat className="h-4 w-4" />}
@@ -972,7 +972,7 @@ export default function MusicWidget() {
                           ? { borderColor: accentBorder, backgroundColor: accentSoft, color: ACCENT.color }
                           : { borderColor: "rgba(255,255,255,0.10)", backgroundColor: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.75)" }
                       }
-                      aria-label="Mezcla aleatoria"
+                      aria-label={t("musicwidget.shuffle")}
                       type="button"
                     >
                       <LuShuffle className="h-4 w-4" />
@@ -1085,7 +1085,7 @@ export default function MusicWidget() {
                             onChange={(e) => handlePlaylistChange(e.target.value)}
                             className="rounded-xl border border-white/10 bg-[#0b171c] px-2.5 py-1 text-[11px] text-white/80 outline-none transition focus:border-white/20"
                             style={{ backgroundColor: "#0b171c", color: "rgba(255,255,255,0.82)" }}
-                            aria-label="Seleccionar playlist"
+                            aria-label={t("musicwidget.selectPlaylist")}
                           >
                             {playlists.map((p) => (
                               <option key={p.id} value={p.id} style={{ backgroundColor: "#0b171c", color: "#ffffff" }}>
@@ -1108,13 +1108,13 @@ export default function MusicWidget() {
 
                         return (
                           <button
-                            key={`${track.title}-${index}`}
+                            key={`${track.title || "track"}-${index}`}
                             type="button"
                             onClick={() => handleTrackChange(index)}
                             className={`flex w-full items-center gap-3 rounded-xl px-2 py-2 text-left transition ${active ? "bg-white/[0.05]" : "hover:bg-white/[0.03]"}`}
                           >
                             {cover ? (
-                              <img src={cover} alt={track.title} className={`h-10 w-10 shrink-0 rounded-xl ${
+                              <img src={cover} alt={track.title || t("musicwidget.untitled")} className={`h-10 w-10 shrink-0 rounded-xl ${
                                   isEmbeddedCover ? "bg-[#0b171c] p-1 object-contain" : "object-cover"
                                 }`} />
                             ) : (
@@ -1123,7 +1123,7 @@ export default function MusicWidget() {
                               </div>
                             )}
                             <div className="min-w-0 flex-1">
-                              <div className="truncate text-sm font-medium text-white">{track.title}</div>
+                              <div className="truncate text-sm font-medium text-white">{track.title || t("musicwidget.untitled")}</div>
                               <div className="truncate text-xs text-white/45">{track.artist ?? ""}</div>
                             </div>
                             <div className="flex shrink-0 items-center gap-2">

@@ -264,4 +264,25 @@
 			"hint": "稍后再试"
 		}
 	}
+	,
+	"musicwidget": {
+		"music": "音乐",
+		"queue": "队列",
+		"songs": "首歌曲",
+		"playlists": "播放列表",
+		"noTracks": "没有可用曲目",
+		"playing": "正在播放",
+		"play": "播放",
+		"pause": "暂停",
+		"next": "下一首",
+		"previous": "上一首",
+		"volume": "音量",
+		"open": "打开",
+		"close": "关闭",
+		"untitled": "未命名",
+		"loopTrack": "单曲循环",
+		"loopPlaylist": "列表循环",
+		"shuffle": "随机播放",
+		"selectPlaylist": "选择播放列表"
+	}
 }

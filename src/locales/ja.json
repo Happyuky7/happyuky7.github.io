@@ -288,4 +288,25 @@
             "hint": "後で再試行"
         }
     }
+    ,
+    "musicwidget": {
+        "music": "音楽",
+        "queue": "キュー",
+        "songs": "曲",
+        "playlists": "プレイリスト",
+        "noTracks": "利用可能なトラックがありません",
+        "playing": "再生中",
+        "play": "再生",
+        "pause": "一時停止",
+        "next": "次へ",
+        "previous": "前へ",
+        "volume": "音量",
+        "open": "開く",
+        "close": "閉じる",
+        "untitled": "無題",
+        "loopTrack": "1曲リピート",
+        "loopPlaylist": "プレイリストをリピート",
+        "shuffle": "シャッフル",
+        "selectPlaylist": "プレイリストを選択"
+    }
 }
