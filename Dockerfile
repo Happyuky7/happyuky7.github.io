@@ -1,6 +1,6 @@
-# Multi-stage build: build with Node, serve with Nginx
+# Multi-stage build: build with Node + pnpm, serve with Nginx
 
-FROM node:20-alpine AS build
+FROM node:22-alpine AS build
 WORKDIR /app
 
 ARG VITE_BASE=/
@@ -11,13 +11,18 @@ ENV VITE_BASE=$VITE_BASE
 ENV VITE_SITE_URL=$VITE_SITE_URL
 ENV SITE_URL=$SITE_URL
 
+# pnpm via Corepack (version comes from the "packageManager" field)
+ENV PNPM_HOME=/pnpm
+ENV PATH=$PNPM_HOME:$PATH
+RUN corepack enable
+
 # Install deps first (better caching)
-COPY package.json package-lock.json* ./
-RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
 
 # Build
 COPY . .
-RUN npm run build
+RUN pnpm run build
 
 
 FROM nginx:1.27-alpine AS runtime

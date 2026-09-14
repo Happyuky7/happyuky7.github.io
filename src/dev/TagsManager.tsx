@@ -414,7 +414,7 @@ export default function TagsManager() {
             </div>
 
             <div className="mt-4 text-white/50 text-xs">
-              Pool global: <span className="font-mono">localStorage</span> (DEV). “Eliminar global” modifica <span className="font-mono">public/jsons/*.json</span> (solo en <span className="font-mono">npm run dev</span>).
+              Pool global: <span className="font-mono">localStorage</span> (DEV). “Eliminar global” modifica <span className="font-mono">public/jsons/*.json</span> (solo en <span className="font-mono">pnpm dev</span>).
             </div>
           </div>
         </div>

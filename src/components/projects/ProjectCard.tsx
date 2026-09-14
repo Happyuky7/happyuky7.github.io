@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from '@i18n/LanguageContext';
 import { withLang } from '@i18n/path';
 import { publicPath } from '@/utils/publicPath';
+import { projectSlug } from '@/utils/projectSlug.mjs';
 
 const ProjectCard: React.FC<{
     name: string;
@@ -33,18 +34,7 @@ const ProjectCard: React.FC<{
     };
 
     const directLink: boolean | null | undefined = normalizeDirectLink(proyectData.directLink); // NO usar ?? false
-    const toSlug = (value: any) => {
-        if (!value || typeof value !== 'string') return '';
-        return value
-            .toLowerCase()
-            .trim()
-            .replace(/\s+/g, '-')
-            .replace(/[^\w\-]+/g, '-')
-            .replace(/-+/g, '-')
-            .replace(/^-+|-+$/g, '');
-    };
-
-    const projectId: string = toSlug(proyectData.id || proyectData.name) || 'unknown';
+    const projectId = projectSlug(proyectData) || 'unknown';
 
     const getDescription = () => {
         if (!description) return t('projects.noDescriptionAvailable');
@@ -73,10 +63,10 @@ const ProjectCard: React.FC<{
             const raw = (projectLink || '').trim();
             if (raw.startsWith('/')) {
                 const pathOnly = raw.split(/[?#]/)[0];
-                if (pathOnly.startsWith('/project/')) return withLang(language, pathOnly);
+                if (pathOnly.startsWith('/project/')) return withLang(language, `/project/${projectId}`);
 
                 const slugFromLink = pathOnly.replace(/^\/+/, '').split('/')[0];
-                if (slugFromLink) return withLang(language, `/project/${slugFromLink}`);
+                if (slugFromLink) return withLang(language, `/project/${projectId}`);
             }
 
             return projectLink;

@@ -16,6 +16,17 @@ dist/
 dist-ssr/
 *.local
 
+# This repo uses pnpm - pnpm-lock.yaml is the ONLY lockfile (commit it!)
+package-lock.json
+npm-shrinkwrap.json
+yarn.lock
+bun.lockb
+
+# pnpm local state (the store/virtual dir must never be committed)
+.pnpm-store/
+.pnpm/
+*.tgz
+
 # TypeScript build info
 *.tsbuildinfo
 
@@ -73,7 +84,10 @@ Desktop.ini
 *.sw?
 
 # Sensitive files / keys
+# .npmrc can hold registry auth tokens - keep project-wide pnpm settings in
+# pnpm-workspace.yaml instead (pnpm 11 no longer reads the "pnpm" field in package.json).
 .npmrc
+.pnpmrc
 *.pem
 *.key
 

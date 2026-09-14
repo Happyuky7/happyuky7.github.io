@@ -18,23 +18,27 @@ Personal portfolio website built with **React + TypeScript + Vite**, with:
 ## Getting started
 
 Requirements:
-- Node.js 20+
+- Node.js 22.13+
+- pnpm 11+ (this repo uses **pnpm**, not npm — enable it with `corepack enable`)
 
 Install and run locally:
 
 ```bash
-npm ci
-npm run dev
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
 Then open the URL printed by Vite (default port in this repo is `5177`).
 
 ## Scripts
 
-- `npm run dev` — starts Vite in dev mode (also generates sitemap/robots first)
-- `npm run build` — production build (TypeScript build + Vite build + static SEO generation)
-- `npm run preview` — previews the production build locally
-- `npm run lint` — ESLint
+- `pnpm dev` — starts Vite in dev mode (also generates sitemap/robots first)
+- `pnpm build` — production build (TypeScript build + Vite build + static SEO generation)
+- `pnpm preview` — previews the production build locally
+- `pnpm lint` — ESLint
+
+> The package manager is pinned via the `packageManager` field in `package.json`.
+> `pnpm-lock.yaml` is the only lockfile — do not commit a `package-lock.json`.
 
 ## GitHub Pages deployment
 

@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { projectSlug } from '../src/utils/projectSlug.mjs';
 
 const ROOT = process.cwd();
 const DIST = path.join(ROOT, 'dist');
@@ -25,6 +26,50 @@ const OG_LOCALE = {
   th: 'th_TH',
   fil: 'fil_PH',
 };
+
+let publicProjects = [];
+let publicPosts = [];
+const locales = {};
+
+function staticBody(lang, urlPath, title, description) {
+  const labels = locales[lang]?.nav || locales.en.nav;
+  const link = (href, text) => `<a href="${escapeHtml(href)}">${escapeHtml(text)}</a>`;
+  const route = urlPath.replace(/^\/[^/]+/, '').replace(/\/$/, '') || '/';
+  const nav = ['home', 'projects', 'blog', 'contact'].map((key) =>
+    link(`/${lang}/${key === 'home' ? '' : `${key}/`}`, labels[key])).join(' · ');
+  let content = `<h1>${escapeHtml(title)}</h1><p>${escapeHtml(description)}</p>`;
+  const projects = publicProjects.map((p) => `<li>${link(`/${lang}/project/${projectSlug(p)}/`, p.displayName || p.name)}<p>${escapeHtml(pickLocalized(p.description, lang))}</p></li>`).join('');
+  if (route === '/') {
+    content += (locales[lang]?.home?.['about-paragraphs'] || locales.en.home['about-paragraphs'])
+      .map((text) => `<p>${escapeHtml(text.replaceAll('**', ''))}</p>`).join('');
+    content += `<h2>${escapeHtml(labels.projects)}</h2><ul>${projects}</ul>`;
+  } else if (route === '/projects') {
+    content += `<ul>${projects}</ul>`;
+  } else if (route.startsWith('/project/')) {
+    const project = publicProjects.find((p) => projectSlug(p) === route.split('/')[2]);
+    if (project) {
+      content += `<ul>${(project.tags || []).map((tag) => `<li>${escapeHtml(tag.name)}</li>`).join('')}</ul>`;
+      content += [project.github, project.demo, project.link].filter((url) => /^https?:\/\//i.test(url || ''))
+        .map((url) => `<p>${link(url, url)}</p>`).join('');
+    }
+  } else if (route === '/contact') {
+    content += `<p>${link('mailto:happyrogelio7developer@gmail.com', 'happyrogelio7developer@gmail.com')}</p>`;
+    content += `<p>${link('https://github.com/Happyuky7', 'GitHub')} · ${link('https://x.com/happyuky7', 'X (Twitter)')}</p>`;
+  } else if (route === '/blog') {
+    content += `<ul>${publicPosts.filter((p) => !p.languages?.length || p.languages.includes(lang)).map((p) => {
+      const route = p.year && p.month ? `${p.year}/${p.month}/${p.slug || p.id}` : p.slug || p.id;
+      return `<li>${link(`/${lang}/blog/${route}/`, pickLocalized(p.title, lang))}<p>${escapeHtml(pickLocalized(p.excerpt || p.description, lang))}</p></li>`;
+    }).join('')}</ul>`;
+  }
+  return `<main style="max-width:72rem;margin:auto;padding:2rem"><nav>${nav}</nav>${content}</main>`;
+}
+
+async function writeRedirect(from, to) {
+  const target = `${normalizeSiteUrl(SITE_URL)}${to}`;
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Page moved</title><link rel="canonical" href="${escapeHtml(target)}"><meta http-equiv="refresh" content="0; url=${escapeHtml(target)}"></head><body><a href="${escapeHtml(target)}">Continue to the project</a></body></html>`;
+  // HTTP paths are decoded by static hosts before looking up files.
+  await writeHtml(path.join(DIST, decodeURIComponent(from).replace(/^\//, ''), 'index.html'), html);
+}
 
 function normalizeSiteUrl(url) {
   return url.endsWith('/') ? url.slice(0, -1) : url;
@@ -130,7 +175,7 @@ function replaceOrInsert(html, regex, replacement, insertBefore = '</head>') {
   return html.replace(insertBefore, `${replacement}\n  ${insertBefore}`);
 }
 
-function applySeo(html, { lang, title, description, urlPath, image, ogType }) {
+function applySeo(html, { lang, title, description, urlPath, image, ogType, languages = LANGS, noindex = false }) {
   const absUrl = `${normalizeSiteUrl(SITE_URL)}${ensureLeadingSlash(urlPath)}`;
   const canonical = absUrl.endsWith('/') ? absUrl : `${absUrl}/`;
 
@@ -160,12 +205,11 @@ function applySeo(html, { lang, title, description, urlPath, image, ogType }) {
 
   // hreflang alternates: remove existing ones (simple) then add fresh block
   html = html.replace(/\s*<link\s+rel="alternate"\s+hreflang="[^"]+"\s+href="[^"]*"\s*\/>\s*/gi, '\n');
+  const clean = urlPath.replace(/^\/(en|es|ja|zh|pt|pl|de|ru|th|fil|fr|ko)(\/|$)/, '/').replace(/\/$/, '');
+  const alternateUrl = (l) => `${normalizeSiteUrl(SITE_URL)}/${l}${clean}/`;
   const alternates = [
-    `    <link rel="alternate" hreflang="x-default" href="${normalizeSiteUrl(SITE_URL)}/en${ensureLeadingSlash(urlPath.replace(/^\/(en|es|ja|zh|pt|pl|de|ru|th|fil|fr|ko)/, ''))}/" />`,
-    ...LANGS.map((l) => {
-      const clean = urlPath.replace(/^\/(en|es|ja|zh|pt|pl|de|ru|th|fil|fr|ko)(\/|$)/, '/');
-      return `    <link rel="alternate" hreflang="${l}" href="${normalizeSiteUrl(SITE_URL)}/${l}${clean}${clean.endsWith('/') ? '' : '/'}" />`;
-    }),
+    `    <link rel="alternate" hreflang="x-default" href="${alternateUrl(languages.includes('en') ? 'en' : languages[0])}" />`,
+    ...languages.map((l) => `    <link rel="alternate" hreflang="${l}" href="${alternateUrl(l)}" />`),
   ].join('\n');
   html = html.replace('</head>', `${alternates}\n  </head>`);
 
@@ -194,6 +238,9 @@ function applySeo(html, { lang, title, description, urlPath, image, ogType }) {
   html = replaceOrInsert(html, /<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/>/i, `    <meta name="twitter:description" content="${safeDesc}" />`);
   html = replaceOrInsert(html, /<meta\s+name="twitter:image"\s+content="[^"]*"\s*\/>/i, `    <meta name="twitter:image" content="${absImg}" />`);
 
+  html = replaceOrInsert(html, /<meta\s+name="robots"\s+content="[^"]*"\s*\/?>/i,
+    `<meta name="robots" content="${noindex ? 'noindex,follow' : 'index,follow'}" />`);
+  html = html.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${staticBody(lang, urlPath, title, description)}</div>`);
   return html;
 }
 
@@ -222,18 +269,27 @@ async function writeHtml(outPath, html) {
 
 async function generate() {
   const blogPosts = await readJson('jsons/blogPosts.json');
+  publicPosts = blogPosts.filter((p) => !p.draft && !p.private && !p.unlisted && !p.localExample);
   const projects = await readJson('jsons/projects-real.json');
+  publicProjects = projects.filter((p) => p.name && !p.hidden);
+  for (const lang of LANGS) {
+    locales[lang] = JSON.parse(await fs.readFile(path.join(ROOT, 'src', 'locales', `${lang}.json`), 'utf8'));
+  }
 
   for (const lang of LANGS) {
     const template = await readTemplate(lang);
 
     const baseDesc = baseDescription(lang);
 
-    const pageLabel = {
-      en: { blog: 'Blog', projects: 'Projects', contact: 'Contact' },
-      es: { blog: 'Blog', projects: 'Proyectos', contact: 'Contacto' },
-      ja: { blog: 'ブログ', projects: 'プロジェクト', contact: 'お問い合わせ' },
-    }[lang] || { blog: 'Blog', projects: 'Projects', contact: 'Contact' };
+    const pageLabel = locales[lang].nav;
+
+    // Home pages also need useful HTML before JavaScript loads.
+    const home = applySeo(template, {
+      lang, title: `${SITE_TITLE_PREFIX} | ${locales[lang].nav.home}`,
+      description: baseDesc, urlPath: `/${lang}/`, image: '/assets/img/logo.png',
+    });
+    await writeHtml(path.join(DIST, lang, 'index.html'), insertOrReplaceJsonLd(home, profileJsonLd(lang)));
+    if (lang === 'en') await writeHtml(path.join(DIST, 'index.html'), insertOrReplaceJsonLd(home, profileJsonLd(lang)));
 
     // Contact
     {
@@ -261,6 +317,7 @@ async function generate() {
         urlPath,
         image: '/assets/img/logo.png',
         ogType: 'website',
+        noindex: publicPosts.length === 0,
       });
       const htmlWithRich = insertOrReplaceJsonLd(html, profileJsonLd(lang));
       await writeHtml(path.join(DIST, lang, 'blog', 'index.html'), htmlWithRich);
@@ -293,7 +350,7 @@ async function generate() {
       if (!slug) continue;
 
       const title = pickLocalized(post.title, lang, post.defaultLanguage || 'en') || slug;
-      const desc = pickLocalized(post.description, lang, post.defaultLanguage || 'en') || baseDesc;
+      const desc = pickLocalized(post.description || post.excerpt, lang, post.defaultLanguage || 'en') || baseDesc;
       const img = post.image || '/assets/img/logo.png';
 
       const supportedLangs = Array.isArray(post.languages) && post.languages.length ? post.languages : LANGS;
@@ -310,13 +367,14 @@ async function generate() {
         urlPath,
         image: img,
         ogType: 'article',
+        languages: supportedLangs,
       });
 
       const canonical = `${normalizeSiteUrl(SITE_URL)}${urlPath.startsWith('/') ? urlPath : `/${urlPath}`}/`;
       const authorName = post.author?.name || PROFILE_NAME;
       const authorUrl = post.author?.url || normalizeSiteUrl(SITE_URL);
       const authorAvatar = post.author?.avatar || '/assets/img/logo.png';
-      const published = post.date ? `${post.date}T00:00:00.000Z` : undefined;
+      const published = post.date && !Number.isNaN(Date.parse(post.date)) ? new Date(post.date).toISOString() : undefined;
       const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
@@ -364,7 +422,7 @@ async function generate() {
     // Project details
     for (const proj of Array.isArray(projects) ? projects : []) {
       if (proj?.hidden) continue;
-      const slug = proj.name || '';
+      const slug = projectSlug(proj);
       if (!slug) continue;
 
       const name = proj.displayName || proj.name || 'Project';
@@ -396,15 +454,21 @@ async function generate() {
 
       const htmlWithRich = insertOrReplaceJsonLd(html, jsonLd);
 
-      await writeHtml(path.join(DIST, lang, 'project', encodeURIComponent(slug), 'index.html'), htmlWithRich);
-      // alias route in your router: /projects/:slug
-      await writeHtml(path.join(DIST, lang, 'projects', encodeURIComponent(slug), 'index.html'), htmlWithRich);
-
-
-      if (lang === 'en') {
-        await writeHtml(path.join(DIST, 'project', encodeURIComponent(slug), 'index.html'), htmlWithRich);
-        await writeHtml(path.join(DIST, 'projects', encodeURIComponent(slug), 'index.html'), htmlWithRich);
+      await writeHtml(path.join(DIST, lang, 'project', slug, 'index.html'), htmlWithRich);
+      const aliases = [
+        `/${lang}/projects/${slug}/`,
+        `/${lang}/project/${encodeURIComponent(proj.name)}/`,
+        `/${lang}/projects/${encodeURIComponent(proj.name)}/`,
+      ];
+      if (lang === 'en') aliases.push(`/project/${slug}/`, `/projects/${slug}/`,
+        `/project/${encodeURIComponent(proj.name)}/`, `/projects/${encodeURIComponent(proj.name)}/`);
+      for (const alias of new Set(aliases)) {
+        if (alias === `${urlPath}/`) continue;
+        // NTFS is case-insensitive; the Linux deployment emits these aliases.
+        if (process.platform === 'win32' && alias.toLowerCase() === `${urlPath}/`.toLowerCase()) continue;
+        await writeRedirect(alias, `${urlPath}/`);
       }
+
     }
 
   }

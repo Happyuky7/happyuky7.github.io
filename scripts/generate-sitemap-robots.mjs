@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { projectSlug } from '../src/utils/projectSlug.mjs';
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, 'public');
@@ -49,12 +50,13 @@ async function generate() {
 
   const entries = [];
 
-  // Root landing (unprefixed). Canonical is /en/, but the URL exists.
-  entries.push({ loc: `${base}/` });
+  // Only canonical, indexable URLs belong in the sitemap.
 
   for (const lang of LANGS) {
     entries.push({ loc: `${base}/${lang}/` });
-    entries.push({ loc: `${base}/${lang}/blog/` });
+    if (blogPosts.some((p) => !p.draft && !p.private && !p.unlisted && !p.localExample)) {
+      entries.push({ loc: `${base}/${lang}/blog/` });
+    }
     entries.push({ loc: `${base}/${lang}/projects/` });
     entries.push({ loc: `${base}/${lang}/contact/` });
 
@@ -77,7 +79,7 @@ async function generate() {
 
     for (const proj of Array.isArray(projects) ? projects : []) {
       if (proj?.hidden) continue;
-      const slug = proj.name;
+      const slug = projectSlug(proj);
       if (!slug) continue;
       entries.push({ loc: `${base}/${lang}/project/${encodeURIComponent(slug)}/` });
     }

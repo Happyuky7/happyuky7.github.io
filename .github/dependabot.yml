@@ -1,10 +1,28 @@
 version: 2
 updates:
+  # NOTE: the "npm" ecosystem also covers pnpm (it reads pnpm-lock.yaml).
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
     open-pull-requests-limit: 10
+    ignore:
+      # katex must stay on 0.16.x: rehype-katex@7 and micromark-extension-math
+      # both depend on katex ^0.16, and the app imports "katex/dist/katex.min.css".
+      # Bumping only the root katex ships CSS that does not match the renderer
+      # that actually produces the math HTML. Revisit when rehype-katex widens
+      # its katex range. (For 0.x, Dependabot treats 0.16 -> 0.17 as a minor.)
+      - dependency-name: "katex"
+        update-types:
+          - "version-update:semver-minor"
+          - "version-update:semver-major"
+
+      # TypeScript must stay on 6.x: typescript-eslint@8 declares the peer range
+      # "typescript >=4.8.4 <6.1.0", so TS 7 breaks `pnpm lint`.
+      # Revisit once typescript-eslint ships TS 7 support.
+      - dependency-name: "typescript"
+        update-types:
+          - "version-update:semver-major"
 
   - package-ecosystem: "github-actions"
     directory: "/"

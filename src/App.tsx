@@ -9,6 +9,7 @@ import { DeviceProvider } from "@/device/DeviceContext";
 import { BackgroundProvider } from "@/background/BackgroundContext";
 
 import AppLayout from "@/layouts/AppLayout";
+import Seo from "@/seo/Seo";
 
 
 const Home = lazy(() => import("@pages/Home"));
@@ -59,12 +60,7 @@ function LangGuard({ children }: { children: React.ReactNode }) {
   }
   if (lang && supported.includes(lang)) return <>{children}</>;
 
-  // If the first path segment isn't a supported lang, treat it as an unprefixed URL.
-  const preferred = getPreferredLang();
-  const pathname = location.pathname || "/";
-  const parts = pathname.split("/").filter(Boolean);
-  const rest = parts.length > 1 ? `/${parts.slice(1).join("/")}` : "/";
-  return <Navigate to={`/${preferred}${rest}` + location.search + location.hash} replace />;
+  return <><Seo /><NotFound /></>;
 }
 
 function RedirectLegacyJpToJa() {

@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 import { useLanguage } from '@i18n/LanguageContext';
 import { publicPath } from '@/utils/publicPath';
+import { projectSlug, matchesProjectSlug } from '@/utils/projectSlug.mjs';
 
 const SUPPORTED = ['en', 'es', 'ja', 'fr', 'de', 'pt', 'pl', 'ru', 'zh', 'ko', 'th', 'fil'] as const;
 type SupportedLang = (typeof SUPPORTED)[number];
@@ -45,7 +46,7 @@ function makeUrl(baseUrl: string, pathname: string) {
 
 function langPath(lang: SupportedLang, cleanPath: string) {
   const path = normalizePath(cleanPath);
-  return normalizePath(`/${lang}${path}`);
+  return `${normalizePath(`/${lang}${path}`)}/`;
 }
 
 function routeLabel(pathnameClean: string, t: (k: string) => string) {
@@ -136,7 +137,8 @@ export default function Seo() {
       const normalizedClean = normalizePath(cleanPath);
 
       const baseUrl = (import.meta as any).env?.VITE_SITE_URL || window.location.origin;
-      const uiLang: SupportedLang = (SUPPORTED.includes(language as any) ? (language as SupportedLang) : 'en');
+      const pathLang = location.pathname.split('/')[1];
+      const uiLang: SupportedLang = SUPPORTED.includes(pathLang as SupportedLang) ? pathLang as SupportedLang : 'en';
 
       const siteName = t('seo.siteName') !== 'seo.siteName' ? t('seo.siteName') : 'Happyuky7';
       const baseDescription = t('seo.description') !== 'seo.description'
@@ -148,6 +150,9 @@ export default function Seo() {
       let ogImage = makeUrl(baseUrl, publicPath('/assets/img/logo.png'));
       let ogType: 'website' | 'article' = 'website';
       let publishedTime: string | null = null;
+      let canonicalClean = normalizedClean;
+      let alternateLangs: readonly SupportedLang[] = SUPPORTED;
+      let noindex = !['/', '/projects', '/blog', '/contact'].includes(normalizedClean);
 
       // Route-specific enrichment (blog posts + project details)
       const blogMatch = normalizedClean.match(/^\/blog\/(\d{4})\/(\d{2})\/([^\/]+)$/) || normalizedClean.match(/^\/blog\/([^\/]+)$/);
@@ -168,6 +173,8 @@ export default function Seo() {
         });
 
         if (found) {
+          noindex = Boolean(found.draft || found.private || found.unlisted || found.localExample);
+          alternateLangs = SUPPORTED.filter((l) => !found.languages?.length || found.languages.includes(l));
           const postTitle = pickLocalized(found.title, uiLang, (found.defaultLanguage || 'en') as SupportedLang) || String(found.slug || found.id || slug);
           const postDesc =
             pickLocalized(found.excerpt, uiLang, (found.defaultLanguage || 'en') as SupportedLang) ||
@@ -196,8 +203,10 @@ export default function Seo() {
         })();
 
         const projects = await loadProjects();
-        const found = (projects || []).find((p) => String(p?.name || '') === String(decoded));
+        const found = (projects || []).find((p) => matchesProjectSlug(p, decoded));
         if (found) {
+          noindex = Boolean(found.hidden);
+          canonicalClean = `/project/${projectSlug(found)}`;
           const projTitle = String(found.displayName || found.name || decoded);
           const projDesc = pickLocalized(found.description, uiLang, 'en') || baseDescription;
           title = `${siteName} | ${projTitle}`;
@@ -215,34 +224,39 @@ export default function Seo() {
         title = section && section !== 'Happyuky7' ? `${siteName} | ${section}` : siteName;
       }
 
+      if (normalizedClean === '/blog') {
+        const posts = await loadBlogPosts();
+        noindex = posts !== null && !posts.some((p) => !p.draft && !p.private && !p.unlisted && !p.localExample);
+      }
       if (cancelled) return;
 
       // Canonical uses visible language prefix, even if user landed on an unprefixed URL.
-      const canonicalPath = langPath(uiLang, normalizedClean);
+      const canonicalLang = alternateLangs.includes(uiLang) ? uiLang : alternateLangs[0] || uiLang;
+      const canonicalPath = langPath(canonicalLang, canonicalClean);
       const canonical = makeUrl(baseUrl, canonicalPath);
 
       document.title = title;
 
       upsertMeta('meta[name="description"]', { name: 'description', content: description });
       upsertMeta('meta[name="theme-color"]', { name: 'theme-color', content: '#27F59F' });
-      upsertMeta('meta[name="robots"]', { name: 'robots', content: 'index,follow' });
+      upsertMeta('meta[name="robots"]', { name: 'robots', content: noindex ? 'noindex,follow' : 'index,follow' });
 
       upsertLink('link[rel="canonical"]', { rel: 'canonical', href: canonical });
 
       // Clear previous alternates that we manage.
-      document.head.querySelectorAll('link[rel="alternate"][data-seo="1"]').forEach((n) => n.remove());
+      document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((n) => n.remove());
       const xDefault = document.createElement('link');
       xDefault.setAttribute('rel', 'alternate');
       xDefault.setAttribute('hrefLang', 'x-default');
-      xDefault.setAttribute('href', makeUrl(baseUrl, '/en'));
+      xDefault.setAttribute('href', makeUrl(baseUrl, langPath(alternateLangs.includes('en') ? 'en' : alternateLangs[0] || 'en', canonicalClean)));
       xDefault.setAttribute('data-seo', '1');
       document.head.appendChild(xDefault);
 
-      for (const lang of SUPPORTED) {
+      for (const lang of alternateLangs) {
         const link = document.createElement('link');
         link.setAttribute('rel', 'alternate');
         link.setAttribute('hrefLang', lang);
-        link.setAttribute('href', makeUrl(baseUrl, langPath(lang, normalizedClean)));
+        link.setAttribute('href', makeUrl(baseUrl, langPath(lang, canonicalClean)));
         link.setAttribute('data-seo', '1');
         document.head.appendChild(link);
       }

@@ -9,6 +9,7 @@ import VideoBackground from '@/components/videoBackground/VideoBackground';
 import ProjectDetailInfo from "@/components/projects/ProjectDetailInfo";
 import ProjectReadme from "@/components/projects/ProjectReadme";
 import { publicPath } from '@/utils/publicPath';
+import { matchesProjectSlug } from '@/utils/projectSlug.mjs';
 
 
 // Type definitions
@@ -57,6 +58,12 @@ const ProjectsDetails: React.FC = () => {
     }, [slug]);
 
     const loadProjects = async () => {
+        setLoading(true);
+        setError(false);
+        setProject(null);
+        setReadme('');
+        setGithubData(null);
+        setReadmeError(null);
         try {
 
             const response = await fetch(publicPath('/jsons/projects-real.json'));
@@ -85,32 +92,7 @@ const ProjectsDetails: React.FC = () => {
             const validProjects = data.filter((p: any) => p && typeof p === 'object' && p.name);
             console.log('Valid projects with names:', validProjects.length);
 
-            const getProjectSlug = (p: any) => createSlug(p?.id || p?.name);
-
-            const foundProject = validProjects.find((p: any) => {                
-                const projectSlug = getProjectSlug(p);
-                
-                // Test specifically for the problematic project
-                if (p.name.includes('All options Projects')) {
-                    console.log('=== DEBUGGING PROBLEMATIC PROJECT ===');
-                    console.log('Project name:', p.name);
-                    console.log('Generated slug:', projectSlug);
-                    console.log('URL slug (raw):', slug);
-                    console.log('URL slug (decoded):', decodedSlug);
-                    console.log('Match with decoded?', projectSlug === decodedSlug);
-                    console.log('Match with raw?', projectSlug === slug);
-                }
-                
-                console.log('Comparing slugs:', { 
-                    projectName: p.name, 
-                    projectId: p.id,
-                    projectSlug, 
-                    decodedSlug,
-                    rawSlug: slug,
-                    match: projectSlug === decodedSlug
-                });
-                return projectSlug === decodedSlug;
-            });
+            const foundProject = validProjects.find((p: Project) => matchesProjectSlug(p, decodedSlug));
 
             if (!foundProject || (foundProject as any)?.hidden) {
                 console.log('Project not found for slug:', slug);
@@ -120,6 +102,8 @@ const ProjectsDetails: React.FC = () => {
             }
 
             setProject(foundProject);
+            // The primary content must not wait for optional GitHub requests.
+            setLoading(false);
 
             // Load GitHub stats if github URL exists
             if (foundProject.github) {
@@ -323,23 +307,6 @@ const ProjectsDetails: React.FC = () => {
             console.error('Error loading custom README:', err);
             setReadmeError({ status: 'network' });
         }
-    };
-
-    const createSlug = (name: string | undefined | null): string => {
-        if (!name || typeof name !== 'string') {
-            return '';
-        }
-        return name
-            .toLowerCase()
-            .trim()
-            // Replace spaces with hyphens
-            .replace(/\s+/g, '-')
-            // Replace special characters but keep some meaningful ones
-            .replace(/[^\w\-()|\[\]]/g, '-')
-            // Replace multiple consecutive hyphens with a single one
-            .replace(/-+/g, '-')
-            // Remove leading and trailing hyphens
-            .replace(/^-+|-+$/g, '');
     };
 
     if (loading) {

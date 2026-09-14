@@ -1927,7 +1927,7 @@ export default function ProjectsEditor() {
                     ) : null}
 
                     <div className="text-white/60 text-xs">
-                      Nota: esto solo funciona en <span className="font-mono">npm run dev</span> (usa endpoints <span className="font-mono">/__dev/projects-editor/*</span>).
+                      Nota: esto solo funciona en <span className="font-mono">pnpm dev</span> (usa endpoints <span className="font-mono">/__dev/projects-editor/*</span>).
                     </div>
                   </div>
                 )}
