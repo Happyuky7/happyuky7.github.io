@@ -8,8 +8,27 @@
 		"skills": "Kasanayan",
 		"projects": "Mga Proyekto",
 		"contact": "Makipag-ugnayan",
-		"blog": "Blog"
+		"blog": "Blog",
+		"elsewhere": "Iba Pa",
+		"social": "Mga social link"
 	},
+    "elsewhere": {
+        "pageTitle": "Iba Pang Site",
+        "pageDescription": "Ang iba kong sulok sa internet - mga lugar na mapupuntahan, hindi repository na babasahin.",
+        "title": "Iba kong mga lugar",
+        "subtitle": "Mga site, komunidad at side quest na hindi code projects.",
+        "visit": "Bisitahin",
+        "sites": {
+            "whatever": {
+                "tagline": "Mga Litrato · Mga Iniisip · Musika · Side Quests",
+                "blurb": "Isang mas personal na sulok ng internet. Mga litrato, mga bagay na iniisip ko, musika, Virtual Worlds at kung ano pa mang gusto kong ilagay sa isang lugar. Walang mahigpit na kategorya - iyon ang punto."
+            },
+            "links": {
+                "tagline": "Lahat ng account, isang pahina",
+                "blurb": "Ang links hub: lahat ng profile at account ko sa iisang lugar. Hiwalay na naka-host mula sa portfolio na ito."
+            }
+        }
+    },
 	"home": {
 		"available": "Available para sa bagong projects",
 		"title-h1": "Hi, ako si",

@@ -42,7 +42,7 @@ type ActivePanel = "queue" | "volume" | null;
 type EmbeddedCoverMap = Record<string, string | null>;
 
 const SUPPORTED_LANGS = ["en", "es", "ja", "fr", "de", "pt", "pl", "ru", "zh", "ko", "th", "fil"] as const;
-const ENABLED_PAGES = ["/", "/projects", "/contact"];
+const ENABLED_PAGES = ["/", "/projects", "/contact", "/elsewhere"];
 const STORAGE = {
   isOpen: "musicWidget.isOpen.v1",
   playlistId: "musicWidget.playlistId.v1",

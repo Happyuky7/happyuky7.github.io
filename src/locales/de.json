@@ -8,8 +8,27 @@
 		"skills": "Skills",
 		"projects": "Projekte",
 		"contact": "Kontakt",
-		"blog": "Blog"
+		"blog": "Blog",
+		"elsewhere": "Anderswo",
+		"social": "Soziale Netzwerke"
 	},
+    "elsewhere": {
+        "pageTitle": "Anderswo",
+        "pageDescription": "Meine anderen Ecken des Internets - Orte zum Besuchen, keine Repositories zum Lesen.",
+        "title": "Meine anderen Orte",
+        "subtitle": "Seiten, Communitys und Side Quests, die keine Code-Projekte sind.",
+        "visit": "Besuchen",
+        "sites": {
+            "whatever": {
+                "tagline": "Fotos · Gedanken · Musik · Side Quests",
+                "blurb": "Eine persönlichere Ecke des Internets. Fotos, Dinge, über die ich nachdenke, Musik, virtuelle Welten und alles andere, was ich irgendwo ablegen möchte. Keine strenge Kategorie - das ist irgendwie der Punkt."
+            },
+            "links": {
+                "tagline": "Alle Accounts, eine Seite",
+                "blurb": "Der Link-Hub: alle meine Profile und Accounts an einem Ort. Wird getrennt von diesem Portfolio gehostet."
+            }
+        }
+    },
 	"home": {
 		"available": "Verfügbar für neue Projekte",
 		"title-h1": "Hi, ich bin",

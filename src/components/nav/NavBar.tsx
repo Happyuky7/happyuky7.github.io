@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaTwitch } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaYoutube, FaTwitch, FaDiscord, FaTiktok, FaReddit } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { SiPixiv } from "react-icons/si";
 import { publicPath } from "@/utils/publicPath";
-import { HiMenu, HiX } from "react-icons/hi";
+import { HiMenu, HiX, HiDotsHorizontal } from "react-icons/hi";
 import { HiPhotograph, HiVideoCamera } from "react-icons/hi";
 
 import LanguageSelector from "@components/languageSelector/LanguageSelector";
@@ -13,6 +14,8 @@ import { useBackground } from "@/background/BackgroundContext";
 
 const NavBar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [socialsOpen, setSocialsOpen] = useState(false);
+  const socialsRef = useRef<HTMLDivElement | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const [skillsInView, setSkillsInView] = useState(false);
   const location = useLocation();
@@ -45,13 +48,32 @@ const NavBar: React.FC = () => {
     if (!isMobile) setMobileMenuOpen(false);
   }, [isMobile]);
 
+  useEffect(() => {
+    if (!socialsOpen) return;
+    const onPointerDown = (event: MouseEvent) => {
+      if (socialsRef.current && !socialsRef.current.contains(event.target as Node)) setSocialsOpen(false);
+    };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSocialsOpen(false);
+    };
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [socialsOpen]);
+
   const socialLinks = [
     { icon: <FaGithub />, url: "https://github.com/Happyuky7", label: "GitHub" },
     { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/mathias-iribarren-retamal/", label: "LinkedIn" },
-    { icon: <FaTwitter />, url: "https://twitter.com/happyuky7", label: "Twitter" },
+    { icon: <FaXTwitter />, url: "https://x.com/Happyuky7", label: "X" },
+    { icon: <FaDiscord />, url: "https://discord.gg/3EebYUyeUX", label: "Discord" },
     { icon: <FaYoutube />, url: "https://www.youtube.com/@Happyuky7", label: "YouTube" },
     { icon: <FaTwitch />, url: "https://www.twitch.tv/happyuky7", label: "Twitch" },
+    { icon: <FaTiktok />, url: "https://www.tiktok.com/@happyuky7", label: "TikTok" },
     { icon: <SiPixiv />, url: "https://www.pixiv.net/en/users/80207354", label: "Pixiv" },
+    { icon: <FaReddit />, url: "https://www.reddit.com/user/Happyuky7", label: "Reddit" },
   ];
 
   // ✅ tus links ahora siempre incluyen idioma
@@ -62,6 +84,7 @@ const NavBar: React.FC = () => {
     { to: withLang("/projects"), label: t("nav.projects"), match: "/projects" },
     { to: withLang("/contact"), label: t("nav.contact"), match: "/contact" },
     { to: withLang("/blog"), label: t("nav.blog"), match: "/blog" },
+    { to: withLang("/elsewhere"), label: t("nav.elsewhere"), match: "/elsewhere" },
   ] as const;
 
   const cleanPath = stripLangPrefix(location.pathname);
@@ -144,10 +167,10 @@ const NavBar: React.FC = () => {
         scrolled ? "bg-dark/75 backdrop-blur-lg shadow-lg shadow-primary/10" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-[88rem] min-[1900px]:max-w-[117rem] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-[minmax(max-content,1fr)_auto_minmax(max-content,1fr)] items-center gap-4 lg:gap-8 h-20">
           {/* Logo */}
-          <Link to={withLang("/")} className="navbar-brand flex min-w-0 flex-1 items-center space-x-3 group pr-2 lg:flex-none lg:pr-0">
+          <Link to={withLang("/")} className="navbar-brand col-start-1 flex min-w-0 items-center space-x-3 group pr-2 lg:pr-0">
             <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full overflow-hidden ring-2 ring-primary/50 group-hover:ring-primary transition-all">
               <img src={publicPath('/assets/img/logo.png')} alt="Happy7" className="w-full h-full object-cover" loading="eager" decoding="async" />
             </div>
@@ -157,14 +180,14 @@ const NavBar: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation (show from lg to avoid mid-size overflow) */}
-          <div className="navbar-desktop-links hidden lg:flex items-center space-x-8">
+          <div className="navbar-desktop-links col-start-2 hidden lg:flex items-center space-x-10">
             {navLinks.map((link) => (
               <Link
                 key={`${link.match}-${link.to}`}
                 to={link.to}
                 state={(link as any).state}
                 onClick={link.match === "skills" ? handleSkillsClick : undefined}
-                className={`text-lg font-medium transition-all duration-300 hover:text-primary ${
+                className={`whitespace-nowrap text-lg font-medium transition-all duration-300 hover:text-primary ${
                   isActive(link.match) ? "text-primary" : "text-white"
                 }`}
               >
@@ -174,8 +197,8 @@ const NavBar: React.FC = () => {
           </div>
 
           {/* Right side - Desktop */}
-          <div className="navbar-desktop-social hidden lg:flex items-center gap-4">
-            <div className="hidden xl:flex items-center space-x-4">
+          <div className="navbar-desktop-social col-start-3 justify-self-end hidden lg:flex items-center gap-6">
+            <div className="hidden min-[1900px]:flex items-center space-x-5">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
@@ -189,6 +212,44 @@ const NavBar: React.FC = () => {
                 </a>
               ))}
             </div>
+            {/* Under 1900px the full icon row cannot fit without pushing the nav
+                off-centre, so the same links live behind this button instead of
+                simply disappearing. */}
+            <div ref={socialsRef} className="relative min-[1900px]:hidden">
+              <button
+                type="button"
+                onClick={() => setSocialsOpen((open) => !open)}
+                aria-expanded={socialsOpen}
+                aria-haspopup="true"
+                aria-label={t("nav.social")}
+                title={t("nav.social")}
+                className={`flex items-center justify-center rounded-lg border border-primary/30 px-3 py-2 transition-all duration-300 hover:bg-primary/20 hover:text-primary ${
+                  socialsOpen ? "bg-primary/20 text-primary" : "bg-dark-lighter text-gray-300"
+                }`}
+              >
+                <HiDotsHorizontal className="h-5 w-5" />
+              </button>
+
+              {socialsOpen ? (
+                <div className="absolute right-0 top-full z-50 mt-2 grid w-max grid-cols-5 gap-2 rounded-xl border border-primary/25 bg-dark-lighter/95 p-3 shadow-lg shadow-black/40 backdrop-blur">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.label}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setSocialsOpen(false)}
+                      className="grid h-9 w-9 place-items-center rounded-lg text-gray-400 transition-all duration-300 hover:bg-primary/15 hover:text-primary"
+                      aria-label={social.label}
+                      title={social.label}
+                    >
+                      <span className="text-xl">{social.icon}</span>
+                    </a>
+                  ))}
+                </div>
+              ) : null}
+            </div>
+
             <div className="flex items-center gap-3">
               <label
                 title={mode === "static" ? "Animated background" : "Static background"}
@@ -218,7 +279,7 @@ const NavBar: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button + Language Selector */}
-          <div className="navbar-mobile-controls shrink-0 flex items-center gap-2 lg:hidden max-[430px]:gap-1">
+          <div className="navbar-mobile-controls col-start-3 justify-self-end shrink-0 flex items-center gap-2 lg:hidden max-[430px]:gap-1">
             <LanguageSelector />
             <label
               title={mode === "static" ? "Animated background" : "Static background"}

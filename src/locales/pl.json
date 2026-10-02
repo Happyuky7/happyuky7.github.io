@@ -8,8 +8,27 @@
 		"skills": "Umiejętności",
 		"projects": "Projekty",
 		"contact": "Kontakt",
-		"blog": "Blog"
+		"blog": "Blog",
+		"elsewhere": "Inne",
+		"social": "Media społecznościowe"
 	},
+    "elsewhere": {
+        "pageTitle": "Inne strony",
+        "pageDescription": "Moje inne zakątki internetu - miejsca do odwiedzenia, a nie repozytoria do czytania.",
+        "title": "Moje inne miejsca",
+        "subtitle": "Strony, społeczności i poboczne questy, które nie są projektami z kodem.",
+        "visit": "Odwiedź",
+        "sites": {
+            "whatever": {
+                "tagline": "Zdjęcia · Myśli · Muzyka · Poboczne questy",
+                "blurb": "Bardziej osobisty zakątek internetu. Zdjęcia, rzeczy, o których myślę, muzyka, Wirtualne Światy i wszystko inne, co mam ochotę gdzieś umieścić. Bez sztywnej kategorii - w tym rzecz."
+            },
+            "links": {
+                "tagline": "Wszystkie konta na jednej stronie",
+                "blurb": "Hub z linkami: wszystkie moje profile i konta w jednym miejscu. Hostowany osobno od tego portfolio."
+            }
+        }
+    },
 	"home": {
 		"available": "Dostępny do nowych projektów",
 		"title-h1": "Cześć, jestem",

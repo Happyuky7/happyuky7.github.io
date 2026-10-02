@@ -8,8 +8,27 @@
 		"skills": "Skills",
 		"projects": "Projetos",
 		"contact": "Contacto",
-		"blog": "Blog"
+		"blog": "Blog",
+		"elsewhere": "Outros",
+		"social": "Redes sociais"
 	},
+    "elsewhere": {
+        "pageTitle": "Outros sites",
+        "pageDescription": "Meus outros cantos da internet: lugares para visitar, não repositórios para ler.",
+        "title": "Meus outros lugares",
+        "subtitle": "Sites, comunidades e side quests que não são projetos de código.",
+        "visit": "Visitar",
+        "sites": {
+            "whatever": {
+                "tagline": "Fotos · Pensamentos · Música · Side Quests",
+                "blurb": "Um canto mais pessoal da internet. Fotos, coisas em que estou pensando, música, Mundos Virtuais e qualquer outra coisa que eu queira deixar em algum lugar. Sem categoria estrita - essa é mais ou menos a ideia."
+            },
+            "links": {
+                "tagline": "Todas as contas, uma página",
+                "blurb": "O hub de links: todos os meus perfis e contas em um só lugar. Hospedado separadamente deste portfólio."
+            }
+        }
+    },
 	"home": {
 		"available": "Disponível para novos projetos",
 		"title-h1": "Olá, eu sou",

@@ -6,7 +6,7 @@ import VideoBackground from "@components/videoBackground/VideoBackground";
 import { useLanguage } from "@i18n/LanguageContext";
 
 import { FaXTwitter } from "react-icons/fa6";
-import { FaGithub, FaLinkedin, FaYoutube, FaTwitch, FaDiscord, FaEnvelope, FaCopy, FaCheck } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaYoutube, FaTwitch, FaDiscord, FaEnvelope, FaCopy, FaCheck, FaTiktok, FaStackOverflow, FaReddit } from "react-icons/fa";
 import { SiPixiv } from "react-icons/si";
 import { HiClock, HiLocationMarker } from "react-icons/hi";
 
@@ -154,7 +154,7 @@ const Contact: React.FC = () => {
       {
         icon: <FaXTwitter className="text-4xl" />,
         name: "X / Twitter",
-        url: "https://twitter.com/happyuky7",
+        url: X_TWITTER_URL,
         username: "@happyuky7",
         hoverColor: "group-hover:text-sky-400",
       },
@@ -173,11 +173,32 @@ const Contact: React.FC = () => {
         hoverColor: "group-hover:text-purple-500",
       },
       {
+        icon: <FaTiktok className="text-4xl" />,
+        name: "TikTok",
+        url: "https://www.tiktok.com/@happyuky7",
+        username: "@happyuky7",
+        hoverColor: "group-hover:text-pink-400",
+      },
+      {
         icon: <SiPixiv className="text-4xl" />,
         name: "Pixiv",
         url: "https://www.pixiv.net/en/users/80207354",
         username: "Happy7",
         hoverColor: "group-hover:text-blue-400",
+      },
+      {
+        icon: <FaStackOverflow className="text-4xl" />,
+        name: "Stack Overflow",
+        url: "https://stackoverflow.com/users/17251608/happy7",
+        username: "Happy7",
+        hoverColor: "group-hover:text-orange-400",
+      },
+      {
+        icon: <FaReddit className="text-4xl" />,
+        name: "Reddit",
+        url: "https://www.reddit.com/user/Happyuky7",
+        username: "u/Happyuky7",
+        hoverColor: "group-hover:text-orange-600",
       },
     ],
     []

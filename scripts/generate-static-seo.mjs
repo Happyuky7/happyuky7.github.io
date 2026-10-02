@@ -27,6 +27,13 @@ const OG_LOCALE = {
   fil: 'fil_PH',
 };
 
+// Mirrors src/components/elsewhere/elsewhereData.tsx (name + url + tagline only).
+// Keep both in sync when adding a site.
+const ELSEWHERE_SITES = [
+  { id: 'whatever', name: 'Whatever', url: 'https://whatever.happyuky7.com/' },
+  { id: 'links', name: 'All My Links', url: 'https://happyuky7.com/links/' },
+];
+
 let publicProjects = [];
 let publicPosts = [];
 const locales = {};
@@ -35,7 +42,7 @@ function staticBody(lang, urlPath, title, description) {
   const labels = locales[lang]?.nav || locales.en.nav;
   const link = (href, text) => `<a href="${escapeHtml(href)}">${escapeHtml(text)}</a>`;
   const route = urlPath.replace(/^\/[^/]+/, '').replace(/\/$/, '') || '/';
-  const nav = ['home', 'projects', 'blog', 'contact'].map((key) =>
+  const nav = ['home', 'projects', 'blog', 'contact', 'elsewhere'].map((key) =>
     link(`/${lang}/${key === 'home' ? '' : `${key}/`}`, labels[key])).join(' · ');
   let content = `<h1>${escapeHtml(title)}</h1><p>${escapeHtml(description)}</p>`;
   const projects = publicProjects.map((p) => `<li>${link(`/${lang}/project/${projectSlug(p)}/`, p.displayName || p.name)}<p>${escapeHtml(pickLocalized(p.description, lang))}</p></li>`).join('');
@@ -55,6 +62,11 @@ function staticBody(lang, urlPath, title, description) {
   } else if (route === '/contact') {
     content += `<p>${link('mailto:happyrogelio7developer@gmail.com', 'happyrogelio7developer@gmail.com')}</p>`;
     content += `<p>${link('https://github.com/Happyuky7', 'GitHub')} · ${link('https://x.com/happyuky7', 'X (Twitter)')}</p>`;
+  } else if (route === '/elsewhere') {
+    content += `<ul>${ELSEWHERE_SITES.map((site) => {
+      const copy = locales[lang]?.elsewhere?.sites?.[site.id] || locales.en.elsewhere.sites[site.id];
+      return `<li>${link(site.url, site.name)}<p>${escapeHtml(copy.tagline)}</p></li>`;
+    }).join('')}</ul>`;
   } else if (route === '/blog') {
     content += `<ul>${publicPosts.filter((p) => !p.languages?.length || p.languages.includes(lang)).map((p) => {
       const route = p.year && p.month ? `${p.year}/${p.month}/${p.slug || p.id}` : p.slug || p.id;
@@ -305,6 +317,22 @@ async function generate() {
       const htmlWithRich = insertOrReplaceJsonLd(html, profileJsonLd(lang));
       await writeHtml(path.join(DIST, lang, 'contact', 'index.html'), htmlWithRich);
       if (lang === 'en') await writeHtml(path.join(DIST, 'contact', 'index.html'), htmlWithRich);
+    }
+
+    // Elsewhere (my other sites - not code projects)
+    {
+      const urlPath = `/${lang}/elsewhere`;
+      const html = applySeo(template, {
+        lang,
+        title: `${SITE_TITLE_PREFIX} | ${locales[lang]?.elsewhere?.pageTitle || locales.en.elsewhere.pageTitle}`,
+        description: locales[lang]?.elsewhere?.pageDescription || locales.en.elsewhere.pageDescription,
+        urlPath,
+        image: '/assets/img/logo.png',
+        ogType: 'website',
+      });
+      const htmlWithRich = insertOrReplaceJsonLd(html, profileJsonLd(lang));
+      await writeHtml(path.join(DIST, lang, 'elsewhere', 'index.html'), htmlWithRich);
+      if (lang === 'en') await writeHtml(path.join(DIST, 'elsewhere', 'index.html'), htmlWithRich);
     }
 
     // Blog index

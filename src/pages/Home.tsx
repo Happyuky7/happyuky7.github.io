@@ -13,6 +13,7 @@ import { publicPath } from '@/utils/publicPath';
 import SkillsSection from "@components/skills/SkillsSection";
 import RelevantProjectsSection from "@components/relevantProjects/RelevantProjectsSection";
 import LanguagesSection from "@components/languages/LanguagesSection";
+import ElsewhereSection from "@components/elsewhere/ElsewhereSection";
 import { skillsCategories } from "@components/skills/skillsData";
 
 // Styles
@@ -259,6 +260,8 @@ const Home: React.FC = () => {
                 <LanguagesSection />
 
                 <RelevantProjectsSection />
+
+                <ElsewhereSection />
 
 
                 

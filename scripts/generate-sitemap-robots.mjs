@@ -59,6 +59,7 @@ async function generate() {
     }
     entries.push({ loc: `${base}/${lang}/projects/` });
     entries.push({ loc: `${base}/${lang}/contact/` });
+    entries.push({ loc: `${base}/${lang}/elsewhere/` });
 
     for (const post of Array.isArray(blogPosts) ? blogPosts : []) {
       if (post?.draft || post?.private || post?.unlisted || post?.localExample) continue;

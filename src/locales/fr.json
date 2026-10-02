@@ -8,8 +8,27 @@
 		"skills": "Compétences",
 		"projects": "Projets",
 		"contact": "Contact",
-		"blog": "Blog"
+		"blog": "Blog",
+		"elsewhere": "Ailleurs",
+		"social": "Réseaux sociaux"
 	},
+    "elsewhere": {
+        "pageTitle": "Ailleurs",
+        "pageDescription": "Mes autres coins d'Internet : des endroits à visiter, pas des dépôts à lire.",
+        "title": "Mes autres lieux",
+        "subtitle": "Des sites, des communautés et des quêtes secondaires qui ne sont pas des projets de code.",
+        "visit": "Visiter",
+        "sites": {
+            "whatever": {
+                "tagline": "Photos · Pensées · Musique · Quêtes secondaires",
+                "blurb": "Un coin plus personnel d'Internet. Des photos, ce à quoi je pense, de la musique, des Mondes Virtuels et tout ce que j'ai envie de poser quelque part. Pas de catégorie stricte — c'est un peu le but."
+            },
+            "links": {
+                "tagline": "Tous mes comptes, une seule page",
+                "blurb": "Le hub de liens : tous mes profils et comptes au même endroit. Hébergé séparément de ce portfolio."
+            }
+        }
+    },
 	"home": {
 		"available": "Disponible pour de nouveaux projets",
 		"title-h1": "Salut, je suis",

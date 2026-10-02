@@ -4,7 +4,26 @@
         "skills": "Skills",
         "projects": "Proyectos",
         "contact": "Contacto",
-        "blog": "Blog"
+        "blog": "Blog",
+        "elsewhere": "Otros sitios",
+        "social": "Redes sociales"
+    },
+    "elsewhere": {
+        "pageTitle": "Otros sitios",
+        "pageDescription": "Mis otros rincones de internet: lugares para visitar, no repositorios para leer.",
+        "title": "Otros lugares míos",
+        "subtitle": "Sitios, comunidades y side quests que no son proyectos de código.",
+        "visit": "Visitar",
+        "sites": {
+            "whatever": {
+                "tagline": "Fotos · Pensamientos · Música · Side Quests",
+                "blurb": "Un rincón más personal de internet. Fotos, cosas que estoy pensando, música, Mundos Virtuales y cualquier otra cosa que tenga ganas de dejar en algún lado. Sin categoría estricta: esa es un poco la idea."
+            },
+            "links": {
+                "tagline": "Todas mis cuentas, una página",
+                "blurb": "El hub de enlaces: todos mis perfiles y cuentas en un solo lugar. Alojado aparte de este portafolio."
+            }
+        }
     },
         "seo": {
             "siteName": "Happyuky7",

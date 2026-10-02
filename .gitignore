@@ -66,6 +66,16 @@ src/components/terminalfun/FunTerminal.tsx
 public/sitemap.xml
 public/robots.txt
 
+# Separate repo (github.com/Happyuky7/links) cloned here for local work.
+# Committing it as-is would create a broken gitlink; make it a submodule if
+# you ever want it versioned from this repo.
+/links/
+
+# Google Search Console exports: raw CSV/ZIP dumps stay local.
+# The write-up inside stays trackable - drop the '!' line to ignore it too.
+/happyuky7.com-google search/*
+!/happyuky7.com-google search/*.md
+
 # Oversized media (keep local, don't commit)
 public/assets/video/background4.mp4
 

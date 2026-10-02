@@ -55,6 +55,7 @@ function routeLabel(pathnameClean: string, t: (k: string) => string) {
   if (p === '/projects' || p.startsWith('/project/')) return t('nav.projects');
   if (p === '/blog' || p.startsWith('/blog/')) return t('nav.blog');
   if (p === '/contact') return t('nav.contact');
+  if (p === '/elsewhere') return t('elsewhere.pageTitle');
   return 'Happyuky7';
 }
 
@@ -152,7 +153,7 @@ export default function Seo() {
       let publishedTime: string | null = null;
       let canonicalClean = normalizedClean;
       let alternateLangs: readonly SupportedLang[] = SUPPORTED;
-      let noindex = !['/', '/projects', '/blog', '/contact'].includes(normalizedClean);
+      let noindex = !['/', '/projects', '/blog', '/contact', '/elsewhere'].includes(normalizedClean);
 
       // Route-specific enrichment (blog posts + project details)
       const blogMatch = normalizedClean.match(/^\/blog\/(\d{4})\/(\d{2})\/([^\/]+)$/) || normalizedClean.match(/^\/blog\/([^\/]+)$/);
