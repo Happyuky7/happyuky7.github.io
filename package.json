@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "buffer": "^6.0.3",
-    "flag-icons": "^7.5.0",
+    "flag-icons": "^7.6.0",
     "framer-motion": "^13.4.6",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.12.0",
