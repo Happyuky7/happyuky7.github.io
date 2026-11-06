@@ -1,0 +1,15 @@
+# pnpm 10+ reads its settings from this file instead of the "pnpm" field in
+# package.json. This repo is a single package, so there is no `packages:` list.
+
+overrides:
+  # Security patches for transitive dependencies that their parents have not
+  # picked up yet. All three are build/lint-time only - none ship to the browser.
+  # Each is a patch bump within the same major, so the APIs are unchanged.
+  #
+  # Remove an entry once the parent depends on a patched version by itself:
+  #   source-map-js  <- @tailwindcss/node (still pins 1.2.1)
+  #   zod            <- eslint-plugin-react-hooks
+  #   minimatch      <- eslint / @eslint/config-array
+  source-map-js: ">=1.2.2"
+  zod: ">=4.6.6"
+  minimatch: ">=11.0.1"

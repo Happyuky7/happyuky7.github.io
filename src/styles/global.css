@@ -123,6 +123,14 @@ html {
   }
 }
 
+/* 384px phones (Galaxy S24 Ultra) and below: the brand and the mobile
+   controls only fit side by side if the name gets a little smaller. */
+@media (max-width: 400px) {
+  .navbar-brand-text {
+    font-size: 1.2rem;
+  }
+}
+
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-dark);

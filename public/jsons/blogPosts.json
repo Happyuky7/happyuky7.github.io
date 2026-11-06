@@ -1,273 +1,372 @@
 [
-    {
-        "id": "exlocal-status-published",
-        "slug": "exlocal-status-published",
-        "date": "2026-03-15T12:00:00",
-        "year": "2026",
-        "month": "03",
-        "languages": [
-            "en"
-        ],
-        "defaultLanguage": "en",
-        "title": {
-            "en": "Status: Published"
-        },
-        "excerpt": {
-            "en": "A normal public post (baseline)."
-        },
-        "draft": false,
-        "private": false,
-        "unlisted": false,
-        "archived": false,
-        "localExample": true,
-        "tags": [
-            "status",
-            "published"
-        ],
-        "categories": [
-            "development"
-        ]
+  {
+    "id": "chatgpt-work-back-to-normal-chat",
+    "slug": "chatgpt-work-back-to-normal-chat",
+    "date": "2026-10-31T12:00:00",
+    "year": "2026",
+    "month": "10",
+    "readTime": 6,
+    "languages": [
+      "en",
+      "es",
+      "ja",
+      "fr",
+      "de",
+      "pt",
+      "pl",
+      "ru",
+      "zh",
+      "ko",
+      "th",
+      "fil"
+    ],
+    "defaultLanguage": "es",
+    "author": {
+      "name": "Happyuky7",
+      "avatar": "/assets/img/logo.png",
+      "url": "https://happyuky7.com",
+      "role": {
+        "es": "Full Stack Developer & DevOps Engineer — desarrollo backend, infraestructura de servidores, integración de IA y modelado 3D de ingeniería",
+        "en": "Full Stack Developer & DevOps Engineer — backend development, server infrastructure, AI integration, and 3D engineering design",
+        "de": "Full Stack Developer & DevOps Engineer — Backend-Entwicklung, Serverinfrastruktur, KI-Integration und technische 3D-Konstruktion",
+        "fr": "Full Stack Developer & DevOps Engineer — développement backend, infrastructure serveur, intégration d'IA et modélisation 3D d'ingénierie",
+        "pt": "Full Stack Developer & DevOps Engineer — desenvolvimento backend, infraestrutura de servidores, integração de IA e modelagem 3D de engenharia",
+        "pl": "Full Stack Developer & DevOps Engineer — rozwój backendu, infrastruktura serwerowa, integracja AI i modelowanie 3D w inżynierii",
+        "ru": "Full Stack Developer & DevOps Engineer — бэкенд-разработка, серверная инфраструктура, интеграция ИИ и инженерное 3D-моделирование",
+        "ja": "フルスタック開発者 & DevOps エンジニア — バックエンド開発、サーバーインフラ、AI 統合、エンジニアリング 3D モデリング",
+        "zh": "全栈开发者 & DevOps 工程师 — 后端开发、服务器基础设施、AI 集成、工程 3D 建模",
+        "ko": "풀스택 개발자 & DevOps 엔지니어 — 백엔드 개발, 서버 인프라, AI 통합, 엔지니어링 3D 모델링",
+        "th": "นักพัฒนา Full Stack & วิศวกร DevOps — การพัฒนาแบ็กเอนด์ โครงสร้างพื้นฐานเซิร์ฟเวอร์ การผสาน AI และการขึ้นรูป 3 มิติเชิงวิศวกรรม",
+        "fil": "Full Stack Developer & DevOps Engineer — backend development, server infrastructure, AI integration, at 3D engineering design"
+      }
     },
-    {
-        "id": "exlocal-status-archived",
-        "slug": "exlocal-status-archived",
-        "date": "2026-03-15T11:30:00",
-        "year": "2026",
-        "month": "03",
-        "languages": [
-            "en"
-        ],
-        "defaultLanguage": "en",
-        "title": {
-            "en": "Status: Archived"
-        },
-        "excerpt": {
-            "en": "Visible in public list, but marked as archived."
-        },
-        "draft": false,
-        "private": false,
-        "unlisted": false,
-        "archived": true,
-        "localExample": true,
-        "tags": [
-            "status",
-            "archived"
-        ],
-        "categories": [
-            "development"
-        ]
+    "title": {
+      "en": "I turned on ChatGPT Work by accident and Chat mode disappeared",
+      "es": "Activé ChatGPT Work sin querer y desapareció el modo Chat",
+      "ja": "うっかり ChatGPT Work を有効にしたら Chat モードが消えた",
+      "fr": "J'ai activé ChatGPT Work par erreur et le mode Chat a disparu",
+      "de": "Ich habe ChatGPT Work versehentlich aktiviert und der Chat-Modus war weg",
+      "pt": "Ativei o ChatGPT Work sem querer e o modo Chat desapareceu",
+      "pl": "Przypadkiem włączyłem ChatGPT Work i tryb Chat zniknął",
+      "ru": "Случайно включил ChatGPT Work — и режим Chat исчез",
+      "zh": "我不小心开启了 ChatGPT Work，聊天模式就消失了",
+      "ko": "실수로 ChatGPT Work를 켰더니 Chat 모드가 사라졌다",
+      "th": "ผมเผลอเปิด ChatGPT Work แล้วโหมด Chat ก็หายไป",
+      "fil": "Hindi ko sinasadyang buksan ang ChatGPT Work at nawala ang Chat mode"
     },
-    {
-        "id": "exlocal-status-unlisted",
-        "slug": "exlocal-status-unlisted",
-        "date": "2026-03-15T11:00:00",
-        "year": "2026",
-        "month": "03",
-        "languages": [
-            "en"
-        ],
-        "defaultLanguage": "en",
-        "title": {
-            "en": "Status: Unlisted"
-        },
-        "excerpt": {
-            "en": "Hidden from the public list, accessible by URL."
-        },
-        "draft": false,
-        "private": false,
-        "unlisted": true,
-        "archived": false,
-        "localExample": true,
-        "tags": [
-            "status",
-            "unlisted"
-        ],
-        "categories": [
-            "development"
-        ]
+    "excerpt": {
+      "en": "I clicked \"Try Work\" assuming I could go back to Chat whenever I wanted. The selector vanished. Here is what I tried to get it back.",
+      "es": "Pulsé «Try Work» pensando que volvería a Chat cuando quisiera. El selector desapareció. Esto es lo que probé para recuperarlo.",
+      "ja": "「Try Work」を押せばいつでも Chat に戻れると思っていた。セレクターは消えた。取り戻すために試したことをまとめる。",
+      "fr": "J'ai cliqué sur « Try Work » en pensant revenir à Chat quand je voudrais. Le sélecteur a disparu. Voici ce que j'ai essayé pour le récupérer.",
+      "de": "Ich habe auf „Try Work“ geklickt und dachte, ich käme jederzeit zu Chat zurück. Der Umschalter war weg. Das habe ich versucht, um ihn zurückzubekommen.",
+      "pt": "Cliquei em «Try Work» achando que voltaria ao Chat quando quisesse. O seletor sumiu. Isto foi o que testei para recuperá-lo.",
+      "pl": "Kliknąłem „Try Work”, sądząc, że wrócę do Chat, kiedy zechcę. Przełącznik zniknął. Oto, co próbowałem, żeby go odzyskać.",
+      "ru": "Нажал «Try Work», думая, что вернусь в Chat когда захочу. Переключатель исчез. Вот что я пробовал, чтобы его вернуть.",
+      "zh": "我点了“Try Work”，以为随时能回到 Chat。选择器却消失了。这是我为找回它所做的尝试。",
+      "ko": "「Try Work」를 누르면 언제든 Chat으로 돌아갈 수 있을 줄 알았다. 선택기는 사라졌다. 되찾기 위해 시도한 것들.",
+      "th": "ผมกด «Try Work» โดยคิดว่าจะกลับไป Chat เมื่อไหร่ก็ได้ แต่ตัวเลือกหายไป นี่คือสิ่งที่ผมลองเพื่อเรียกมันกลับมา",
+      "fil": "Pinindot ko ang «Try Work» akala ko puwede akong bumalik sa Chat anumang oras. Nawala ang selector. Ito ang sinubukan ko para maibalik ito."
     },
-    {
-        "id": "exlocal-status-private",
-        "slug": "exlocal-status-private",
-        "date": "2026-03-15T10:30:00",
-        "year": "2026",
-        "month": "03",
-        "languages": [
-            "en"
-        ],
-        "defaultLanguage": "en",
-        "title": {
-            "en": "Status: Private"
-        },
-        "excerpt": {
-            "en": "Hidden from public list; shows a private message if accessed by URL."
-        },
-        "draft": false,
-        "private": true,
-        "unlisted": false,
-        "archived": false,
-        "localExample": true,
-        "tags": [
-            "status",
-            "private"
-        ],
-        "categories": [
-            "development"
-        ]
+    "description": {
+      "en": "What ChatGPT Work is, why the Chat/Work selector can disappear, and which community workarounds exist for getting back to normal Chat.",
+      "es": "Qué es ChatGPT Work, por qué puede desaparecer el selector Chat/Work y qué alternativas de la comunidad existen para volver al Chat normal.",
+      "ja": "ChatGPT Work とは何か、Chat/Work セレクターが消えることがあるのはなぜか、通常の Chat に戻るためのコミュニティの回避策。",
+      "fr": "Ce qu'est ChatGPT Work, pourquoi le sélecteur Chat/Work peut disparaître et quels contournements de la communauté existent pour revenir au Chat normal.",
+      "de": "Was ChatGPT Work ist, warum der Chat/Work-Umschalter verschwinden kann und welche Workarounds aus der Community zurück zum normalen Chat führen.",
+      "pt": "O que é o ChatGPT Work, por que o seletor Chat/Work pode sumir e quais alternativas da comunidade existem para voltar ao Chat normal.",
+      "pl": "Czym jest ChatGPT Work, dlaczego przełącznik Chat/Work może zniknąć i jakie obejścia społeczności pozwalają wrócić do zwykłego Chat.",
+      "ru": "Что такое ChatGPT Work, почему может исчезнуть переключатель Chat/Work и какие обходные пути сообщества помогают вернуться к обычному Chat.",
+      "zh": "什么是 ChatGPT Work，Chat/Work 选择器为何会消失，以及社区有哪些回到普通 Chat 的变通办法。",
+      "ko": "ChatGPT Work란 무엇이고, Chat/Work 선택기가 사라질 수 있는 이유, 그리고 일반 Chat으로 돌아가기 위한 커뮤니티의 우회 방법.",
+      "th": "ChatGPT Work คืออะไร ทำไมตัวเลือก Chat/Work ถึงหายไปได้ และมีทางเลี่ยงจากคอมมูนิตี้อะไรบ้างเพื่อกลับไปใช้ Chat ปกติ",
+      "fil": "Ano ang ChatGPT Work, bakit puwedeng mawala ang Chat/Work selector, at anong mga workaround ng komunidad ang puwedeng gamitin para makabalik sa normal na Chat."
     },
-    {
-        "id": "exlocal-status-newer",
-        "slug": "exlocal-status-newer",
-        "date": "2026-03-15T10:15:00",
-        "year": "2026",
-        "month": "03",
-        "languages": [
-            "en"
-        ],
-        "defaultLanguage": "en",
-        "title": {
-            "en": "Status: Newer Version"
-        },
-        "excerpt": {
-            "en": "The newer version referenced by outdated posts."
-        },
-        "draft": false,
-        "private": false,
-        "unlisted": false,
-        "archived": false,
-        "localExample": true,
-        "tags": [
-            "status",
-            "new"
-        ],
-        "categories": [
-            "development"
-        ]
+    "draft": false,
+    "private": false,
+    "unlisted": false,
+    "archived": false,
+    "localExample": false,
+    "tags": [
+      "chatgpt",
+      "openai",
+      "work",
+      "troubleshooting"
+    ],
+    "categories": [
+      "technology",
+      "tutorial"
+    ]
+  },
+  {
+    "id": "exlocal-status-published",
+    "slug": "exlocal-status-published",
+    "date": "2026-03-15T12:00:00",
+    "year": "2026",
+    "month": "03",
+    "languages": [
+      "en"
+    ],
+    "defaultLanguage": "en",
+    "title": {
+      "en": "Status: Published"
     },
-    {
-        "id": "exlocal-status-outdated",
-        "slug": "exlocal-status-outdated",
-        "date": "2026-03-15T10:00:00",
-        "year": "2026",
-        "month": "03",
-        "languages": [
-            "en"
-        ],
-        "defaultLanguage": "en",
-        "title": {
-            "en": "Status: Outdated"
-        },
-        "excerpt": {
-            "en": "Shows a banner linking to the newer version."
-        },
-        "draft": false,
-        "private": false,
-        "unlisted": false,
-        "archived": false,
-        "supersededBy": "exlocal-status-newer",
-        "localExample": true,
-        "tags": [
-            "status",
-            "outdated"
-        ],
-        "categories": [
-            "development"
-        ]
+    "excerpt": {
+      "en": "A normal public post (baseline)."
     },
-    {
-        "id": "exlocal-status-archived-outdated",
-        "slug": "exlocal-status-archived-outdated",
-        "date": "2026-03-15T09:30:00",
-        "year": "2026",
-        "month": "03",
-        "languages": [
-            "en"
-        ],
-        "defaultLanguage": "en",
-        "title": {
-            "en": "Status: Archived + New Version"
-        },
-        "excerpt": {
-            "en": "Archived and also points to a newer version."
-        },
-        "draft": false,
-        "private": false,
-        "unlisted": false,
-        "archived": true,
-        "supersededBy": "exlocal-status-newer",
-        "localExample": true,
-        "tags": [
-            "status",
-            "archived",
-            "outdated"
-        ],
-        "categories": [
-            "development"
-        ]
+    "draft": false,
+    "private": false,
+    "unlisted": false,
+    "archived": false,
+    "localExample": true,
+    "tags": [
+      "status",
+      "published"
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "exlocal-status-archived",
+    "slug": "exlocal-status-archived",
+    "date": "2026-03-15T11:30:00",
+    "year": "2026",
+    "month": "03",
+    "languages": [
+      "en"
+    ],
+    "defaultLanguage": "en",
+    "title": {
+      "en": "Status: Archived"
     },
-    {
-        "id": "example-project",
-        "slug": "example-project",
-        "date": "2026-01-21",
-        "year": "2026",
-        "month": "01",
-        "readTime": 5,
-        "image": "https://cdn.discordapp.com/attachments/1213609984026214410/1461466516162609354/76B213DD-ACFF-47D2-92DB-1B3611B38CFD.gif?ex=698c4682&is=698af502&hm=b19b344f71e2cbbf16d26a7eea13758ef611aa360ba5755d7184b78857b2fc15",
-        "languages": [
-            "en",
-            "es",
-            "ja"
-        ],
-        "defaultLanguage": "en",
-        "author": {
-            "name": "Happyuky7",
-            "avatar": "/assets/img/logo.png",
-            "url": "https://happyuky7.com",
-            "role": {
-                "en": "Full Stack Developer",
-                "es": "Desarrollador Full Stack",
-                "ja": "フルスタック開発者"
-            }
-        },
-        "translators": [
-            {
-                "name": "Translator Name",
-                "avatar": "https://example.com/path-to-translator-avatar.jpg",
-                "url": "https://translator-website.com",
-                "language": "es"
-            }
-        ],
-        "colaborators": [
-            {
-                "name": "Collaborator Name",
-                "avatar": "https://example.com/path-to-collaborator-avatar.jpg",
-                "url": "https://collaborator-website.com",
-                "role": {
-                    "en": "Content Editor",
-                    "es": "Editor de Contenido",
-                    "ja": "コンテンツエディター"
-                }
-            }
-        ],
-        "title": {
-            "en": "Example Project",
-            "es": "Proyecto de Ejemplo",
-            "ja": "例のプロジェクト"
-        },
-        "description": {
-            "en": "This is an example description for the blog post in English.",
-            "es": "Esta es una descripción de ejemplo para la publicación del blog en español.",
-            "ja": "これは日本語のブログ投稿の例の説明です。"
-        },
-        "draft": true,
-        "tags": [
-            "example",
-            "blog",
-            "post"
-        ],
-        "categories": [
-            "tutorial",
-            "development"
-        ]
-    }
+    "excerpt": {
+      "en": "Visible in public list, but marked as archived."
+    },
+    "draft": false,
+    "private": false,
+    "unlisted": false,
+    "archived": true,
+    "localExample": true,
+    "tags": [
+      "status",
+      "archived"
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "exlocal-status-unlisted",
+    "slug": "exlocal-status-unlisted",
+    "date": "2026-03-15T11:00:00",
+    "year": "2026",
+    "month": "03",
+    "languages": [
+      "en"
+    ],
+    "defaultLanguage": "en",
+    "title": {
+      "en": "Status: Unlisted"
+    },
+    "excerpt": {
+      "en": "Hidden from the public list, accessible by URL."
+    },
+    "draft": false,
+    "private": false,
+    "unlisted": true,
+    "archived": false,
+    "localExample": true,
+    "tags": [
+      "status",
+      "unlisted"
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "exlocal-status-private",
+    "slug": "exlocal-status-private",
+    "date": "2026-03-15T10:30:00",
+    "year": "2026",
+    "month": "03",
+    "languages": [
+      "en"
+    ],
+    "defaultLanguage": "en",
+    "title": {
+      "en": "Status: Private"
+    },
+    "excerpt": {
+      "en": "Hidden from public list; shows a private message if accessed by URL."
+    },
+    "draft": false,
+    "private": true,
+    "unlisted": false,
+    "archived": false,
+    "localExample": true,
+    "tags": [
+      "status",
+      "private"
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "exlocal-status-newer",
+    "slug": "exlocal-status-newer",
+    "date": "2026-03-15T10:15:00",
+    "year": "2026",
+    "month": "03",
+    "languages": [
+      "en"
+    ],
+    "defaultLanguage": "en",
+    "title": {
+      "en": "Status: Newer Version"
+    },
+    "excerpt": {
+      "en": "The newer version referenced by outdated posts."
+    },
+    "draft": false,
+    "private": false,
+    "unlisted": false,
+    "archived": false,
+    "localExample": true,
+    "tags": [
+      "status",
+      "new"
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "exlocal-status-outdated",
+    "slug": "exlocal-status-outdated",
+    "date": "2026-03-15T10:00:00",
+    "year": "2026",
+    "month": "03",
+    "languages": [
+      "en"
+    ],
+    "defaultLanguage": "en",
+    "title": {
+      "en": "Status: Outdated"
+    },
+    "excerpt": {
+      "en": "Shows a banner linking to the newer version."
+    },
+    "draft": false,
+    "private": false,
+    "unlisted": false,
+    "archived": false,
+    "supersededBy": "exlocal-status-newer",
+    "localExample": true,
+    "tags": [
+      "status",
+      "outdated"
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "exlocal-status-archived-outdated",
+    "slug": "exlocal-status-archived-outdated",
+    "date": "2026-03-15T09:30:00",
+    "year": "2026",
+    "month": "03",
+    "languages": [
+      "en"
+    ],
+    "defaultLanguage": "en",
+    "title": {
+      "en": "Status: Archived + New Version"
+    },
+    "excerpt": {
+      "en": "Archived and also points to a newer version."
+    },
+    "draft": false,
+    "private": false,
+    "unlisted": false,
+    "archived": true,
+    "supersededBy": "exlocal-status-newer",
+    "localExample": true,
+    "tags": [
+      "status",
+      "archived",
+      "outdated"
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "example-project",
+    "slug": "example-project",
+    "date": "2026-01-21",
+    "year": "2026",
+    "month": "01",
+    "readTime": 5,
+    "image": "https://cdn.discordapp.com/attachments/1213609984026214410/1461466516162609354/76B213DD-ACFF-47D2-92DB-1B3611B38CFD.gif?ex=698c4682&is=698af502&hm=b19b344f71e2cbbf16d26a7eea13758ef611aa360ba5755d7184b78857b2fc15",
+    "languages": [
+      "en",
+      "es",
+      "ja"
+    ],
+    "defaultLanguage": "en",
+    "author": {
+      "name": "Happyuky7",
+      "avatar": "/assets/img/logo.png",
+      "url": "https://happyuky7.com",
+      "role": {
+        "en": "Full Stack Developer",
+        "es": "Desarrollador Full Stack",
+        "ja": "フルスタック開発者"
+      }
+    },
+    "translators": [
+      {
+        "name": "Translator Name",
+        "avatar": "https://example.com/path-to-translator-avatar.jpg",
+        "url": "https://translator-website.com",
+        "language": "es"
+      }
+    ],
+    "colaborators": [
+      {
+        "name": "Collaborator Name",
+        "avatar": "https://example.com/path-to-collaborator-avatar.jpg",
+        "url": "https://collaborator-website.com",
+        "role": {
+          "en": "Content Editor",
+          "es": "Editor de Contenido",
+          "ja": "コンテンツエディター"
+        }
+      }
+    ],
+    "title": {
+      "en": "Example Project",
+      "es": "Proyecto de Ejemplo",
+      "ja": "例のプロジェクト"
+    },
+    "description": {
+      "en": "This is an example description for the blog post in English.",
+      "es": "Esta es una descripción de ejemplo para la publicación del blog en español.",
+      "ja": "これは日本語のブログ投稿の例の説明です。"
+    },
+    "draft": true,
+    "tags": [
+      "example",
+      "blog",
+      "post"
+    ],
+    "categories": [
+      "tutorial",
+      "development"
+    ]
+  }
 ]

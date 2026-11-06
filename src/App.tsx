@@ -1,4 +1,5 @@
 import { lazy } from "react";
+import { lazyWithRetry } from "@/utils/lazyWithRetry";
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation, useParams } from "react-router-dom";
 
 import { LanguageProvider } from "@i18n/LanguageContext";
@@ -12,16 +13,16 @@ import AppLayout from "@/layouts/AppLayout";
 import Seo from "@/seo/Seo";
 
 
-const Home = lazy(() => import("@pages/Home"));
-const Projects = lazy(() => import("@pages/Projects"));
-const ProjectsDetails = lazy(() => import("@pages/ProjectsDetails"));
-const Blog = lazy(() => import("@pages/Blog"));
-const BlogPost = lazy(() => import("@pages/BlogPost"));
-const Contact = lazy(() => import("@pages/Contact"));
-const Elsewhere = lazy(() => import("@pages/Elsewhere"));
-const MonitorProbe = lazy(() => import("@pages/MonitorProbe"));
-const ErrorRoute = lazy(() => import("@pages/erros/ErrorRoute"));
-const NotFound = lazy(() => import("@pages/erros/404"));
+const Home = lazyWithRetry(() => import("@pages/Home"));
+const Projects = lazyWithRetry(() => import("@pages/Projects"));
+const ProjectsDetails = lazyWithRetry(() => import("@pages/ProjectsDetails"));
+const Blog = lazyWithRetry(() => import("@pages/Blog"));
+const BlogPost = lazyWithRetry(() => import("@pages/BlogPost"));
+const Contact = lazyWithRetry(() => import("@pages/Contact"));
+const Elsewhere = lazyWithRetry(() => import("@pages/Elsewhere"));
+const MonitorProbe = lazyWithRetry(() => import("@pages/MonitorProbe"));
+const ErrorRoute = lazyWithRetry(() => import("@pages/erros/ErrorRoute"));
+const NotFound = lazyWithRetry(() => import("@pages/erros/404"));
 
 // DEV-only routes (should not be included in production build output)
 const DevBlogEditorHub = import.meta.env.DEV ? lazy(() => import("./dev/blogeditor/Hub")) : null;

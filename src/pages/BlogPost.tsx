@@ -369,7 +369,13 @@ export default function BlogPost() {
         const mm = String(date.getMonth() + 1).padStart(2, '0');
         const yyyy = date.getFullYear();
 
-        const localizedDate = date.toLocaleDateString(language === 'es' ? 'es-ES' : 'en-US', {
+        // Posts are translated into every UI language, so the long date has to follow the UI
+        // language too - hardcoding es/en left the other locales reading "October 28, 2026".
+        const dateLocales: Record<string, string> = {
+            en: 'en-US', es: 'es-ES', ja: 'ja-JP', fr: 'fr-FR', de: 'de-DE', pt: 'pt-BR',
+            pl: 'pl-PL', ru: 'ru-RU', zh: 'zh-CN', ko: 'ko-KR', th: 'th-TH', fil: 'fil-PH',
+        };
+        const localizedDate = date.toLocaleDateString(dateLocales[language] || 'en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -1144,7 +1150,7 @@ export default function BlogPost() {
                         >
                             {toc.length > 0 && (
                                 <aside className="hidden lg:block">
-                                    <div className="sticky top-28 rounded-2xl border border-primary/15 bg-dark-lighter/60 backdrop-blur-lg p-4">
+                                    <div className="sticky top-28 min-w-0 overflow-hidden rounded-2xl border border-primary/15 bg-dark-lighter/60 backdrop-blur-lg p-4">
                                         <p className="text-base font-bold text-white/90 mb-3">{t('blog.tocTitle')}</p>
                                         <nav aria-label="Table of contents">
                                             <ul className="space-y-1">
@@ -1161,7 +1167,9 @@ export default function BlogPost() {
                                                             });
                                                         }}
                                                     >
-                                                        <span className="whitespace-pre font-mono text-primary/90">{title}/</span>
+                                                        {/* No whitespace-pre here: a long post title has to wrap inside the
+                                                            280px sidebar instead of overflowing it. */}
+                                                        <span className="block font-mono text-primary/90 break-words hyphens-auto">{title}/</span>
                                                     </button>
                                                 </li>
                                                 {tocView.map((it) => (
@@ -1190,7 +1198,7 @@ export default function BlogPost() {
                                                             >
                                                                 {it.prefix}
                                                             </span>
-                                                            <span className="font-sans">{it.text}</span>
+                                                            <span className="font-sans break-words">{it.text}</span>
                                                         </button>
                                                     </li>
                                                 ))}

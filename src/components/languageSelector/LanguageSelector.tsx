@@ -53,7 +53,7 @@ const LanguageSelector: React.FC = () => {
     <div className="relative">
       <button
         onClick={() => setMenuOpen(!menuOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-lighter hover:bg-primary/20 transition-all duration-300 border border-primary/30 max-[360px]:px-2"
+        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-lighter hover:bg-primary/20 transition-all duration-300 border border-primary/30 max-[400px]:px-2"
         aria-label="Change language"
       >
         <HiGlobeAlt className="text-xl text-primary" />

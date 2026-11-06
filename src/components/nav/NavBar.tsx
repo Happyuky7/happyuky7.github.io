@@ -168,19 +168,19 @@ const NavBar: React.FC = () => {
       }`}
     >
       <div className="max-w-[88rem] min-[1900px]:max-w-[117rem] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-[minmax(max-content,1fr)_auto_minmax(max-content,1fr)] items-center gap-4 lg:gap-8 h-20">
+        <div className="grid grid-cols-[minmax(0,1fr)_auto] xl:grid-cols-[minmax(max-content,1fr)_auto_minmax(max-content,1fr)] items-center gap-2 sm:gap-4 lg:gap-8 h-20">
           {/* Logo */}
-          <Link to={withLang("/")} className="navbar-brand col-start-1 flex min-w-0 items-center space-x-3 group pr-2 lg:pr-0">
-            <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full overflow-hidden ring-2 ring-primary/50 group-hover:ring-primary transition-all">
+          <Link to={withLang("/")} className="navbar-brand col-start-1 flex min-w-0 items-center space-x-2 sm:space-x-3 group pr-2 lg:pr-0">
+            <div className="h-10 w-10 shrink-0 sm:h-12 sm:w-12 rounded-full overflow-hidden ring-2 ring-primary/50 group-hover:ring-primary transition-all">
               <img src={publicPath('/assets/img/logo.png')} alt="Happy7" className="w-full h-full object-cover" loading="eager" decoding="async" />
             </div>
-            <span className="navbar-brand-text whitespace-nowrap text-xl sm:text-2xl font-bold bg-linear-to-r from-primary to-blue-500 bg-clip-text text-transparent">
+            <span className="navbar-brand-text min-w-0 truncate whitespace-nowrap max-[340px]:hidden text-xl sm:text-2xl font-bold bg-linear-to-r from-primary to-blue-500 bg-clip-text text-transparent">
               Happyuky7
             </span>
           </Link>
 
           {/* Desktop Navigation (show from lg to avoid mid-size overflow) */}
-          <div className="navbar-desktop-links col-start-2 hidden lg:flex items-center space-x-10">
+          <div className="navbar-desktop-links col-start-2 hidden xl:flex items-center space-x-8 2xl:space-x-10">
             {navLinks.map((link) => (
               <Link
                 key={`${link.match}-${link.to}`}
@@ -197,7 +197,7 @@ const NavBar: React.FC = () => {
           </div>
 
           {/* Right side - Desktop */}
-          <div className="navbar-desktop-social col-start-3 justify-self-end hidden lg:flex items-center gap-6">
+          <div className="navbar-desktop-social col-start-3 justify-self-end hidden xl:flex items-center gap-6">
             <div className="hidden min-[1900px]:flex items-center space-x-5">
               {socialLinks.map((social, index) => (
                 <a
@@ -279,11 +279,11 @@ const NavBar: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button + Language Selector */}
-          <div className="navbar-mobile-controls col-start-3 justify-self-end shrink-0 flex items-center gap-2 lg:hidden max-[430px]:gap-1">
+          <div className="navbar-mobile-controls col-start-2 xl:col-start-3 justify-self-end shrink-0 flex items-center gap-2 xl:hidden max-[430px]:gap-1">
             <LanguageSelector />
             <label
               title={mode === "static" ? "Animated background" : "Static background"}
-                className="navbar-mobile-bg-toggle flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-lighter hover:bg-primary/20 transition-all duration-300 border border-primary/30 cursor-pointer select-none"
+                className="navbar-mobile-bg-toggle flex items-center gap-2 px-3 max-[400px]:px-2 py-2 rounded-lg bg-dark-lighter hover:bg-primary/20 transition-all duration-300 border border-primary/30 cursor-pointer select-none"
             >
               <input
                 type="checkbox"
@@ -316,7 +316,7 @@ const NavBar: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`navbar-mobile-menu lg:hidden transition-all duration-300 ${
+        className={`navbar-mobile-menu xl:hidden transition-all duration-300 ${
           mobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >

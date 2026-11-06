@@ -815,6 +815,43 @@ function devTagsManagerPlugin(): Plugin {
   };
 }
 
+/**
+ * GitHub Pages caches HTML for ~10 minutes. Right after a deploy a cached page
+ * can still point at the previous build's hashed files, which no longer exist:
+ * the entry script 404s, React never starts, and the page stays dark.
+ *
+ * This puts a tiny classic script at the top of every HTML entry (there is one
+ * per language), so it runs before any module and reloads once to fetch the
+ * current HTML. It shares the sessionStorage stamp with src/utils/lazyWithRetry.ts,
+ * so the two guards can't chain into a reload loop.
+ */
+function staleDeployGuardPlugin(): Plugin {
+  const guard = `(function () {
+  var KEY = 'chunkReload.lastAttempt.v1';
+  window.addEventListener('error', function (event) {
+    var el = event.target;
+    if (!el || (el.tagName !== 'SCRIPT' && el.tagName !== 'LINK')) return;
+    var url = el.src || el.href || '';
+    if (url.indexOf('/assets/') === -1) return;
+    try {
+      var last = Number(sessionStorage.getItem(KEY));
+      if (last && Date.now() - last < 15000) return;
+      sessionStorage.setItem(KEY, String(Date.now()));
+    } catch (e) {
+      /* storage blocked: still reload once, the browser caps the rest */
+    }
+    location.reload();
+  }, true);
+})();`
+
+  return {
+    name: 'stale-deploy-guard',
+    transformIndexHtml() {
+      return [{ tag: 'script', children: guard, injectTo: 'head-prepend' }]
+    },
+  }
+}
+
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
@@ -823,7 +860,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     base,
-    plugins: [react(), devBlogEditorPlugin(), devProjectsEditorPlugin(), devTagsManagerPlugin()],
+    plugins: [react(), staleDeployGuardPlugin(), devBlogEditorPlugin(), devProjectsEditorPlugin(), devTagsManagerPlugin()],
     publicDir: 'public',
     server: {
       port: 5177,

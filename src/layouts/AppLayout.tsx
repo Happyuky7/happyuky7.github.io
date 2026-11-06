@@ -15,7 +15,7 @@ export default function AppLayout() {
       <Seo />
       <NavBar />
       <main className="app-content">
-        <Suspense fallback={null}>
+        <Suspense fallback={<div className="min-h-[60vh]" aria-busy="true" />}>
           <Outlet />
         </Suspense>
       </main>
