@@ -2,6 +2,7 @@ import React from "react";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
+import rehypeRaw from 'rehype-raw';
 import 'highlight.js/styles/github-dark.css';
 import { HiCode } from 'react-icons/hi';
 import { useNavigate } from "react-router-dom";
@@ -18,6 +19,13 @@ interface ProjectReadmeProps {
     readmeError?: ReadmeError | null;
     readmeBaseUrl?: string | null;
 }
+
+// rehype-raw turns GitHub's <td valign="top"> into a vAlign prop, which React
+// rejects as unknown; pass it on as the CSS it stands for.
+const withVAlign = <P extends { style?: React.CSSProperties }>(props: P & { vAlign?: string }) => {
+    const { vAlign, ...rest } = props;
+    return vAlign ? { ...rest, style: { verticalAlign: vAlign, ...rest.style } } : rest;
+};
 
 const ProjectReadme: React.FC<ProjectReadmeProps> = ({ readme, readmeError, readmeBaseUrl }) => {
     const { t } = useLanguage();
@@ -88,7 +96,9 @@ const ProjectReadme: React.FC<ProjectReadmeProps> = ({ readme, readmeError, read
               <div className="prose prose-invert prose-lg max-w-none overflow-x-hidden wrap-break-word prose-headings:text-left prose-p:text-left prose-ul:text-left prose-ol:text-left prose-li:text-left prose-blockquote:text-left prose-table:text-left">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
-                  rehypePlugins={[rehypeHighlight]}
+                  // rehypeRaw: GitHub READMEs wrap their header in <div align="center">,
+                  // which otherwise shows up as literal text.
+                  rehypePlugins={[rehypeRaw, rehypeHighlight]}
                   components={{
                     a({ node, children, href, ...props }) {
 
@@ -297,8 +307,8 @@ const ProjectReadme: React.FC<ProjectReadmeProps> = ({ readme, readmeError, read
                         <table className="min-w-full border border-primary/20" {...props} />
                       </div>
                     ),
-                    th: ({ node, ...props }) => <th className="border border-primary/20 px-4 py-2 bg-dark-lighter text-primary" {...props} />,
-                    td: ({ node, ...props }) => <td className="border border-primary/20 px-4 py-2 text-gray-300" {...props} />,
+                    th: ({ node, ...props }) => <th className="border border-primary/20 px-4 py-2 bg-dark-lighter text-primary" {...withVAlign(props)} />,
+                    td: ({ node, ...props }) => <td className="border border-primary/20 px-4 py-2 text-gray-300" {...withVAlign(props)} />,
                     code: ({ node, inline, className, children, ...props }: any) => {
                       if (inline) {
                         return <code className="bg-dark-lighter px-2 py-1 rounded text-primary font-mono text-sm break-all" {...props}>{children}</code>;

@@ -19,7 +19,7 @@ type ProjectLike = {
 };
 
 const FEATURED_PROJECT_NAMES = [
-    'anime-codes',
+    'LyricsOSC',
     'theserverjars',
     'Kaory Network',
     'Convert Minecraft Server Icon',

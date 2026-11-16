@@ -16,6 +16,15 @@ const ProjectDetailInfo: React.FC<{
 
     const isHttpUrl = (value: any) => typeof value === 'string' && /^https?:\/\//i.test(value.trim());
 
+    // "demo" is sometimes a real demo and sometimes just the project's website;
+    // demoType: "website" picks the label. A demo pointing at the same URL as
+    // "link" would only repeat the Visit Project button, so it is hidden.
+    const sameUrl = (a: unknown, b: unknown) =>
+        typeof a === 'string' && typeof b === 'string' && isHttpUrl(a) && isHttpUrl(b)
+        && a.trim().replace(/\/+$/, '') === b.trim().replace(/\/+$/, '');
+    const showDemo = isHttpUrl(project?.demo) && !sameUrl(project?.demo, project?.link);
+    const demoLabel = project?.demoType === 'website' ? t('projectsDetails.viewWebsite') : t('projectsDetails.viewDemo');
+
     const resolvePublicImg = (value: any) => {
         if (typeof value !== 'string') return '';
         const s = value.trim();
@@ -125,7 +134,7 @@ const ProjectDetailInfo: React.FC<{
                                 </a>
                             )}
 
-                            {project?.demo && (
+                            {showDemo && (
                                 <a
                                     href={project.demo}
                                     target="_blank"
@@ -133,7 +142,7 @@ const ProjectDetailInfo: React.FC<{
                                     className="flex items-center gap-2 px-6 py-3 bg-dark-lighter hover:bg-dark border border-blue-500/30 hover:border-blue-500 text-white rounded-lg transition-all duration-300 transform hover:scale-105"
                                 >
                                     <FaGlobe className="text-xl" />
-                                    {t('projectsDetails.viewDemo')}
+                                    {demoLabel}
                                 </a>
                             )}
                         </div>

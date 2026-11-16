@@ -1,5 +1,56 @@
 [
   {
+    "name": "LyricsOSC",
+    "displayName": "LyricsOSC",
+    "description": {
+      "en": "Desktop app that shows synced lyrics for whatever you are playing in the VRChat chatbox. When a song has no lyrics, it transcribes the audio live with AI (faster-whisper on the GPU). Rust + Python, Windows and Linux.",
+      "es": "App de escritorio que muestra en el chatbox de VRChat la letra sincronizada de lo que estés escuchando. Si una canción no tiene letra, transcribe el audio en vivo con IA (faster-whisper en la GPU). Rust + Python, Windows y Linux.",
+      "ja": "再生中の曲の同期歌詞を VRChat のチャットボックスに表示するデスクトップアプリ。歌詞がない曲は、AI（GPU 上の faster-whisper）で音声をリアルタイムに文字起こしします。Rust + Python、Windows と Linux に対応。",
+      "fr": "Application de bureau qui affiche dans la chatbox de VRChat les paroles synchronisées de ce que vous écoutez. Si une chanson n'a pas de paroles, elle transcrit l'audio en direct avec l'IA (faster-whisper sur le GPU). Rust + Python, Windows et Linux.",
+      "de": "Desktop-App, die die synchronisierten Songtexte zu dem, was gerade läuft, in der VRChat-Chatbox anzeigt. Hat ein Song keinen Text, transkribiert sie das Audio live mit KI (faster-whisper auf der GPU). Rust + Python, Windows und Linux.",
+      "pt": "App de desktop que mostra no chatbox do VRChat a letra sincronizada do que você estiver ouvindo. Se uma música não tiver letra, transcreve o áudio ao vivo com IA (faster-whisper na GPU). Rust + Python, Windows e Linux.",
+      "pl": "Aplikacja desktopowa, która wyświetla w chatboxie VRChat zsynchronizowany tekst tego, czego słuchasz. Gdy utwór nie ma tekstu, transkrybuje dźwięk na żywo za pomocą AI (faster-whisper na GPU). Rust + Python, Windows i Linux.",
+      "ru": "Десктопное приложение, которое показывает в чатбоксе VRChat синхронизированный текст того, что сейчас играет. Если у песни нет текста, оно расшифровывает звук в реальном времени с помощью ИИ (faster-whisper на GPU). Rust + Python, Windows и Linux.",
+      "zh": "一款桌面应用，在 VRChat 聊天框中显示你正在播放的歌曲的同步歌词。歌曲没有歌词时，会用 AI（GPU 上的 faster-whisper）实时转写音频。Rust + Python，支持 Windows 和 Linux。",
+      "ko": "지금 재생 중인 곡의 싱크 가사를 VRChat 채팅박스에 표시하는 데스크톱 앱입니다. 가사가 없는 곡은 AI(GPU에서 실행되는 faster-whisper)로 오디오를 실시간 받아쓰기합니다. Rust + Python, Windows 및 Linux 지원.",
+      "th": "แอปเดสก์ท็อปที่แสดงเนื้อเพลงแบบซิงก์ของเพลงที่กำลังเล่นในแชตบ็อกซ์ของ VRChat ถ้าเพลงไหนไม่มีเนื้อเพลง จะถอดเสียงสดด้วย AI (faster-whisper บน GPU) ใช้ Rust + Python รองรับ Windows และ Linux",
+      "fil": "Desktop app na nagpapakita sa VRChat chatbox ng naka-sync na lyrics ng pinapakinggan mo. Kapag walang lyrics ang kanta, tina-transcribe nito ang audio nang live gamit ang AI (faster-whisper sa GPU). Rust + Python, Windows at Linux."
+    },
+    "image": "/assets/img/projects/lyricsosc-logo.webp",
+    "link": "https://lyricsosc.happyuky7.com/",
+    "demo": null,
+    "github": "https://github.com/Happyuky7/LyricsOSC",
+    "readme": "",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Rust",
+        "readable": true
+      },
+      {
+        "name": "Python",
+        "readable": true
+      },
+      {
+        "name": "VRChat",
+        "readable": true
+      },
+      {
+        "name": "AI",
+        "readable": true
+      },
+      {
+        "name": "Desktop",
+        "readable": true
+      },
+      {
+        "name": "Linux",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
     "name": "anime-codes",
     "displayName": "anime.codes",
     "description": {
@@ -27,7 +78,7 @@
         "readable": true
       }
     ],
-    "hidden": false
+    "hidden": true
   },
   {
     "name": "theserverjars",
@@ -139,6 +190,7 @@
     "image": "/assets/img/projects/rmguard-logo.png",
     "link": "https://github.com/Happyuky7/RMGUARD-Linux",
     "demo": "https://happyuky7.github.io/RMGUARD-Linux",
+    "demoType": "website",
     "github": "https://github.com/Happyuky7/RMGUARD-Linux",
     "directLink": false,
     "tags": [

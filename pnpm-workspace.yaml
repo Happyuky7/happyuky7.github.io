@@ -13,3 +13,13 @@ overrides:
   source-map-js: ">=1.2.2"
   zod: ">=4.6.6"
   minimatch: ">=11.0.1"
+
+  # katex must be ONE version everywhere: the app imports katex/dist/katex.min.css,
+  # while rehype-katex (still pinned to ^0.16) renders the HTML, and its classes
+  # changed in 0.18. Both package.json and this override read the version from
+  # the catalog below, so bumping it there moves the renderer and the CSS together.
+  # 0.18.2+ fixes GHSA-238p-pmpm-9mq7.
+  katex: "catalog:"
+
+catalog:
+  katex: ^0.19.1
