@@ -1,5 +1,107 @@
 [
   {
+    "id": "black-hole-web-gargantua",
+    "slug": "black-hole-web-gargantua",
+    "date": "2026-11-23T12:00:00",
+    "image": "/blog-content/2026/11/black-hole-web-gargantua/black-hole-web-gargantua.webp",
+    "year": "2026",
+    "month": "11",
+    "readTime": 8,
+    "languages": [
+      "en",
+      "es",
+      "ja",
+      "fr",
+      "de",
+      "pt",
+      "pl",
+      "ru",
+      "zh",
+      "ko",
+      "th",
+      "fil"
+    ],
+    "defaultLanguage": "es",
+    "author": {
+      "name": "Happyuky7",
+      "avatar": "/assets/img/logo.png",
+      "url": "https://happyuky7.com",
+      "role": {
+        "es": "Full Stack Developer & DevOps Engineer — desarrollo backend, infraestructura de servidores, integración de IA y modelado 3D de ingeniería",
+        "en": "Full Stack Developer & DevOps Engineer — backend development, server infrastructure, AI integration, and 3D engineering design",
+        "de": "Full Stack Developer & DevOps Engineer — Backend-Entwicklung, Serverinfrastruktur, KI-Integration und technische 3D-Konstruktion",
+        "fr": "Full Stack Developer & DevOps Engineer — développement backend, infrastructure serveur, intégration d'IA et modélisation 3D d'ingénierie",
+        "pt": "Full Stack Developer & DevOps Engineer — desenvolvimento backend, infraestrutura de servidores, integração de IA e modelagem 3D de engenharia",
+        "pl": "Full Stack Developer & DevOps Engineer — rozwój backendu, infrastruktura serwerowa, integracja AI i modelowanie 3D w inżynierii",
+        "ru": "Full Stack Developer & DevOps Engineer — бэкенд-разработка, серверная инфраструктура, интеграция ИИ и инженерное 3D-моделирование",
+        "ja": "フルスタック開発者 & DevOps エンジニア — バックエンド開発、サーバーインフラ、AI 統合、エンジニアリング 3D モデリング",
+        "zh": "全栈开发者 & DevOps 工程师 — 后端开发、服务器基础设施、AI 集成、工程 3D 建模",
+        "ko": "풀스택 개발자 & DevOps 엔지니어 — 백엔드 개발, 서버 인프라, AI 통합, 엔지니어링 3D 모델링",
+        "th": "นักพัฒนา Full Stack & วิศวกร DevOps — การพัฒนาแบ็กเอนด์ โครงสร้างพื้นฐานเซิร์ฟเวอร์ การผสาน AI และการขึ้นรูป 3 มิติเชิงวิศวกรรม",
+        "fil": "Full Stack Developer & DevOps Engineer — backend development, server infrastructure, AI integration, at 3D engineering design"
+      }
+    },
+    "title": {
+      "en": "Looking at a black hole in the browser: Gargantua, explained",
+      "es": "Mirar un agujero negro en el navegador: Gargantua, explicado",
+      "ja": "ブラウザでブラックホールを眺める：ガルガンチュアをやさしく解説",
+      "fr": "Regarder un trou noir dans le navigateur : Gargantua expliqué",
+      "de": "Ein Schwarzes Loch im Browser: Gargantua einfach erklärt",
+      "pt": "Olhando um buraco negro no navegador: Gargantua explicado",
+      "pl": "Czarna dziura w przeglądarce: Gargantua wyjaśniona",
+      "ru": "Чёрная дыра в браузере: Гаргантюа простыми словами",
+      "zh": "在浏览器里看黑洞：卡冈图雅详解",
+      "ko": "브라우저에서 블랙홀 보기: 가르강튀아 쉽게 이해하기",
+      "th": "ดูหลุมดำในเบราว์เซอร์: อธิบายการ์แกนทัวแบบเข้าใจง่าย",
+      "fil": "Pagtingin sa black hole sa browser: si Gargantua, ipinaliwanag"
+    },
+    "excerpt": {
+      "en": "A side project that got out of hand: Gargantua from Interstellar, ray-traced through real Kerr spacetime. What a black hole is, why it looks like that and how the website draws it.",
+      "es": "Un proyecto por aburrimiento que se fue de las manos: Gargantua de Interstellar, calculado con la física real de Kerr. Qué es un agujero negro, por qué se ve así y cómo lo dibuja la web.",
+      "ja": "退屈しのぎが本気になったプロジェクト：インターステラーのガルガンチュアを、カー時空の本物の物理で描画。ブラックホールとは何か、なぜあの見た目なのか、サイトがどう描いているのか。",
+      "fr": "Un projet né de l'ennui qui a dérapé : Gargantua d'Interstellar, calculé avec la vraie physique de Kerr. Ce qu'est un trou noir, pourquoi il a cette allure et comment le site le dessine.",
+      "de": "Ein Langeweile-Projekt, das ausgeufert ist: Gargantua aus Interstellar, mit echter Kerr-Physik berechnet. Was ein Schwarzes Loch ist, warum es so aussieht und wie die Website es zeichnet.",
+      "pt": "Um projeto de tédio que saiu do controle: Gargantua de Interstellar, calculado com a física real de Kerr. O que é um buraco negro, por que ele tem essa aparência e como o site o desenha.",
+      "pl": "Projekt z nudów, który wymknął się spod kontroli: Gargantua z Interstellar, liczona prawdziwą fizyką Kerra. Czym jest czarna dziura, dlaczego tak wygląda i jak strona ją rysuje.",
+      "ru": "Проект от скуки, который вышел из-под контроля: Гаргантюа из «Интерстеллара», рассчитанная по настоящей физике Керра. Что такое чёрная дыра, почему она так выглядит и как сайт её рисует.",
+      "zh": "一个因为无聊而越做越大的项目：用真实的克尔时空物理渲染《星际穿越》里的卡冈图雅。黑洞是什么、为什么长这样，以及网站是怎么画出来的。",
+      "ko": "심심해서 시작했다가 커져 버린 프로젝트: 인터스텔라의 가르강튀아를 실제 커 시공간 물리로 계산했습니다. 블랙홀이 무엇인지, 왜 그렇게 보이는지, 웹사이트가 어떻게 그리는지.",
+      "th": "โปรเจกต์แก้เบื่อที่เลยเถิด: การ์แกนทัวจาก Interstellar คำนวณด้วยฟิสิกส์ของเคอร์จริง ๆ หลุมดำคืออะไร ทำไมถึงหน้าตาแบบนั้น และเว็บวาดมันอย่างไร",
+      "fil": "Isang proyektong nagsimula sa pagkabagot na lumaki: si Gargantua ng Interstellar, kinuwenta gamit ang totoong Kerr physics. Ano ang black hole, bakit ganoon ang itsura nito, at paano ito iginuguhit ng website."
+    },
+    "description": {
+      "en": "An easy explanation of black holes, gravitational lensing and the Doppler effect through Black Hole Web, a Kerr ray tracer that runs in the browser.",
+      "es": "Una explicación sencilla de los agujeros negros, la lente gravitacional y el efecto Doppler a través de Black Hole Web, un ray tracer de Kerr que corre en el navegador.",
+      "ja": "ブラウザで動くカー時空のレイトレーサー Black Hole Web を通して、ブラックホール、重力レンズ、ドップラー効果をやさしく解説します。",
+      "fr": "Une explication simple des trous noirs, de la lentille gravitationnelle et de l'effet Doppler à travers Black Hole Web, un ray tracer de Kerr qui tourne dans le navigateur.",
+      "de": "Eine einfache Erklärung von Schwarzen Löchern, Gravitationslinsen und Doppler-Effekt anhand von Black Hole Web, einem Kerr-Raytracer im Browser.",
+      "pt": "Uma explicação simples de buracos negros, lente gravitacional e efeito Doppler por meio do Black Hole Web, um ray tracer de Kerr que roda no navegador.",
+      "pl": "Proste wyjaśnienie czarnych dziur, soczewkowania grawitacyjnego i efektu Dopplera na przykładzie Black Hole Web, ray tracera Kerra działającego w przeglądarce.",
+      "ru": "Простое объяснение чёрных дыр, гравитационного линзирования и эффекта Доплера на примере Black Hole Web — трассировщика лучей Керра, работающего в браузере.",
+      "zh": "通过在浏览器中运行的克尔光线追踪器 Black Hole Web，浅显地讲解黑洞、引力透镜和多普勒效应。",
+      "ko": "브라우저에서 돌아가는 커 레이 트레이서 Black Hole Web을 통해 블랙홀, 중력 렌즈, 도플러 효과를 쉽게 설명합니다.",
+      "th": "อธิบายหลุมดำ เลนส์ความโน้มถ่วง และปรากฏการณ์ดอปเพลอร์แบบเข้าใจง่าย ผ่าน Black Hole Web เรย์เทรเซอร์ของเคอร์ที่ทำงานในเบราว์เซอร์",
+      "fil": "Simpleng paliwanag tungkol sa black holes, gravitational lensing, at Doppler effect gamit ang Black Hole Web, isang Kerr ray tracer na tumatakbo sa browser."
+    },
+    "draft": false,
+    "private": false,
+    "unlisted": false,
+    "archived": false,
+    "localExample": false,
+    "tags": [
+      "black-hole",
+      "physics",
+      "interstellar",
+      "webgl",
+      "ray-tracing",
+      "astronomy"
+    ],
+    "categories": [
+      "education",
+      "technology"
+    ]
+  },
+  {
     "id": "chatgpt-work-back-to-normal-chat",
     "slug": "chatgpt-work-back-to-normal-chat",
     "date": "2026-11-06T12:00:00",

@@ -51,6 +51,57 @@
     "hidden": false
   },
   {
+    "name": "Black-Hole-Web-Interstellar-Style",
+    "displayName": "Black Hole Web",
+    "description": {
+      "en": "Gargantua from Interstellar, ray-traced through real Kerr spacetime live in the browser (WebGL2). Free 3D camera, the film's look, and a scientific mode with a blackbody disk, exact Doppler and a step-by-step physics page backed by 27 sources.",
+      "es": "Gargantua de Interstellar, con ray tracing a través del espacio-tiempo de Kerr real, en vivo en el navegador (WebGL2). Cámara 3D libre, el estilo de la película y un modo científico con disco de cuerpo negro, Doppler exacto y una página de física paso a paso respaldada por 27 fuentes.",
+      "ja": "インターステラーのガルガンチュアを、本物のカー時空でレイトレーシングしてブラウザ上でリアルタイム描画（WebGL2）。自由な3Dカメラ、映画風の映像、黒体放射の円盤と正確なドップラー効果を備えた科学モード、27の文献に基づく物理解説ページ付き。",
+      "fr": "Gargantua d'Interstellar, en ray tracing à travers le vrai espace-temps de Kerr, en direct dans le navigateur (WebGL2). Caméra 3D libre, le style du film et un mode scientifique avec disque de corps noir, Doppler exact et une page de physique pas à pas appuyée par 27 sources.",
+      "de": "Gargantua aus Interstellar, per Raytracing durch echte Kerr-Raumzeit live im Browser (WebGL2). Freie 3D-Kamera, der Look des Films und ein wissenschaftlicher Modus mit Schwarzkörper-Scheibe, exaktem Doppler und einer Schritt-für-Schritt-Physikseite mit 27 Quellen.",
+      "pt": "Gargantua de Interstellar, com ray tracing pelo espaço-tempo de Kerr real, ao vivo no navegador (WebGL2). Câmera 3D livre, o visual do filme e um modo científico com disco de corpo negro, Doppler exato e uma página de física passo a passo baseada em 27 fontes.",
+      "pl": "Gargantua z Interstellar, renderowana ray tracingiem przez prawdziwą czasoprzestrzeń Kerra na żywo w przeglądarce (WebGL2). Swobodna kamera 3D, styl filmu i tryb naukowy z dyskiem ciała doskonale czarnego, dokładnym efektem Dopplera i stroną z fizyką krok po kroku opartą na 27 źródłach.",
+      "ru": "Гаргантюа из «Интерстеллара» с трассировкой лучей в настоящем пространстве-времени Керра прямо в браузере (WebGL2). Свободная 3D-камера, стиль фильма и научный режим с диском абсолютно чёрного тела, точным эффектом Доплера и пошаговой страницей о физике на основе 27 источников.",
+      "zh": "在浏览器中用真实克尔时空实时光线追踪《星际穿越》里的卡冈图雅（WebGL2）。自由 3D 相机、电影风格，以及带黑体吸积盘、精确多普勒效应的科学模式，还有基于 27 篇文献的分步物理讲解页面。",
+      "ko": "인터스텔라의 가르강튀아를 실제 커 시공간으로 레이 트레이싱해 브라우저에서 실시간으로 보여줍니다(WebGL2). 자유로운 3D 카메라, 영화 스타일, 흑체 원반과 정확한 도플러 효과를 갖춘 과학 모드, 27개 자료에 기반한 단계별 물리 설명 페이지.",
+      "th": "การ์แกนทัวจาก Interstellar เรย์เทรซผ่านกาลอวกาศของเคอร์จริงแบบเรียลไทม์ในเบราว์เซอร์ (WebGL2) มีกล้อง 3D อิสระ ลุคแบบในหนัง และโหมดวิทยาศาสตร์ที่มีจานแบบวัตถุดำ ดอปเพลอร์ที่แม่นยำ และหน้าอธิบายฟิสิกส์ทีละขั้นจาก 27 แหล่งอ้างอิง",
+      "fil": "Si Gargantua ng Interstellar, ni-ray trace sa totoong Kerr spacetime nang live sa browser (WebGL2). Malayang 3D camera, ang itsura ng pelikula, at scientific mode na may blackbody disk, eksaktong Doppler, at step-by-step na physics page na may 27 source."
+    },
+    "image": "/assets/img/projects/black-hole-web.webp",
+    "link": "https://gargantua.happyuky7.com",
+    "demo": null,
+    "github": "https://github.com/Happyuky7/Black-Hole-Web-Interstellar-Style",
+    "readme": "",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "JavaScript",
+        "readable": true
+      },
+      {
+        "name": "WebGL",
+        "readable": true
+      },
+      {
+        "name": "Three.js",
+        "readable": true
+      },
+      {
+        "name": "GLSL",
+        "readable": true
+      },
+      {
+        "name": "Physics",
+        "readable": true
+      },
+      {
+        "name": "Docker",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
     "name": "anime-codes",
     "displayName": "anime.codes",
     "description": {

@@ -3,6 +3,9 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
 import 'highlight.js/styles/github-dark.css';
 import { HiCode } from 'react-icons/hi';
 import { useNavigate } from "react-router-dom";
@@ -95,10 +98,11 @@ const ProjectReadme: React.FC<ProjectReadmeProps> = ({ readme, readmeError, read
               
               <div className="prose prose-invert prose-lg max-w-none overflow-x-hidden wrap-break-word prose-headings:text-left prose-p:text-left prose-ul:text-left prose-ol:text-left prose-li:text-left prose-blockquote:text-left prose-table:text-left">
                 <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
+                  // remarkMath + rehypeKatex: GitHub renders $...$ and $...$ in READMEs, so the site does too.
+                  remarkPlugins={[remarkGfm, remarkMath]}
                   // rehypeRaw: GitHub READMEs wrap their header in <div align="center">,
                   // which otherwise shows up as literal text.
-                  rehypePlugins={[rehypeRaw, rehypeHighlight]}
+                  rehypePlugins={[rehypeRaw, rehypeHighlight, rehypeKatex]}
                   components={{
                     a({ node, children, href, ...props }) {
 
