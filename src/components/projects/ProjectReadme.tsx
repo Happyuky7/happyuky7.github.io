@@ -288,23 +288,40 @@ const ProjectReadme: React.FC<ProjectReadmeProps> = ({ readme, readmeError, read
                           altText.includes('version')
                         ));
                       
+                      // An image the README sized itself (e.g. all-contributors avatars,
+                      // <img width="100px;">) keeps that size, as on GitHub, instead of
+                      // being stretched to the full width like a screenshot.
+                      const sizeOf = (v: unknown) => {
+                        const n = parseFloat(String(v ?? ''));
+                        return Number.isFinite(n) && n > 0 ? n : undefined;
+                      };
+                      const fixedWidth = sizeOf(props.width);
+                      const fixedHeight = sizeOf(props.height);
+                      const isSized = !isBadge && (fixedWidth !== undefined || fixedHeight !== undefined);
+
                       return (
                         <img 
                           src={resolvedSrc}
                           alt={alt}
                           className={isBadge 
                             ? "my-2 max-w-full inline-block align-middle" 
-                            : "rounded-lg my-6 w-full block"
+                            : isSized
+                              ? "my-1 max-w-full h-auto inline-block align-middle rounded-lg"
+                              : "rounded-lg my-6 w-full block"
                           }
                           loading={isBadge ? "eager" : "lazy"}
                           decoding="async"
                           {...props} 
+                          width={fixedWidth ?? props.width}
+                          height={fixedHeight ?? props.height}
+                          style={isSized ? { width: fixedWidth, ...props.style } : props.style}
                         />
                       );
                     },
                     table: ({ node, ...props }) => (
                       <div className="overflow-x-auto my-6 code-scrollbar">
-                        <table className="min-w-full border border-primary/20" {...props} />
+                        {/* Sized to its content like on GitHub; a one-cell table (the contributors list) stays small. */}
+                        <table className="w-max max-w-full border border-primary/20" {...props} />
                       </div>
                     ),
                     th: ({ node, ...props }) => <th className="border border-primary/20 px-4 py-2 bg-dark-lighter text-primary" {...withVAlign(props)} />,
