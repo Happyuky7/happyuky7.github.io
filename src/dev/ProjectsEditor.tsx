@@ -21,6 +21,7 @@ type Project = {
   image?: string;
   link?: string;
   demo?: string | null;
+  demoType?: 'website';
   github?: string | null;
   readme?: string;
   directLink?: boolean | null;
@@ -1327,6 +1328,19 @@ export default function ProjectsEditor() {
                           onChange={(e) => updateDraft({ demo: e.target.value || null })}
                           placeholder="https://..."
                         />
+                      </label>
+
+                      <label className="block">
+                        <div className="text-white/70 text-sm mb-1">demoType (texto del botón de demo)</div>
+                        <select
+                          className="w-full rounded-xl bg-black/30 border border-white/10 px-3 py-2 text-white"
+                          value={draft.demoType === 'website' ? 'website' : 'demo'}
+                          // undefined drops the key on save, so plain demos keep the JSON as it was.
+                          onChange={(e) => updateDraft({ demoType: e.target.value === 'website' ? 'website' : undefined })}
+                        >
+                          <option value="demo">demo → "Ver Demo"</option>
+                          <option value="website">website → "Ver sitio web"</option>
+                        </select>
                       </label>
 
                       <label className="block">
