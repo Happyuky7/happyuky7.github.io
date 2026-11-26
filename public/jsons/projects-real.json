@@ -1,5 +1,70 @@
 [
   {
+    "name": "Vtuber-Lithing",
+    "displayName": "Vtuber-Lithing",
+    "description": {
+      "en": "Lightweight real-time VTuber app for VRM avatars and PNGTubers: your webcam and microphone drive the face, eyes, mouth and hands. Perfect Sync, hand tracking, transparent background for OBS and plugins. Tauri + TypeScript + Three.js + Rust, on Windows, Linux and Android, with no account and no cloud.",
+      "es": "App VTuber ligera en tiempo real para avatares VRM y PNGTubers: tu webcam y tu micrófono mueven la cara, los ojos, la boca y las manos. Perfect Sync, tracking de manos, fondo transparente para OBS y plugins. Tauri + TypeScript + Three.js + Rust, en Windows, Linux y Android, sin cuenta y sin nube.",
+      "ja": "VRM アバターと PNGTuber 向けの軽量リアルタイム VTuber アプリ。Web カメラとマイクで顔・目・口・手を動かします。Perfect Sync、ハンドトラッキング、OBS 用の透過背景、プラグインに対応。Tauri + TypeScript + Three.js + Rust で、Windows・Linux・Android で動作し、アカウントもクラウドも不要です。",
+      "fr": "Application VTuber légère en temps réel pour avatars VRM et PNGTubers : votre webcam et votre micro animent le visage, les yeux, la bouche et les mains. Perfect Sync, suivi des mains, fond transparent pour OBS et plugins. Tauri + TypeScript + Three.js + Rust, sur Windows, Linux et Android, sans compte ni cloud.",
+      "de": "Leichtgewichtige Echtzeit-VTuber-App für VRM-Avatare und PNGTuber: Webcam und Mikrofon steuern Gesicht, Augen, Mund und Hände. Perfect Sync, Hand-Tracking, transparenter Hintergrund für OBS und Plugins. Tauri + TypeScript + Three.js + Rust, auf Windows, Linux und Android, ohne Konto und ohne Cloud.",
+      "pt": "App VTuber leve em tempo real para avatares VRM e PNGTubers: sua webcam e seu microfone movem o rosto, os olhos, a boca e as mãos. Perfect Sync, rastreamento de mãos, fundo transparente para o OBS e plugins. Tauri + TypeScript + Three.js + Rust, no Windows, Linux e Android, sem conta e sem nuvem.",
+      "pl": "Lekka aplikacja VTuber działająca w czasie rzeczywistym dla awatarów VRM i PNGTuberów: kamera i mikrofon poruszają twarzą, oczami, ustami i dłońmi. Perfect Sync, śledzenie dłoni, przezroczyste tło dla OBS i wtyczki. Tauri + TypeScript + Three.js + Rust, na Windows, Linux i Android, bez konta i bez chmury.",
+      "ru": "Лёгкое VTuber-приложение реального времени для VRM-аватаров и PNGTuber: веб-камера и микрофон управляют лицом, глазами, ртом и руками. Perfect Sync, трекинг рук, прозрачный фон для OBS и плагины. Tauri + TypeScript + Three.js + Rust, на Windows, Linux и Android, без аккаунта и без облака.",
+      "zh": "轻量级实时 VTuber 应用，支持 VRM 虚拟形象和 PNGTuber：用摄像头和麦克风驱动脸部、眼睛、嘴巴和双手。支持 Perfect Sync、手部追踪、OBS 透明背景和插件。基于 Tauri + TypeScript + Three.js + Rust，支持 Windows、Linux 和 Android，无需账号，也不依赖云端。",
+      "ko": "VRM 아바타와 PNGTuber를 위한 가벼운 실시간 VTuber 앱입니다. 웹캠과 마이크로 얼굴, 눈, 입, 손을 움직입니다. Perfect Sync, 손 트래킹, OBS용 투명 배경, 플러그인 지원. Tauri + TypeScript + Three.js + Rust로 만들었고 Windows, Linux, Android에서 계정도 클라우드도 없이 동작합니다.",
+      "th": "แอป VTuber แบบเรียลไทม์ที่เบา สำหรับอวาตาร์ VRM และ PNGTuber ใช้เว็บแคมและไมโครโฟนขยับใบหน้า ดวงตา ปาก และมือ รองรับ Perfect Sync การติดตามมือ พื้นหลังโปร่งใสสำหรับ OBS และปลั๊กอิน สร้างด้วย Tauri + TypeScript + Three.js + Rust ใช้ได้บน Windows, Linux และ Android ไม่ต้องมีบัญชีและไม่ใช้คลาวด์",
+      "fil": "Magaan na real-time na VTuber app para sa VRM avatars at PNGTubers: ginagalaw ng webcam at mikropono mo ang mukha, mata, bibig, at kamay. May Perfect Sync, hand tracking, transparent na background para sa OBS, at plugins. Tauri + TypeScript + Three.js + Rust, sa Windows, Linux, at Android, walang account at walang cloud."
+    },
+    "image": "/assets/img/projects/vtuber-lithing.webp",
+    "link": "https://vtuber-lithing.happyuky7.com/",
+    "demo": null,
+    "github": "https://github.com/Happyuky7/Vtuber-Lithing",
+    "stores": [
+      {
+        "name": "BOOTH",
+        "url": "https://happyuky7.booth.pm/items/9225081"
+      },
+      {
+        "name": "itch.io",
+        "url": "https://happy7.itch.io/vtuber-lithing"
+      }
+    ],
+    "readme": "",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "TypeScript",
+        "readable": true
+      },
+      {
+        "name": "Rust",
+        "readable": true
+      },
+      {
+        "name": "Tauri",
+        "readable": true
+      },
+      {
+        "name": "Three.js",
+        "readable": true
+      },
+      {
+        "name": "VTuber",
+        "readable": true
+      },
+      {
+        "name": "Desktop",
+        "readable": true
+      },
+      {
+        "name": "Android",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
     "name": "LyricsOSC",
     "displayName": "LyricsOSC",
     "description": {
@@ -96,6 +161,53 @@
       },
       {
         "name": "Docker",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
+    "name": "lithing-native-tracking-rs",
+    "displayName": "Lithing Native Tracking",
+    "description": {
+      "en": "Standalone motion tracking engine in Rust on ONNX Runtime: 478 face landmarks, 52 blendshapes, head pose, gaze, blinks and both hands with every finger, on the GPU (DirectML, CUDA) or the CPU. Use it as a Rust library, a Tauri plugin or a CLI. It is Vtuber-Lithing's native engine; body tracking is next. MPL-2.0.",
+      "es": "Motor de captura de movimiento independiente en Rust sobre ONNX Runtime: 478 puntos de la cara, 52 blendshapes, posición de la cabeza, mirada, parpadeos y las dos manos con cada dedo, en la GPU (DirectML, CUDA) o la CPU. Se usa como librería de Rust, plugin de Tauri o CLI. Es el motor nativo de Vtuber-Lithing; el siguiente paso es el cuerpo. MPL-2.0.",
+      "ja": "ONNX Runtime 上で動く Rust 製の独立したモーショントラッキングエンジン。顔の 478 ランドマーク、52 のブレンドシェイプ、頭の向き、視線、まばたき、両手のすべての指を、GPU（DirectML、CUDA）または CPU で推定します。Rust ライブラリ、Tauri プラグイン、CLI として使えます。Vtuber-Lithing のネイティブエンジンで、次は全身トラッキングに対応予定。MPL-2.0。",
+      "fr": "Moteur de capture de mouvement autonome en Rust sur ONNX Runtime : 478 points du visage, 52 blendshapes, orientation de la tête, regard, clignements et les deux mains avec chaque doigt, sur le GPU (DirectML, CUDA) ou le CPU. Utilisable comme bibliothèque Rust, plugin Tauri ou CLI. C'est le moteur natif de Vtuber-Lithing ; le corps est la prochaine étape. MPL-2.0.",
+      "de": "Eigenständige Motion-Tracking-Engine in Rust auf ONNX Runtime: 478 Gesichtspunkte, 52 Blendshapes, Kopfhaltung, Blickrichtung, Blinzeln und beide Hände mit jedem Finger, auf der GPU (DirectML, CUDA) oder der CPU. Nutzbar als Rust-Bibliothek, Tauri-Plugin oder CLI. Sie ist die native Engine von Vtuber-Lithing; als Nächstes kommt der Körper. MPL-2.0.",
+      "pt": "Motor de captura de movimento independente em Rust sobre ONNX Runtime: 478 pontos do rosto, 52 blendshapes, posição da cabeça, olhar, piscadas e as duas mãos com cada dedo, na GPU (DirectML, CUDA) ou na CPU. Pode ser usado como biblioteca Rust, plugin do Tauri ou CLI. É o motor nativo do Vtuber-Lithing; o próximo passo é o corpo. MPL-2.0.",
+      "pl": "Samodzielny silnik śledzenia ruchu w Rust na ONNX Runtime: 478 punktów twarzy, 52 blendshape’y, pozycja głowy, kierunek spojrzenia, mrugnięcia i obie dłonie z każdym palcem, na GPU (DirectML, CUDA) lub CPU. Działa jako biblioteka Rust, wtyczka Tauri albo CLI. To natywny silnik Vtuber-Lithing; następny krok to całe ciało. MPL-2.0.",
+      "ru": "Самостоятельный движок трекинга движений на Rust поверх ONNX Runtime: 478 точек лица, 52 блендшейпа, положение головы, взгляд, моргание и обе руки с каждым пальцем, на GPU (DirectML, CUDA) или CPU. Работает как библиотека Rust, плагин Tauri или CLI. Это нативный движок Vtuber-Lithing; следующий шаг — трекинг тела. MPL-2.0.",
+      "zh": "基于 ONNX Runtime、用 Rust 编写的独立动作捕捉引擎：478 个面部关键点、52 个 blendshape、头部姿态、视线、眨眼，以及双手的每根手指，可在 GPU（DirectML、CUDA）或 CPU 上运行。可作为 Rust 库、Tauri 插件或命令行工具使用。它是 Vtuber-Lithing 的原生引擎，下一步是全身追踪。MPL-2.0。",
+      "ko": "ONNX Runtime 위에서 동작하는 Rust 기반 독립 모션 트래킹 엔진입니다. 얼굴 랜드마크 478개, 블렌드셰이프 52개, 머리 방향, 시선, 눈 깜빡임, 양손의 모든 손가락을 GPU(DirectML, CUDA)나 CPU에서 추적합니다. Rust 라이브러리, Tauri 플러그인, CLI로 사용할 수 있습니다. Vtuber-Lithing의 네이티브 엔진이며, 다음 단계는 전신 트래킹입니다. MPL-2.0.",
+      "th": "เอนจินติดตามการเคลื่อนไหวแบบแยกอิสระ เขียนด้วย Rust บน ONNX Runtime: จุดบนใบหน้า 478 จุด เบลนด์เชป 52 แบบ ท่าทางศีรษะ ทิศทางการมอง การกะพริบตา และมือทั้งสองข้างพร้อมทุกนิ้ว ทำงานบน GPU (DirectML, CUDA) หรือ CPU ใช้เป็นไลบรารี Rust ปลั๊กอิน Tauri หรือ CLI ได้ เป็นเอนจินเนทีฟของ Vtuber-Lithing ขั้นต่อไปคือการติดตามร่างกาย MPL-2.0",
+      "fil": "Hiwalay na motion tracking engine sa Rust gamit ang ONNX Runtime: 478 face landmark, 52 blendshape, posisyon ng ulo, tingin, pagkurap, at ang dalawang kamay kasama ang bawat daliri, sa GPU (DirectML, CUDA) o CPU. Magagamit bilang Rust library, Tauri plugin, o CLI. Ito ang native engine ng Vtuber-Lithing; susunod ang body tracking. MPL-2.0."
+    },
+    "image": "/assets/img/projects/lithing-native-tracking.webp",
+    "link": "https://vtuber-lithing.happyuky7.com/docs/guide/tracking#native-tracking-engine-beta",
+    "demo": null,
+    "github": "https://github.com/Happyuky7/lithing-native-tracking-rs",
+    "readme": "",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Rust",
+        "readable": true
+      },
+      {
+        "name": "ONNX",
+        "readable": true
+      },
+      {
+        "name": "AI",
+        "readable": true
+      },
+      {
+        "name": "Computer Vision",
+        "readable": true
+      },
+      {
+        "name": "Tauri",
         "readable": true
       }
     ],
@@ -265,6 +377,78 @@
     "hidden": false
   },
   {
+    "name": "SEPARE-WORLD-ITEMS",
+    "description": {
+      "en": "Minecraft plugin to separate items/inventory by world.",
+      "es": "Plugin de Minecraft para separar el inventario por mundos.",
+      "ja": "ワールドごとにアイテム/インベントリを分離するMinecraftプラグイン。"
+    },
+    "image": "/assets/img/projects/separeworlditem-logo.png",
+    "link": "https://github.com/Happyuky7/SEPARE-WORLD-ITEMS",
+    "demo": null,
+    "github": "https://github.com/Happyuky7/SEPARE-WORLD-ITEMS",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Minecraft",
+        "readable": true
+      },
+      {
+        "name": "Plugin",
+        "readable": true
+      },
+      {
+        "name": "Java",
+        "readable": true
+      },
+      {
+        "name": "Spigot",
+        "readable": true
+      },
+      {
+        "name": "Bukkit",
+        "readable": true
+      },
+      {
+        "name": "Paper",
+        "readable": true
+      },
+      {
+        "name": "Folia",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
+    "name": "NameMC-API-ServersMC",
+    "description": {
+      "en": "Project using the NameMC API for Minecraft servers.",
+      "es": "Uso de la API de NameMC para servidores de Minecraft.",
+      "ja": "Minecraftサーバー向けにNameMC APIを利用するプロジェクト。"
+    },
+    "image": "/assets/img/projects/NameMC-API-ServersMC-logo.jpg",
+    "link": "https://github.com/Happyuky7/NameMC-API-ServersMC",
+    "demo": null,
+    "github": "https://github.com/Happyuky7/NameMC-API-ServersMC",
+    "directLink": false,
+    "tags": [
+      {
+        "name": "Minecraft",
+        "readable": true
+      },
+      {
+        "name": "Java",
+        "readable": true
+      },
+      {
+        "name": "API",
+        "readable": true
+      }
+    ],
+    "hidden": false
+  },
+  {
     "name": "MTA-API-SERVERINFO",
     "description": {
       "en": "API to fetch information from MTA:SA servers.",
@@ -361,50 +545,6 @@
     "hidden": false
   },
   {
-    "name": "SEPARE-WORLD-ITEMS",
-    "description": {
-      "en": "Minecraft plugin to separate items/inventory by world.",
-      "es": "Plugin de Minecraft para separar el inventario por mundos.",
-      "ja": "ワールドごとにアイテム/インベントリを分離するMinecraftプラグイン。"
-    },
-    "image": "/assets/img/projects/separeworlditem-logo.png",
-    "link": "https://github.com/Happyuky7/SEPARE-WORLD-ITEMS",
-    "demo": null,
-    "github": "https://github.com/Happyuky7/SEPARE-WORLD-ITEMS",
-    "directLink": false,
-    "tags": [
-      {
-        "name": "Minecraft",
-        "readable": true
-      },
-      {
-        "name": "Plugin",
-        "readable": true
-      },
-      {
-        "name": "Java",
-        "readable": true
-      },
-      {
-        "name": "Spigot",
-        "readable": true
-      },
-      {
-        "name": "Bukkit",
-        "readable": true
-      },
-      {
-        "name": "Paper",
-        "readable": true
-      },
-      {
-        "name": "Folia",
-        "readable": true
-      }
-    ],
-    "hidden": false
-  },
-  {
     "name": "CobwebRemoveBoxPvP",
     "description": {
       "en": "Minecraft plugin that removes cobwebs in BoxPvP.",
@@ -427,34 +567,6 @@
       },
       {
         "name": "Java",
-        "readable": true
-      }
-    ],
-    "hidden": false
-  },
-  {
-    "name": "NameMC-API-ServersMC",
-    "description": {
-      "en": "Project using the NameMC API for Minecraft servers.",
-      "es": "Uso de la API de NameMC para servidores de Minecraft.",
-      "ja": "Minecraftサーバー向けにNameMC APIを利用するプロジェクト。"
-    },
-    "image": "/assets/img/projects/NameMC-API-ServersMC-logo.jpg",
-    "link": "https://github.com/Happyuky7/NameMC-API-ServersMC",
-    "demo": null,
-    "github": "https://github.com/Happyuky7/NameMC-API-ServersMC",
-    "directLink": false,
-    "tags": [
-      {
-        "name": "Minecraft",
-        "readable": true
-      },
-      {
-        "name": "Java",
-        "readable": true
-      },
-      {
-        "name": "API",
         "readable": true
       }
     ],

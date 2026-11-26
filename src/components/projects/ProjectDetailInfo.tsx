@@ -1,5 +1,6 @@
 import type React from 'react';
-import { FaGithub, FaGlobe } from 'react-icons/fa';
+import { FaGithub, FaGlobe, FaStore } from 'react-icons/fa';
+import { SiItchdotio } from 'react-icons/si';
 import { HiTag, HiStar, HiCode, HiEye, HiUser, HiExternalLink } from 'react-icons/hi';
 import { useLanguage } from '@i18n/LanguageContext';
 import { publicPath } from '@/utils/publicPath';
@@ -24,6 +25,12 @@ const ProjectDetailInfo: React.FC<{
         && a.trim().replace(/\/+$/, '') === b.trim().replace(/\/+$/, '');
     const showDemo = isHttpUrl(project?.demo) && !sameUrl(project?.demo, project?.link);
     const demoLabel = project?.demoType === 'website' ? t('projectsDetails.viewWebsite') : t('projectsDetails.viewDemo');
+
+    // Optional extra places to get the project (BOOTH, itch.io...): [{ name, url }].
+    // The name is a brand, so it is shown as-is in every language.
+    const stores: { name: string; url: string }[] = Array.isArray(project?.stores)
+        ? project.stores.filter((s: any) => typeof s?.name === 'string' && s.name.trim() && isHttpUrl(s?.url))
+        : [];
 
     const resolvePublicImg = (value: any) => {
         if (typeof value !== 'string') return '';
@@ -145,6 +152,19 @@ const ProjectDetailInfo: React.FC<{
                                     {demoLabel}
                                 </a>
                             )}
+
+                            {stores.map((store) => (
+                                <a
+                                    key={store.url}
+                                    href={store.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 px-6 py-3 bg-dark-lighter hover:bg-dark border border-white/15 hover:border-primary text-white rounded-lg transition-all duration-300 transform hover:scale-105"
+                                >
+                                    {/itch/i.test(store.name) ? <SiItchdotio className="text-xl" /> : <FaStore className="text-xl" />}
+                                    {store.name}
+                                </a>
+                            ))}
                         </div>
                     </div>
                 </div>

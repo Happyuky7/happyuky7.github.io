@@ -19,6 +19,7 @@ type ProjectLike = {
 };
 
 const FEATURED_PROJECT_NAMES = [
+    'Vtuber-Lithing',
     'LyricsOSC',
     'theserverjars',
     'Kaory Network',
