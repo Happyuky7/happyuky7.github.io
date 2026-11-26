@@ -1,7 +1,9 @@
 import type { ReactNode } from "react";
 import { FaBrain, FaCamera, FaRobot, FaServer, FaVrCardboard } from "react-icons/fa";
 import { HiCube, HiPencilAlt } from "react-icons/hi";
-import { SiApachemaven, SiGithub, SiGradle, SiLmstudio, SiNvidia, SiOllama, SiRust } from "react-icons/si";
+import {
+  SiApachemaven, SiGithub, SiGradle, SiLmstudio, SiMediapipe, SiNvidia, SiOllama, SiOnnx, SiRust, SiTauri, SiThreedotjs, SiWebgl,
+} from "react-icons/si";
 
 const devicon = (path: string) => `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${path}`;
 
@@ -55,6 +57,9 @@ export const skillsCategories: SkillsCategories = {
     { name: "React", icon: devicon("react/react-original.svg"), level: 30 },
     { name: "Vite", icon: devicon("vitejs/vitejs-original.svg"), level: 30 },
     { name: "Tailwind CSS", icon: devicon("tailwindcss/tailwindcss-original.svg"), level: 35 },
+    { name: "Tauri", icon: <SiTauri />, color: "text-[#24C8DB]", level: 20 },
+    { name: "Three.js", icon: <SiThreedotjs />, color: "text-white", level: 20 },
+    { name: "WebGL / GLSL", icon: <SiWebgl />, color: "text-red-400", level: 15 },
     { name: "Node.js", icon: devicon("nodejs/nodejs-original.svg"), level: 55 },
     { name: "NPM", icon: devicon("npm/npm-original-wordmark.svg"), level: 55 },
     { name: "pnpm", icon: devicon("pnpm/pnpm-original.svg"), level: 40 },
@@ -86,6 +91,8 @@ export const skillsCategories: SkillsCategories = {
     { name: "Mojang AuthLib", icon: <FaServer />, color: "text-emerald-500", level: 30 },
     { name: "Discord.js", icon: devicon("discordjs/discordjs-original.svg"), level: 35 },
     { name: "AI/ML", icon: <FaRobot />, color: "text-purple-500", level: 16 },
+    { name: "ONNX Runtime", icon: <SiOnnx />, color: "text-white", level: 15 },
+    { name: "MediaPipe", icon: <SiMediapipe />, color: "text-sky-400", level: 15 },
     { name: "OpenAI API", icon: <FaBrain />, color: "text-teal-300", level: 20 },
     { name: "Ollama", icon: <SiOllama />, color: "text-white", level: 25 },
     { name: "LM Studio", icon: <SiLmstudio />, color: "text-emerald-400", level: 25 },
